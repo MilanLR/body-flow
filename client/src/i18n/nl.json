@@ -104,14 +104,14 @@
     "h2": "Bodyflow Pakketten",
     "intakeText": "Elk traject begint met een medische intake om uw geschiktheid en de optimale behandelroute vast te stellen. Dit uitgebreide onderzoek door onze cardioloog omvat een ECG, echocardiografie en een inspanningstest op de fiets. Zo garanderen wij een behandelplan dat exact is afgestemd op uw persoonlijke cardiovasculaire status.",
     "ecg": "ECG",
-    "echo": "Echocardiografie",
+    "echo": "Echocardiogram",
     "bike": "Inspanningstest",
     "intakePrice": "De eenmalige klinische intake kost",
     "mostChosen": "Meest gekozen",
     "perSession": "per sessie",
     "fromSessions3": "Vanaf 3 sessies",
     "fromSessions10": "Vanaf 10 sessies",
-    "book": "Vraag een intake aan",
+    "book": "Boek intake",
     "packages": [
       {
         "name": "Flow Essential",

@@ -34,92 +34,15 @@ export function Pakketten() {
             </p>
             <div className="intake-icons-grid">
               <div className="intake-icon-item">
-                <div className="intake-icon-circle">
-                  <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-                    <polyline
-                      points="4,24 10,24 14,12 18,36 22,18 26,30 30,24 44,24"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                  </svg>
-                </div>
+                <img src="/images/ecg.png" alt="ECG" className="w-16 h-16 object-contain" />
                 <span className="intake-icon-label">{tx.ecg}</span>
               </div>
               <div className="intake-icon-item">
-                <div className="intake-icon-circle">
-                  <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-                    <rect
-                      x="8"
-                      y="10"
-                      width="32"
-                      height="28"
-                      rx="2"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="1.8"
-                      fill="none"
-                    />
-                    <circle
-                      cx="24"
-                      cy="24"
-                      r="8"
-                      stroke="oklch(0.45 0.10 230)"
-                      strokeWidth="1.8"
-                      fill="none"
-                    />
-                    <path
-                      d="M18 30 Q12 36 10 40"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+                <img src="/images/echocardiografie.png" alt="Echocardiografie" className="w-16 h-16 object-contain" />
                 <span className="intake-icon-label">{tx.echo}</span>
               </div>
               <div className="intake-icon-item">
-                <div className="intake-icon-circle">
-                  <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-                    <circle
-                      cx="14"
-                      cy="34"
-                      r="8"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="1.8"
-                      fill="none"
-                    />
-                    <circle
-                      cx="34"
-                      cy="34"
-                      r="8"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="1.8"
-                      fill="none"
-                    />
-                    <path
-                      d="M14 34 L24 18 L34 34"
-                      stroke="oklch(0.45 0.10 230)"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                    <path
-                      d="M24 18 L28 12"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M26 12 L32 12"
-                      stroke="oklch(0.35 0.07 240)"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+                <img src="/images/inspanningstest.png" alt="Inspanningstest" className="w-16 h-16 object-contain" />
                 <span className="intake-icon-label">{tx.bike}</span>
               </div>
             </div>
