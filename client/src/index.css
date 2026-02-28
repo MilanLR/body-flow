@@ -245,4 +245,167 @@
   .animate-delay-300 { animation-delay: 0.3s; }
   .animate-delay-400 { animation-delay: 0.4s; }
   .animate-delay-500 { animation-delay: 0.5s; }
+
+  /* ---- Responsive mobile overrides ---- */
+  @media (max-width: 768px) {
+    .responsive-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+    .hidden.md\:flex {
+      display: none !important;
+    }
+    .mobile-stack {
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+    }
+    .mobile-full {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .mobile-center {
+      text-align: center !important;
+      align-items: center !important;
+    }
+    .mobile-hide {
+      display: none !important;
+    }
+    .mobile-padding {
+      padding: 3rem 0 !important;
+    }
+    .mobile-form-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .mobile-price-row {
+      flex-wrap: wrap !important;
+      gap: 0.25rem !important;
+    }
+    .mobile-intake-icons {
+      flex-wrap: wrap !important;
+      gap: 1.5rem !important;
+    }
+    .mobile-intake-price {
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+    .mobile-footer-stack {
+      flex-direction: column !important;
+      gap: 2rem !important;
+    }
+    .mobile-footer-nav {
+      flex-direction: column !important;
+      gap: 2rem !important;
+    }
+    .mobile-stat-card {
+      position: static !important;
+      margin-top: 1.5rem !important;
+      max-width: 100% !important;
+    }
+    .price-row {
+      flex-wrap: wrap !important;
+      gap: 0.25rem !important;
+    }
+    .vitality-quote {
+      font-size: 1.3rem !important;
+    }
+    .intake-card {
+      padding: 1.5rem !important;
+    }
+    .contact-form-card {
+      padding: 1.5rem !important;
+    }
+    .traject-step {
+      gap: 1rem !important;
+    }
+    .hero-subtitle {
+      font-size: 0.95rem !important;
+    }
+    .hero-content {
+      padding: 0 1rem !important;
+    }
+    .eecp-image-wrapper {
+      aspect-ratio: 4/3 !important;
+      max-height: 280px !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .md\:hidden {
+      display: none !important;
+    }
+    .hidden.md\:flex {
+      display: flex !important;
+    }
+  }
+
+  /* Intake icons grid */
+  .intake-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .intake-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  .intake-icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: oklch(0.96 0.015 230);
+    border: 1px solid oklch(0.88 0.03 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .intake-icon-circle:hover {
+    background: oklch(0.92 0.025 230);
+  }
+  .intake-icon-label {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: oklch(0.45 0.06 235);
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+  }
+  .intake-price-text {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.85rem;
+    color: oklch(0.40 0.04 235);
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid oklch(0.92 0.02 230);
+  }
+
+  /* Intake icons responsive */
+  @media (max-width: 768px) {
+    .intake-icons-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .intake-icon-circle {
+      width: 58px;
+      height: 58px;
+    }
+    .intake-icon-label {
+      font-size: 0.65rem;
+    }
+    .intake-price-text {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+
+  /* Hide Made with Manus badge */
+  a[href*="manus"][style*="position: fixed"],
+  div[style*="position: fixed"][style*="z-index: 9999"],
+  div[style*="position:fixed"][style*="z-index:9999"] {
+    display: none !important;
+  }
 }

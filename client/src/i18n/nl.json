@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "eecp": "Wat is EECP",
+    "voordelen": "Voordelen",
+    "traject": "Het Traject",
+    "pakketten": "Pakketten",
+    "tarieven": "Tarieven",
+    "contact": "Contact",
+    "boek": "Boek een sessie"
+  },
+  "hero": {
+    "title": "Herdefinieer uw vitaliteit",
+    "subtitle": "Ervaar de kracht van EECP-therapie, een passieve marathon voor uw cellen, hart en geest",
+    "cta": "Ontdek de mogelijkheden",
+    "scroll": "Scroll",
+    "stat": "35+",
+    "statLabel": "jaar klinisch bewijs in de cardiologie",
+    "statNote": "* klinisch bewezen effectief in peer-reviewed medische studies"
+  },
+  "eecp": {
+    "sectionLabel": "Herstel uw circulatie",
+    "h2": "Herstel uw natuurlijke circulatie met EECP-therapie",
+    "intro": "Een klinisch bewezen, niet-invasieve methode voor cardiovasculaire optimalisatie en vitaal herstel.",
+    "whatTitle": "Wat is EECP?",
+    "whatText": "Bij BodyFlow Amsterdam benaderen we gezondheid vanuit de kern: een ongehinderde doorstroming van uw vaatstelsel. Enhanced External Counterpulsation (EECP) is een geavanceerde technologie die fungeert als een 'natuurlijke bypass'. Zonder operatie of medicatie stimuleren we uw lichaam om de bloedcirculatie te verbeteren en nieuwe haarvaten aan te maken.",
+    "howTitle": "Hoe werkt het? De kracht van synchronisatie",
+    "howText": "EECP-therapie maakt gebruik van nauwkeurig afgestelde drukmanchetten rond de kuiten, bovenbenen en heupen. De behandeling wordt volledig gesynchroniseerd met uw eigen hartritme via een EKG-monitor:",
+    "howLi1": "Tijdens de restfase blazen de manchetten razendsnel op. Dit stuwt zuurstofrijk bloed terug naar het hart en de hersenen op het moment dat de bloedvaten daar het meest ontvankelijk voor zijn.",
+    "howLi1Bold": "rustfase",
+    "howLi2": "Tijdens de contractiefase lopen de manchetten direct leeg. Hierdoor ontstaat er ruimte in de vaten, waardoor het hart met aanzienlijk minder weerstand bloed door het hele lichaam kan pompen.",
+    "howLi2Bold": "contractiefase",
+    "physTitle": "De fysiologische voordelen",
+    "physText": "Deze ritmische 'pulsatie' doet meer dan alleen bloed verplaatsen. Het zet actieve processen in gang in uw lichaam:",
+    "physLi1Bold": "Angiogenese:",
+    "physLi1": "De vorming van nieuwe micro-vaten voor een betere doorbloeding op de lange termijn.",
+    "physLi2Bold": "Stikstofmonoxide-afgifte:",
+    "physLi2": "Helpt de bloedvaten te ontspannen en de vaatwanden gezond te houden.",
+    "physLi3Bold": "Ontstekingsremmend:",
+    "physLi3": "Ondersteunt het lichaam bij het afvoeren van afvalstoffen en het verminderen van systemische ontstekingen."
+  },
+  "voordelen": {
+    "sectionLabel": "De voordelen",
+    "h2": "Wat EECP voor u kan betekenen",
+    "benefits": [
+      {
+        "number": "01",
+        "subtitle": "Cardiovascular Strength",
+        "title": "Versterking van het Hart- en Vaatstelsel",
+        "text": "EECP werkt als een 'passieve marathon'. De ritmische tegendruk stimuleert de aanmaak van nieuwe micro-vaten (angiogenese) en verbetert de conditie van uw vaatwanden. Dit ontlast het hart en zorgt voor een efficiëntere bloedsomloop, zelfs in rust."
+      },
+      {
+        "number": "02",
+        "subtitle": "Energy & Vitality Restoration",
+        "title": "Herstel van Energie en Vitaliteit",
+        "text": "Door de bloedstroom naar uw organen en weefsels te optimaliseren, krijgen uw cellen weer de zuurstof die ze nodig hebben. Dit helpt bij het verminderen van chronische vermoeidheid, zoals we vaak zien bij Long-COVID of na een burn-out, en geeft een duurzame boost aan uw dagelijkse energie."
+      },
+      {
+        "number": "03",
+        "subtitle": "Mental Clarity Focus",
+        "title": "Mentale Helderheid en Focus",
+        "text": "Vitaliteit stopt niet bij het lichaam. Een verbeterde doorbloeding naar de hersenen helpt bij het verminderen van 'brain fog' (hersenmist). Cliënten ervaren vaak dat ze scherper kunnen denken, zich beter kunnen concentreren en mentaal weerbaarder worden."
+      },
+      {
+        "number": "04",
+        "subtitle": "Physical Recovery Accelerated",
+        "title": "Versneld Fysiek Herstel",
+        "text": "De pulserende werking helpt het lichaam om metabolische afvalstoffen sneller af te voeren en systemische ontstekingen te verminderen. Dit is cruciaal voor zowel topsporters als patiënten die herstellen van langdurige ziekte of fysieke uitputting."
+      }
+    ]
+  },
+  "vitality": {
+    "quote": "\"Rustig liggen. Krachtig herstellen.\"",
+    "by": "— BodyFlow Amsterdam"
+  },
+  "traject": {
+    "sectionLabel": "Het proces",
+    "h2": "Het BodyFlow Traject",
+    "subtitle": "Een nauwkeurig samengesteld pad naar cardiovasculaire excellentie.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "KLINISCH CONSULT",
+        "text": "Uw traject start met een diepgaande intake uitgevoerd door onze gespecialiseerde cardioloog. Dit is geen standaard controle, maar een uitgebreide medische beoordeling van uw hart- en vaatstelsel, medische voorgeschiedenis en persoonlijke vitaliteitsdoelen. Wij waarborgen dat EECP-therapie de veiligste en meest effectieve methode is voor uw unieke fysiologie."
+      },
+      {
+        "number": "02",
+        "title": "GEPERSONALISEERD PROTOCOL",
+        "text": "Op basis van de klinische intake ontwerpen wij een behandelplan op maat. Of u nu herstelt van Long-COVID, kampt met Angina Pectoris of streeft naar fysieke optimalisatie op topniveau: uw 'Flow Protocol' wordt nauwkeurig afgestemd op de specifieke behoeften van uw lichaam, inclusief de frequentie en intensiteit van de sessies."
+      },
+      {
+        "number": "03",
+        "title": "DE EECP-SESSIE",
+        "text": "U ondergaat de therapie in de professionele setting van onze studio in Amsterdam. Terwijl u rust, start onze gesynchroniseerde technologie de ritmische drukverhoging via nauwkeurig afgestelde drukmanchetten. Voor u is dit een moment van fysieke rust, terwijl uw vasculair systeem een vitale 'passieve marathon' aflegt voor een verbeterde doorbloeding."
+      },
+      {
+        "number": "04",
+        "title": "MONITORING & OPTIMALISATIE",
+        "text": "Gezondheidsoptimalisatie is een continu proces. Gedurende uw sessies monitoren we uw progressie en passen we het protocol indien nodig in real-time aan. We bieden diepgaand inzicht in uw cardiovasculaire herstel en ondersteunen u bij het vertalen van deze verbeterde energie naar uw dagelijkse prestaties."
+      }
+    ]
+  },
+  "pakketten": {
+    "sectionLabel": "Behandelopties",
+    "h2": "Bodyflow Pakketten",
+    "intakeText": "Elk traject begint met een medische intake om uw geschiktheid en de optimale behandelroute vast te stellen. Dit uitgebreide onderzoek door onze cardioloog omvat een ECG, echocardiografie en een inspanningstest op de fiets. Zo garanderen wij een behandelplan dat exact is afgestemd op uw persoonlijke cardiovasculaire status.",
+    "ecg": "ECG",
+    "echo": "Echocardiografie",
+    "bike": "Inspanningstest",
+    "intakePrice": "De eenmalige klinische intake kost",
+    "mostChosen": "Meest gekozen",
+    "perSession": "per sessie",
+    "fromSessions3": "Vanaf 3 sessies",
+    "fromSessions10": "Vanaf 10 sessies",
+    "book": "Vraag een intake aan",
+    "packages": [
+      {
+        "name": "Flow Essential",
+        "tagline": "De fundering voor een vitaal hart- en vaatstelsel.",
+        "price": "€159",
+        "features": [
+          "Sessies EECP-therapie (de 'passieve marathon')",
+          "Stimulatie van angiogenese (aanmaak nieuwe haarvaten)",
+          "Verbetering van de algehele cardiovasculaire conditie",
+          "Herstel bij (chronische) vermoeidheid of Long-COVID",
+          "Verhoging van mentale helderheid en 'brain fog' reductie",
+          "Versneld fysiek herstel na intensieve inspanning"
+        ]
+      },
+      {
+        "name": "Flow Advanced",
+        "tagline": "Maximale synergie tussen therapie en voeding.",
+        "price": "€179",
+        "featured": true,
+        "minSessions": "Vanaf 3 sessies",
+        "features": [
+          "Alles uit het Flow Essential pakket",
+          "Hoogwaardig pakket met klinische supplementen",
+          "Optimale ondersteuning van het celvernieuwingsproces",
+          "Snellere afvoer van metabole afvalstoffen en toxines",
+          "Effectieve aanpak van systemische ontstekingen"
+        ]
+      },
+      {
+        "name": "Flow Precision",
+        "tagline": "Gezondheid op basis van jouw unieke biometrische data.",
+        "price": "€199",
+        "minSessions": "Vanaf 10 sessies",
+        "features": [
+          "Alles uit het Flow Advanced pakket",
+          "Uitgebreid diagnostisch bloedonderzoek bij aanvang",
+          "Supplementen 100% afgestemd op jouw tekorten en waarden",
+          "Gepersonaliseerd behandelplan op basis van data-analyse",
+          "Diepgaand inzicht in jouw vitale markers en biologische leeftijd",
+          "Exclusieve monitoring van voortgang en fysiologische optimalisatie"
+        ]
+      }
+    ]
+  },
+  "prijslijst": {
+    "sectionLabel": "Transparante tarieven",
+    "h2": "Prijslijst",
+    "book": "Vraag een intake aan",
+    "prices": [
+      { "item": "Intake", "price": "€95" },
+      { "item": "Losse EECP-therapie", "price": "€159" },
+      { "item": "Supplementpakket Advanced", "price": "€75" },
+      { "item": "Supplementpakket Precision", "price": "€100" },
+      { "item": "Bloedonderzoek (2 keer)", "price": "€300" },
+      { "item": "Advanced pakket (3 sessies)", "price": "€552" },
+      { "item": "Precision pakket (10 sessies)", "price": "€1.990,00" },
+      { "item": "EECP-therapie Essential (32 sessies)", "price": "€5.088,00" },
+      { "item": "EECP-therapie Advanced (32 sessies)", "price": "€5.238,00" },
+      { "item": "EECP-therapie Precision (32 sessies)", "price": "€5.588,00" }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Neem contact op",
+    "h2": "Contact",
+    "openingsLabel": "Openingstijden",
+    "days": [
+      "Maandag",
+      "Dinsdag",
+      "Woensdag",
+      "Donderdag",
+      "Vrijdag",
+      "Zaterdag",
+      "Zondag"
+    ],
+    "times": [
+      "09:00 – 21:00",
+      "18:00 – 21:00",
+      "18:00 – 21:00",
+      "09:00 – 18:00",
+      "Gesloten",
+      "Gesloten",
+      "09:00 – 21:00"
+    ],
+    "closed": "Gesloten",
+    "formTitle": "Boek een sessie",
+    "firstName": "Voornaam*",
+    "lastName": "Achternaam*",
+    "phone": "Telefoonnummer",
+    "email": "E-mailadres*",
+    "contactPref": "Wat is uw voorkeursmethode voor contact?*",
+    "phoneOpt": "Telefoon",
+    "emailOpt": "E-mail",
+    "remarks": "Aanvullende opmerkingen",
+    "submit": "Verstuur",
+    "thankYou": "Bedankt!",
+    "thankYouMsg": "Uw aanvraag is ontvangen. Wij nemen spoedig contact met u op."
+  },
+  "footer": {
+    "tagline": "EECP-therapie voor cardiovasculaire optimalisatie en vitaal herstel in Amsterdam.",
+    "nav": "Navigatie",
+    "contactLabel": "Contact",
+    "copyright": "© 2026 BodyFlow Amsterdam. Alle rechten voorbehouden.",
+    "location": "EECP-therapie — Gevestigd in Amstelveen",
+    "navLinks": [
+      ["Wat is EECP", "#eecp"],
+      ["Voordelen", "#voordelen"],
+      ["Het Traject", "#traject"],
+      ["Pakketten", "#pakketten"],
+      ["Tarieven", "#prijslijst"],
+      ["Contact", "#contact"]
+    ]
+  }
+}

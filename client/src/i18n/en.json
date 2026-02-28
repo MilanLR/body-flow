@@ -1,0 +1,204 @@
+{
+  "nav": {
+    "eecp": "What is EECP",
+    "voordelen": "Benefits",
+    "traject": "The Journey",
+    "pakketten": "Packages",
+    "tarieven": "Pricing",
+    "contact": "Contact",
+    "boek": "Book a session"
+  },
+  "hero": {
+    "title": "Redefine your vitality",
+    "subtitle": "Experience the power of EECP therapy — a passive marathon for your cells, heart and mind",
+    "cta": "Discover the possibilities",
+    "scroll": "Scroll",
+    "stat": "35+",
+    "statLabel": "years of clinical evidence in cardiology",
+    "statNote": "* clinically proven effective in peer-reviewed medical studies"
+  },
+  "eecp": {
+    "sectionLabel": "Restore your circulation",
+    "h2": "Restore your natural circulation with EECP therapy",
+    "intro": "A clinically proven, non-invasive method for cardiovascular optimisation and vital recovery.",
+    "whatTitle": "What is EECP?",
+    "whatText": "At BodyFlow Amsterdam we approach health at its core: unobstructed flow through your vascular system. Enhanced External Counterpulsation (EECP) is an advanced technology that acts as a 'natural bypass'. Without surgery or medication, we stimulate your body to improve blood circulation and form new capillaries.",
+    "howTitle": "How does it work? The power of synchronisation",
+    "howText": "EECP therapy uses precisely calibrated pressure cuffs around the calves, thighs and hips. The treatment is fully synchronised with your own heart rhythm via an ECG monitor:",
+    "howLi1": "During the rest phase the cuffs inflate rapidly. This pushes oxygen-rich blood back to the heart and brain at the moment the blood vessels are most receptive.",
+    "howLi1Bold": "rest phase",
+    "howLi2": "During the contraction phase the cuffs deflate immediately. This creates space in the vessels, allowing the heart to pump blood throughout the body with significantly less resistance.",
+    "howLi2Bold": "contraction phase",
+    "physTitle": "The physiological benefits",
+    "physText": "This rhythmic 'pulsation' does more than move blood. It activates processes in your body:",
+    "physLi1Bold": "Angiogenesis:",
+    "physLi1": "The formation of new micro-vessels for improved long-term circulation.",
+    "physLi2Bold": "Nitric oxide release:",
+    "physLi2": "Helps relax blood vessels and keep vessel walls healthy.",
+    "physLi3Bold": "Anti-inflammatory:",
+    "physLi3": "Supports the body in removing waste products and reducing systemic inflammation."
+  },
+  "voordelen": {
+    "sectionLabel": "The benefits",
+    "h2": "What EECP can do for you",
+    "benefits": [
+      {
+        "number": "01",
+        "subtitle": "Cardiovascular Strength",
+        "title": "Strengthening the Cardiovascular System",
+        "text": "EECP works like a 'passive marathon'. The rhythmic counter-pressure stimulates the formation of new micro-vessels (angiogenesis) and improves the condition of your vessel walls. This relieves the heart and ensures a more efficient circulation, even at rest."
+      },
+      {
+        "number": "02",
+        "subtitle": "Energy & Vitality Restoration",
+        "title": "Restoring Energy and Vitality",
+        "text": "By optimising blood flow to your organs and tissues, your cells receive the oxygen they need again. This helps reduce chronic fatigue — as often seen with Long-COVID or after burnout — and provides a lasting boost to your daily energy."
+      },
+      {
+        "number": "03",
+        "subtitle": "Mental Clarity Focus",
+        "title": "Mental Clarity and Focus",
+        "text": "Vitality does not stop at the body. Improved circulation to the brain helps reduce 'brain fog'. Clients often report sharper thinking, better concentration and greater mental resilience."
+      },
+      {
+        "number": "04",
+        "subtitle": "Physical Recovery Accelerated",
+        "title": "Accelerated Physical Recovery",
+        "text": "The pulsating action helps the body remove metabolic waste products more quickly and reduce systemic inflammation. This is crucial for both elite athletes and patients recovering from prolonged illness or physical exhaustion."
+      }
+    ]
+  },
+  "vitality": {
+    "quote": "\"Rest quietly. Recover powerfully.\"",
+    "by": "— BodyFlow Amsterdam"
+  },
+  "traject": {
+    "sectionLabel": "The process",
+    "h2": "The BodyFlow Journey",
+    "subtitle": "A carefully composed path towards cardiovascular excellence.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "CLINICAL CONSULTATION",
+        "text": "Your journey begins with an in-depth intake conducted by our specialist cardiologist. This is not a standard check-up, but a comprehensive medical assessment of your cardiovascular system, medical history and personal vitality goals. We ensure that EECP therapy is the safest and most effective method for your unique physiology."
+      },
+      {
+        "number": "02",
+        "title": "PERSONALISED PROTOCOL",
+        "text": "Based on the clinical intake, we design a tailor-made treatment plan. Whether you are recovering from Long-COVID, dealing with Angina Pectoris or striving for top-level physical optimisation: your 'Flow Protocol' is precisely calibrated to the specific needs of your body, including the frequency and intensity of the sessions."
+      },
+      {
+        "number": "03",
+        "title": "THE EECP SESSION",
+        "text": "You undergo the therapy in the professional setting of our studio in Amsterdam. While you rest, our synchronised technology initiates the rhythmic pressure increase via precisely calibrated pressure cuffs. For you this is a moment of physical rest, while your vascular system completes a vital 'passive marathon' for improved circulation."
+      },
+      {
+        "number": "04",
+        "title": "MONITORING & OPTIMISATION",
+        "text": "Health optimisation is a continuous process. During your sessions we monitor your progress and adjust the protocol in real-time if necessary. We provide deep insight into your cardiovascular recovery and support you in translating this improved energy into your daily performance."
+      }
+    ]
+  },
+  "pakketten": {
+    "sectionLabel": "Treatment options",
+    "h2": "BodyFlow Packages",
+    "intakeText": "Every journey begins with a medical intake to establish your suitability and the optimal treatment route. This comprehensive examination by our cardiologist includes an ECG, echocardiography and a bicycle stress test. This guarantees a treatment plan precisely tailored to your personal cardiovascular status.",
+    "ecg": "ECG",
+    "echo": "Echocardiography",
+    "bike": "Stress test",
+    "intakePrice": "A one-time clinical intake costs",
+    "mostChosen": "Most popular",
+    "perSession": "per session",
+    "fromSessions3": "From 3 sessions",
+    "fromSessions10": "From 10 sessions",
+    "book": "Book",
+    "packages": [
+      {
+        "name": "Flow Essential",
+        "tagline": "The foundation for a vital cardiovascular system.",
+        "price": "€159",
+        "features": [
+          "EECP therapy sessions (the 'passive marathon')",
+          "Stimulation of angiogenesis (formation of new capillaries)",
+          "Improvement of overall cardiovascular condition",
+          "Recovery from (chronic) fatigue or Long-COVID",
+          "Increased mental clarity and brain fog reduction",
+          "Accelerated physical recovery after intensive exertion"
+        ]
+      },
+      {
+        "name": "Flow Advanced",
+        "tagline": "Maximum synergy between therapy and nutrition.",
+        "price": "€179",
+        "featured": true,
+        "minSessions": "From 3 sessions",
+        "features": [
+          "Everything in the Flow Essential package",
+          "High-quality package with clinical supplements",
+          "Optimal support of the cell renewal process",
+          "Faster elimination of metabolic waste and toxins",
+          "Effective approach to systemic inflammation"
+        ]
+      },
+      {
+        "name": "Flow Precision",
+        "tagline": "Health based on your unique biometric data.",
+        "price": "€199",
+        "minSessions": "From 10 sessions",
+        "features": [
+          "Everything in the Flow Advanced package",
+          "Comprehensive diagnostic blood test at the start",
+          "Supplements 100% tailored to your deficiencies and values",
+          "Personalised treatment plan based on data analysis",
+          "Deep insight into your vital markers and biological age",
+          "Exclusive monitoring of progress and physiological optimisation"
+        ]
+      }
+    ]
+  },
+  "prijslijst": {
+    "sectionLabel": "Transparent pricing",
+    "h2": "Price list",
+    "book": "Book",
+    "prices": [
+      { "item": "Intake", "price": "€95" },
+      { "item": "Single EECP therapy session", "price": "€159" },
+      { "item": "Supplement package Advanced", "price": "€75" },
+      { "item": "Supplement package Precision", "price": "€100" },
+      { "item": "Blood test (2 times)", "price": "€300" },
+      { "item": "Advanced package (3 sessions)", "price": "€552" },
+      { "item": "Precision package (10 sessions)", "price": "€1,990.00" },
+      { "item": "EECP therapy Essential (32 sessions)", "price": "€5,088.00" },
+      { "item": "EECP therapy Advanced (32 sessions)", "price": "€5,238.00" },
+      { "item": "EECP therapy Precision (32 sessions)", "price": "€5,588.00" }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Get in touch",
+    "h2": "Contact",
+    "openingsLabel": "Opening hours",
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "times": ["09:00 – 21:00", "18:00 – 21:00", "18:00 – 21:00", "09:00 – 18:00", "Closed", "Closed", "09:00 – 21:00"],
+    "closed": "Closed",
+    "formTitle": "Book a session",
+    "firstName": "First name*",
+    "lastName": "Last name*",
+    "phone": "Phone number",
+    "email": "Email address*",
+    "contactPref": "What is your preferred contact method?*",
+    "phoneOpt": "Phone",
+    "emailOpt": "Email",
+    "remarks": "Additional remarks",
+    "submit": "Send",
+    "thankYou": "Thank you!",
+    "thankYouMsg": "Your request has been received. We will contact you shortly."
+  },
+  "footer": {
+    "tagline": "EECP therapy for cardiovascular optimisation and vital recovery in Amsterdam.",
+    "nav": "Navigation",
+    "contactLabel": "Contact",
+    "copyright": "© 2026 BodyFlow Amsterdam. All rights reserved.",
+    "location": "EECP therapy — Located in Amstelveen",
+    "navLinks": [["What is EECP", "#eecp"], ["Benefits", "#voordelen"], ["The Journey", "#traject"], ["Packages", "#pakketten"], ["Pricing", "#prijslijst"], ["Contact", "#contact"]]
+  }
+}
