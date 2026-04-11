@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { useLang } from "@/i18n/LangContext";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
+import { buildContactPayload } from "./contactForm";
 
 const contactSchema = z.object({
   voornaam: z.string().min(1, "Verplicht"),
@@ -38,12 +39,7 @@ export function Contact() {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
-          subject: "Nieuwe sessie aanvraag - BodyFlow Amsterdam",
-          from_name: `${data.voornaam} ${data.achternaam}`,
-          ...data,
-        }),
+        body: JSON.stringify(buildContactPayload(data)),
       });
       const result = await res.json();
       if (result.success) {
