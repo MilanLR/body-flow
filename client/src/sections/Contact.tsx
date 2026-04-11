@@ -19,6 +19,9 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
+export const EMAIL_LINK_ICON_PATH =
+  "M2.25 4.5H15.75V13.5H2.25V4.5ZM3.75 6L9 9.75L14.25 6";
+
 export function Contact() {
   const { t } = useLang();
   const { ref, inView } = useInView();
@@ -111,7 +114,7 @@ export function Contact() {
               <div className="flex items-center gap-3">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <path
-                    d="M3 3H7L9 8L6.5 9.5C7.57 11.69 9.31 13.43 11.5 14.5L13 12L18 14V18C18 18 15 19 9 13C3 7 4 4 4 4L3 3Z"
+                    d={EMAIL_LINK_ICON_PATH}
                     stroke="var(--ocean-500)"
                     strokeWidth="1.3"
                     fill="none"
