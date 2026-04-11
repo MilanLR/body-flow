@@ -43,10 +43,10 @@ export function Footer() {
                   1181 BR Amstelveen
                 </p>
                 <a
-                  href="mailto:info@bodyflow.nl"
+                  href="mailto:info@body-flow.nl"
                   className="font-body text-[0.85rem] text-white/70 no-underline hover:text-white transition-colors"
                 >
-                  info@bodyflow.nl
+                  info@body-flow.nl
                 </a>
               </div>
             </div>

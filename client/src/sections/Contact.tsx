@@ -70,9 +70,7 @@ export function Contact() {
           <div
             className={cn(
               "transition-all duration-[800ms] ease-out",
-              inView
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6",
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
           >
             <span className="section-label">{tx.sectionLabel}</span>
@@ -122,10 +120,10 @@ export function Contact() {
                   />
                 </svg>
                 <a
-                  href="mailto:info@bodyflow.nl"
+                  href="mailto:info@body-flow.nl"
                   className="font-body text-sm text-[var(--navy-600)] no-underline"
                 >
-                  info@bodyflow.nl
+                  info@body-flow.nl
                 </a>
               </div>
             </div>
@@ -148,7 +146,7 @@ export function Contact() {
                         "font-body text-[0.875rem] font-medium",
                         tx.times[idx] === tx.closed
                           ? "text-[oklch(0.60_0.04_235)]"
-                          : "text-[var(--navy-600)]",
+                          : "text-[var(--navy-600)]"
                       )}
                     >
                       {tx.times[idx]}
@@ -164,9 +162,7 @@ export function Contact() {
             id="boek"
             className={cn(
               "contact-form-card bg-white p-10 rounded-sm shadow-[0_4px_30px_rgba(26,46,74,0.08)] transition-all duration-[800ms] ease-out delay-200",
-              inView
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6",
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
           >
             <h3 className="font-display text-[1.8rem] font-medium text-[var(--navy-800)] mb-7">
@@ -322,7 +318,7 @@ export function Contact() {
                     disabled={isSubmitting}
                     className={cn(
                       "btn-pill btn-pill-navy",
-                      isSubmitting && "opacity-60 cursor-not-allowed",
+                      isSubmitting && "opacity-60 cursor-not-allowed"
                     )}
                   >
                     {isSubmitting ? (
