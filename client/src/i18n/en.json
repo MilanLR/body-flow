@@ -168,9 +168,9 @@
       { "item": "Blood test (2 times)", "price": "€300" },
       { "item": "Advanced package (3 sessions)", "price": "€552" },
       { "item": "Precision package (10 sessions)", "price": "€1,990.00" },
-      { "item": "EECP therapy Essential (32 sessions)", "price": "€5,088.00" },
-      { "item": "EECP therapy Advanced (32 sessions)", "price": "€5,238.00" },
-      { "item": "EECP therapy Precision (32 sessions)", "price": "€5,588.00" }
+      { "item": "Clinical Essential (32 sessions)", "price": "€5,088.00" },
+      { "item": "Clinical Advanced (32 sessions)", "price": "€5,238.00" },
+      { "item": "Clinical Precision (32 sessions)", "price": "€5,588.00" }
     ]
   },
   "contact": {
