@@ -161,7 +161,7 @@
     "h2": "Price list",
     "book": "Book",
     "prices": [
-      { "item": "Intake", "price": "€95" },
+      { "item": "Intake", "price": "€175" },
       { "item": "Single EECP therapy session", "price": "€159" },
       { "item": "Supplement package Advanced", "price": "€75" },
       { "item": "Supplement package Precision", "price": "€100" },
