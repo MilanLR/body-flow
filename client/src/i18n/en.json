@@ -6,7 +6,7 @@
     "pakketten": "Packages",
     "tarieven": "Pricing",
     "contact": "Contact",
-    "boek": "Book a session"
+    "boek": "Schedule an intake"
   },
   "hero": {
     "title": "Redefine your vitality",
@@ -106,7 +106,7 @@
     "ecg": "ECG",
     "echo": "Echocardiography",
     "bike": "Stress test",
-    "intakePrice": "A one-time clinical intake costs",
+    "intakePrice": "A one-time clinical intake costs €175",
     "mostChosen": "Most popular",
     "perSession": "per session",
     "fromSessions3": "From 3 sessions",
@@ -180,7 +180,7 @@
     "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     "times": ["09:00 – 21:00", "18:00 – 21:00", "18:00 – 21:00", "09:00 – 18:00", "Closed", "Closed", "09:00 – 21:00"],
     "closed": "Closed",
-    "formTitle": "Book a session",
+    "formTitle": "Schedule an intake",
     "firstName": "First name*",
     "lastName": "Last name*",
     "phone": "Phone number",
