@@ -161,16 +161,16 @@
     "h2": "Prijslijst",
     "book": "Vraag een intake aan",
     "prices": [
-      { "item": "Intake", "price": "€95" },
+      { "item": "Intake", "price": "€175" },
       { "item": "Losse EECP-therapie", "price": "€159" },
       { "item": "Supplementpakket Advanced", "price": "€75" },
       { "item": "Supplementpakket Precision", "price": "€100" },
       { "item": "Bloedonderzoek (2 keer)", "price": "€300" },
       { "item": "Advanced pakket (3 sessies)", "price": "€552" },
       { "item": "Precision pakket (10 sessies)", "price": "€1.990,00" },
-      { "item": "EECP-therapie Essential (32 sessies)", "price": "€5.088,00" },
-      { "item": "EECP-therapie Advanced (32 sessies)", "price": "€5.238,00" },
-      { "item": "EECP-therapie Precision (32 sessies)", "price": "€5.588,00" }
+      { "item": "Clinical Essential (32 sessies)", "price": "€5.088,00" },
+      { "item": "Clinical Advanced (32 sessies)", "price": "€5.238,00" },
+      { "item": "Clinical Precision (32 sessies)", "price": "€5.588,00" }
     ]
   },
   "contact": {
