@@ -47,7 +47,7 @@ export function Pakketten() {
               </div>
             </div>
             <p className="intake-price-text">
-              {tx.intakePrice} <strong>&euro;95</strong>.
+              {tx.intakePrice}.
             </p>
           </div>
 
