@@ -6,7 +6,7 @@
     "pakketten": "Pakketten",
     "tarieven": "Tarieven",
     "contact": "Contact",
-    "boek": "Boek een sessie"
+    "boek": "Boek intake"
   },
   "hero": {
     "title": "Herdefinieer je vitaliteit",
@@ -196,7 +196,7 @@
       "09:00 – 21:00"
     ],
     "closed": "Gesloten",
-    "formTitle": "Boek een sessie",
+    "formTitle": "Vraag een intake aan",
     "firstName": "Voornaam*",
     "lastName": "Achternaam*",
     "phone": "Telefoonnummer",
