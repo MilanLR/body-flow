@@ -106,7 +106,7 @@
     "ecg": "ECG",
     "echo": "Echocardiogram",
     "bike": "Inspanningstest",
-    "intakePrice": "De eenmalige klinische intake kost",
+    "intakePrice": "De eenmalige klinische intake kost €175",
     "mostChosen": "Meest gekozen",
     "perSession": "per sessie",
     "fromSessions3": "Vanaf 3 sessies",
