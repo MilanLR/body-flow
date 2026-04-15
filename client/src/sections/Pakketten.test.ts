@@ -1,9 +1,12 @@
+import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
+import { createElement } from "react";
 
 import en from "@/i18n/en.json";
+import { LangProvider } from "@/i18n/LangContext";
 import nl from "@/i18n/nl.json";
 
-import { getPackageVariantData } from "./Pakketten";
+import { getPackageVariantData, Pakketten } from "./Pakketten";
 
 describe("Pakketten package variants", () => {
   it("returns Flow packages with per-session pricing copy", () => {
@@ -38,5 +41,23 @@ describe("Pakketten package variants", () => {
     expect(flow.label).toBe("The Flow");
     expect(clinical.label).toBe("Clinical");
     expect(clinical.packages[2].priceNote).toBe("voor 32 sessies");
+  });
+
+  it("renders the intake block before the flow clinical toggle and package cards", () => {
+    const html = renderToStaticMarkup(
+      createElement(LangProvider, null, createElement(Pakketten)),
+    );
+
+    const intakeIndex = html.indexOf(nl.pakketten.intakeText);
+    const toggleIndex = html.indexOf(`aria-label="${nl.pakketten.variantLabel}"`);
+    const firstPackageIndex = html.indexOf(
+      nl.pakketten.packageVariants.flow.packages[0].name,
+    );
+
+    expect(intakeIndex).toBeGreaterThan(-1);
+    expect(toggleIndex).toBeGreaterThan(-1);
+    expect(firstPackageIndex).toBeGreaterThan(-1);
+    expect(intakeIndex).toBeLessThan(toggleIndex);
+    expect(toggleIndex).toBeLessThan(firstPackageIndex);
   });
 });

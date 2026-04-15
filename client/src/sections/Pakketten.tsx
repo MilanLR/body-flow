@@ -43,6 +43,30 @@ export function Pakketten() {
             </h2>
           </div>
 
+          {/* Intake card */}
+          <div className="intake-card bg-white rounded-sm p-8 px-10 mb-12 shadow-[0_2px_20px_rgba(26,46,74,0.06)]">
+            <p className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] mb-6">
+              {tx.intakeText}
+            </p>
+            <div className="intake-icons-grid">
+              <div className="intake-icon-item">
+                <img src="/images/ecg.png" alt="ECG" className="w-16 h-16 object-contain" />
+                <span className="intake-icon-label">{tx.ecg}</span>
+              </div>
+              <div className="intake-icon-item">
+                <img src="/images/echocardiografie.png" alt="Echocardiografie" className="w-16 h-16 object-contain" />
+                <span className="intake-icon-label">{tx.echo}</span>
+              </div>
+              <div className="intake-icon-item">
+                <img src="/images/inspanningstest.png" alt="Inspanningstest" className="w-16 h-16 object-contain" />
+                <span className="intake-icon-label">{tx.bike}</span>
+              </div>
+            </div>
+            <p className="intake-price-text">
+              {tx.intakePrice}.
+            </p>
+          </div>
+
           <div className="mb-10 flex justify-center">
             <div
               className="inline-flex items-center gap-2 rounded-full border border-[oklch(0.83_0.02_230)] bg-white/80 p-2 shadow-[0_6px_24px_rgba(26,46,74,0.08)]"
@@ -75,30 +99,6 @@ export function Pakketten() {
                 );
               })}
             </div>
-          </div>
-
-          {/* Intake card */}
-          <div className="intake-card bg-white rounded-sm p-8 px-10 mb-12 shadow-[0_2px_20px_rgba(26,46,74,0.06)]">
-            <p className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] mb-6">
-              {tx.intakeText}
-            </p>
-            <div className="intake-icons-grid">
-              <div className="intake-icon-item">
-                <img src="/images/ecg.png" alt="ECG" className="w-16 h-16 object-contain" />
-                <span className="intake-icon-label">{tx.ecg}</span>
-              </div>
-              <div className="intake-icon-item">
-                <img src="/images/echocardiografie.png" alt="Echocardiografie" className="w-16 h-16 object-contain" />
-                <span className="intake-icon-label">{tx.echo}</span>
-              </div>
-              <div className="intake-icon-item">
-                <img src="/images/inspanningstest.png" alt="Inspanningstest" className="w-16 h-16 object-contain" />
-                <span className="intake-icon-label">{tx.bike}</span>
-              </div>
-            </div>
-            <p className="intake-price-text">
-              {tx.intakePrice}.
-            </p>
           </div>
 
           {/* Package cards */}
