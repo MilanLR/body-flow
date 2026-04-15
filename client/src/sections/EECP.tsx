@@ -22,7 +22,7 @@ export function EECP() {
               "transition-all duration-[800ms] ease-in-out",
               inView
                 ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-[30px]",
+                : "opacity-0 translate-y-[30px]"
             )}
           >
             <div className="flex items-center gap-4 mb-6">
@@ -51,12 +51,8 @@ export function EECP() {
                 {tx.howText}
               </p>
               <ul className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] pl-5 mb-6">
-                <li className="mb-2">
-                  Tijdens de <strong>{tx.howLi1Bold}</strong> {tx.howLi1}
-                </li>
-                <li>
-                  Tijdens de <strong>{tx.howLi2Bold}</strong> {tx.howLi2}
-                </li>
+                <li className="mb-2">{tx.howLi1}</li>
+                <li>{tx.howLi2}</li>
               </ul>
 
               <h3 className="font-display text-[1.4rem] font-medium text-[var(--navy-800)] mb-3">
@@ -85,7 +81,7 @@ export function EECP() {
               "relative transition-all duration-[800ms] ease-in-out delay-200",
               inView
                 ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-[30px]",
+                : "opacity-0 translate-y-[30px]"
             )}
           >
             <div className="eecp-image-wrapper rounded-sm overflow-hidden aspect-[3/4] relative">
