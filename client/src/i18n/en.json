@@ -112,7 +112,7 @@
     "book": "Book",
     "packageVariants": {
       "flow": {
-        "label": "The Flow",
+        "label": "Flow",
         "packages": [
           {
             "name": "The Flow Essential",
