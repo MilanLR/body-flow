@@ -164,7 +164,7 @@
       { "item": "Intake", "price": "€175" },
       { "item": "Single EECP therapy session", "price": "€159" },
       { "item": "Supplement package Advanced", "price": "€75" },
-      { "item": "Supplement package Precision", "price": "€100" },
+      { "item": "Supplement package Precision", "price": "from €100" },
       { "item": "Blood test (2 times)", "price": "€300" },
       { "item": "Advanced package (3 sessions)", "price": "€552" },
       { "item": "Precision package (10 sessions)", "price": "€1,990.00" },
