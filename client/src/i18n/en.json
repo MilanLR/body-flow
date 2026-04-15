@@ -118,11 +118,10 @@
         "tagline": "The foundation for a vital cardiovascular system.",
         "price": "€159",
         "features": [
-          "EECP therapy sessions (the 'passive marathon')",
-          "Stimulation of angiogenesis (formation of new capillaries)",
-          "Improvement of overall cardiovascular condition",
-          "Recovery from (chronic) fatigue or Long-COVID",
-          "Increased mental clarity and brain fog reduction",
+          "Specialized EECP therapy",
+          "Direct boost to blood circulation",
+          "Accelerated removel of metabolic waste products",
+          "Enhanced mental clarity and 'brain fog' reduction",
           "Accelerated physical recovery after intensive exertion"
         ]
       },
@@ -147,11 +146,9 @@
         "minSessions": "From 10 sessions",
         "features": [
           "Everything in the Flow Advanced package",
-          "Comprehensive diagnostic blood test at the start",
-          "Supplements 100% tailored to your deficiencies and values",
-          "Personalised treatment plan based on data analysis",
-          "Deep insight into your vital markers and biological age",
-          "Exclusive monitoring of progress and physiological optimisation"
+          "2x Comprehensive blood analysis (baseline and follow-up)",
+          "Supplements 100% tailored to your specific deficiencies and biomarkers",
+          "Biometric monitoring of health improvements"
         ]
       }
     ]
