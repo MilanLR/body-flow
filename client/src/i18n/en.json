@@ -108,50 +108,101 @@
     "bike": "Stress test",
     "intakePrice": "A one-time clinical intake costs €175",
     "mostChosen": "Most popular",
-    "perSession": "per session",
-    "fromSessions3": "From 3 sessions",
-    "fromSessions10": "From 10 sessions",
+    "variantLabel": "Select package type",
     "book": "Book",
-    "packages": [
-      {
-        "name": "Flow Essential",
-        "tagline": "The foundation for a vital cardiovascular system.",
-        "price": "€159",
-        "features": [
-          "Specialized EECP therapy",
-          "Direct boost to blood circulation",
-          "Accelerated removel of metabolic waste products",
-          "Enhanced mental clarity and 'brain fog' reduction",
-          "Accelerated physical recovery after intensive exertion"
+    "packageVariants": {
+      "flow": {
+        "label": "The Flow",
+        "packages": [
+          {
+            "name": "The Flow Essential",
+            "tagline": "The foundation for a vital cardiovascular system.",
+            "price": "€159",
+            "priceNote": "per session",
+            "features": [
+              "Specialized EECP therapy",
+              "Direct boost to blood circulation",
+              "Accelerated removal of metabolic waste products",
+              "Enhanced mental clarity and 'brain fog' reduction",
+              "Accelerated physical recovery after intensive exertion"
+            ]
+          },
+          {
+            "name": "The Flow Advanced",
+            "tagline": "Maximum synergy between therapy and nutrition.",
+            "price": "€179",
+            "priceNote": "per session",
+            "featured": true,
+            "minSessions": "From 3 sessions",
+            "features": [
+              "Everything in The Flow Essential",
+              "High-quality package with clinical supplements",
+              "Optimal support of the cell renewal process",
+              "Faster elimination of metabolic waste and toxins",
+              "Effective approach to systemic inflammation"
+            ]
+          },
+          {
+            "name": "The Flow Precision",
+            "tagline": "Health based on your unique biometric data.",
+            "price": "€199",
+            "priceNote": "per session",
+            "minSessions": "From 10 sessions",
+            "features": [
+              "Everything in The Flow Advanced",
+              "2x comprehensive blood analysis (baseline and follow-up)",
+              "Supplements tailored 100% to your deficiencies and biomarkers",
+              "Biometric monitoring of health improvements"
+            ]
+          }
         ]
       },
-      {
-        "name": "Flow Advanced",
-        "tagline": "Maximum synergy between therapy and nutrition.",
-        "price": "€179",
-        "featured": true,
-        "minSessions": "From 3 sessions",
-        "features": [
-          "Everything in the Flow Essential package",
-          "High-quality package with clinical supplements",
-          "Optimal support of the cell renewal process",
-          "Faster elimination of metabolic waste and toxins",
-          "Effective approach to systemic inflammation"
-        ]
-      },
-      {
-        "name": "Flow Precision",
-        "tagline": "Health based on your unique biometric data.",
-        "price": "€199",
-        "minSessions": "From 10 sessions",
-        "features": [
-          "Everything in the Flow Advanced package",
-          "2x Comprehensive blood analysis (baseline and follow-up)",
-          "Supplements 100% tailored to your specific deficiencies and biomarkers",
-          "Biometric monitoring of health improvements"
+      "clinical": {
+        "label": "Clinical",
+        "packages": [
+          {
+            "name": "Clinical Essential",
+            "tagline": "A structured clinical trajectory for deep circulatory recovery.",
+            "price": "€5,088.00",
+            "priceNote": "for 32 sessions",
+            "minSessions": "32 sessions",
+            "features": [
+              "32 specialized EECP therapy sessions",
+              "Clinically guided cardiovascular support",
+              "Steady improvement of circulation and oxygen delivery",
+              "Structured recovery for energy, focus, and resilience"
+            ]
+          },
+          {
+            "name": "Clinical Advanced",
+            "tagline": "An intensive program that combines therapy with targeted support.",
+            "price": "€5,238.00",
+            "priceNote": "for 32 sessions",
+            "featured": true,
+            "minSessions": "32 sessions",
+            "features": [
+              "Everything in Clinical Essential",
+              "Clinical supplement support throughout the trajectory",
+              "Additional focus on inflammation control and cellular recovery",
+              "Designed for a more comprehensive therapeutic protocol"
+            ]
+          },
+          {
+            "name": "Clinical Precision",
+            "tagline": "The most data-led clinical package for personalised optimisation.",
+            "price": "€5,588.00",
+            "priceNote": "for 32 sessions",
+            "minSessions": "32 sessions",
+            "features": [
+              "Everything in Clinical Advanced",
+              "2x comprehensive blood analysis during the trajectory",
+              "Supplement strategy tailored to biomarkers and deficiencies",
+              "Monitoring focused on measurable cardiovascular progress"
+            ]
+          }
         ]
       }
-    ]
+    }
   },
   "prijslijst": {
     "sectionLabel": "Transparent pricing",

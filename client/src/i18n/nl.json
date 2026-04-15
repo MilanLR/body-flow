@@ -108,49 +108,101 @@
     "bike": "Inspanningstest",
     "intakePrice": "De eenmalige klinische intake kost €175",
     "mostChosen": "Meest gekozen",
-    "perSession": "per sessie",
-    "fromSessions3": "Vanaf 3 sessies",
-    "fromSessions10": "Vanaf 10 sessies",
+    "variantLabel": "Selecteer pakkettype",
     "book": "Boek intake",
-    "packages": [
-      {
-        "name": "Flow Essential",
-        "tagline": "De fundering voor een vitaal hart- en vaatstelsel.",
-        "price": "€159",
-        "features": [
-          "Gespecialiseerde EECP-therapie",
-          "Directe boost voor de bloedsomloop",
-          "Versnelde afvoer van afvalstoffen",
-          "Verhoging van mentale helderheid en 'brain fog' reductie",
-          "Versneld fysiek herstel na intensieve inspanning"
+    "packageVariants": {
+      "flow": {
+        "label": "The Flow",
+        "packages": [
+          {
+            "name": "The Flow Essential",
+            "tagline": "De fundering voor een vitaal hart- en vaatstelsel.",
+            "price": "€159",
+            "priceNote": "per sessie",
+            "features": [
+              "Gespecialiseerde EECP-therapie",
+              "Directe boost voor de bloedsomloop",
+              "Versnelde afvoer van afvalstoffen",
+              "Meer mentale helderheid en minder 'brain fog'",
+              "Versneld fysiek herstel na intensieve inspanning"
+            ]
+          },
+          {
+            "name": "The Flow Advanced",
+            "tagline": "Maximale synergie tussen therapie en voeding.",
+            "price": "€179",
+            "priceNote": "per sessie",
+            "featured": true,
+            "minSessions": "Vanaf 3 sessies",
+            "features": [
+              "Alles uit The Flow Essential",
+              "Hoogwaardig pakket met klinische supplementen",
+              "Optimale ondersteuning van het celvernieuwingsproces",
+              "Snellere afvoer van afvalstoffen en toxines",
+              "Effectieve aanpak van systemische ontstekingen"
+            ]
+          },
+          {
+            "name": "The Flow Precision",
+            "tagline": "Gezondheid op basis van jouw unieke biometrische data.",
+            "price": "€199",
+            "priceNote": "per sessie",
+            "minSessions": "Vanaf 10 sessies",
+            "features": [
+              "Alles uit The Flow Advanced",
+              "2x uitgebreid bloedonderzoek tijdens het traject",
+              "Supplementen volledig afgestemd op jouw tekorten en biomarkers",
+              "Biometrische monitoring van meetbare gezondheidsverbetering"
+            ]
+          }
         ]
       },
-      {
-        "name": "Flow Advanced",
-        "tagline": "Maximale synergie tussen therapie en voeding.",
-        "price": "€179",
-        "featured": true,
-        "minSessions": "Vanaf 3 sessies",
-        "features": [
-          "Alles uit het Flow Essential pakket",
-          "Hoogwaardig pakket met klinische supplementen",
-          "Optimale ondersteuning van het celvernieuwingsproces",
-          "Effectieve aanpak van systemische ontstekingen"
-        ]
-      },
-      {
-        "name": "Flow Precision",
-        "tagline": "Gezondheid op basis van jouw unieke biometrische data.",
-        "price": "€199",
-        "minSessions": "Vanaf 10 sessies",
-        "features": [
-          "Alles uit het Flow Advanced pakket",
-          "2x Uitgebreid bloedonderzoek (nulmeting en resultaat)",
-          "Supplementen 100% afgestemd op jouw tekorten en waarden",
-          "Biometrische monitoring van waardeverbetering"
+      "clinical": {
+        "label": "Clinical",
+        "packages": [
+          {
+            "name": "Clinical Essential",
+            "tagline": "Een gestructureerd klinisch traject voor diep circulair herstel.",
+            "price": "€5.088,00",
+            "priceNote": "voor 32 sessies",
+            "minSessions": "32 sessies",
+            "features": [
+              "32 gespecialiseerde EECP-therapiesessies",
+              "Klinisch begeleide ondersteuning van hart en bloedsomloop",
+              "Geleidelijke verbetering van circulatie en zuurstofvoorziening",
+              "Gestructureerd herstel voor energie, focus en belastbaarheid"
+            ]
+          },
+          {
+            "name": "Clinical Advanced",
+            "tagline": "Een intensief programma met therapie en gerichte ondersteuning.",
+            "price": "€5.238,00",
+            "priceNote": "voor 32 sessies",
+            "featured": true,
+            "minSessions": "32 sessies",
+            "features": [
+              "Alles uit Clinical Essential",
+              "Klinische supplementondersteuning gedurende het hele traject",
+              "Extra focus op ontstekingsremming en cellulair herstel",
+              "Ontwikkeld voor een uitgebreider therapeutisch protocol"
+            ]
+          },
+          {
+            "name": "Clinical Precision",
+            "tagline": "Het meest datagedreven klinische pakket voor persoonlijke optimalisatie.",
+            "price": "€5.588,00",
+            "priceNote": "voor 32 sessies",
+            "minSessions": "32 sessies",
+            "features": [
+              "Alles uit Clinical Advanced",
+              "2x uitgebreid bloedonderzoek tijdens het traject",
+              "Supplementstrategie afgestemd op biomarkers en tekorten",
+              "Monitoring gericht op meetbare cardiovasculaire vooruitgang"
+            ]
+          }
         ]
       }
-    ]
+    }
   },
   "prijslijst": {
     "sectionLabel": "Transparante tarieven",
