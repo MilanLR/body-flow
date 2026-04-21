@@ -1,4 +1,6 @@
 import { useLang } from "@/i18n/LangContext";
+import { RouteLink } from "@/components/RouteLink";
+import type { PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
 export function Footer() {
@@ -10,7 +12,9 @@ export function Footer() {
       <div className="container">
         <div className="mobile-footer-stack flex justify-between items-start flex-wrap gap-8 mb-10">
           <div>
-            <BodyFlowLogo white />
+            <RouteLink pageKey="home" className="inline-block no-underline">
+              <BodyFlowLogo white />
+            </RouteLink>
             <p className="font-body text-[0.8rem] text-white/55 mt-4 max-w-[240px] leading-relaxed">
               {tx.tagline}
             </p>
@@ -21,14 +25,14 @@ export function Footer() {
                 {tx.nav}
               </h4>
               <div className="flex flex-col gap-2.5">
-                {tx.navLinks.map(([label, href]) => (
-                  <a
-                    key={href}
-                    href={href}
+                {tx.pageLinks.map((link) => (
+                  <RouteLink
+                    key={link.pageKey}
+                    pageKey={link.pageKey as PageKey}
                     className="font-body text-[0.85rem] text-white/70 no-underline hover:text-white transition-colors"
                   >
-                    {label}
-                  </a>
+                    {link.label}
+                  </RouteLink>
                 ))}
               </div>
             </div>

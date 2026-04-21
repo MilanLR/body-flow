@@ -1,9 +1,18 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
+
+import { RouteLink } from "@/components/RouteLink";
 import { useLang, type Lang } from "@/i18n/LangContext";
+import { getAlternateLanguagePath, type PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
 function LangSwitcher({ scrolled }: { scrolled: boolean }) {
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
+  const [location, navigate] = useLocation();
+
+  function handleSwitch(nextLang: Lang) {
+    navigate(getAlternateLanguagePath(location, nextLang));
+  }
 
   return (
     <div
@@ -15,7 +24,7 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
       {(["nl", "en"] as Lang[]).map((l) => (
         <button
           key={l}
-          onClick={() => setLang(l)}
+          onClick={() => handleSwitch(l)}
           className="font-body rounded-2xl border-none text-[0.7rem] font-semibold uppercase tracking-[0.06em] transition-all duration-200"
           style={{
             background:
@@ -41,10 +50,11 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
 }
 
 export function Navbar() {
-  const { t } = useLang();
+  const { t, pageKey } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const tx = t.nav;
+  const useDarkTopState = scrolled || pageKey !== "home";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -53,13 +63,12 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: tx.eecp, href: "#eecp" },
-    { label: tx.voordelen, href: "#voordelen" },
-    { label: tx.traject, href: "#traject" },
-    { label: tx.pakketten, href: "#pakketten" },
-    { label: tx.tarieven, href: "#prijslijst" },
-    { label: tx.contact, href: "#contact" },
-  ];
+    { label: tx.treatment, pageKey: "treatment" },
+    { label: tx.costs, pageKey: "costs" },
+    { label: tx.whoItsFor, pageKey: "whoItsFor" },
+    { label: tx.amsterdam, pageKey: "amsterdam" },
+    { label: tx.contact, pageKey: "contact" },
+  ] satisfies Array<{ label: string; pageKey: PageKey }>;
 
   return (
     <nav
@@ -74,19 +83,19 @@ export function Navbar() {
       }}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="no-underline">
-          <BodyFlowLogo white={!scrolled} />
-        </a>
+        <RouteLink pageKey="home" className="no-underline">
+          <BodyFlowLogo white={!useDarkTopState} />
+        </RouteLink>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
+            <RouteLink
+              key={link.pageKey}
+              pageKey={link.pageKey}
               className="font-body text-[0.8rem] font-medium tracking-[0.06em] no-underline transition-opacity duration-200"
               style={{
-                color: scrolled
+                color: useDarkTopState
                   ? "var(--navy-800)"
                   : "rgba(255,255,255,0.9)",
               }}
@@ -98,14 +107,14 @@ export function Navbar() {
               }
             >
               {link.label}
-            </a>
+            </RouteLink>
           ))}
-          <a
-            href="#contact"
+          <RouteLink
+            pageKey="contact"
             className="btn-pill"
             style={{
-              color: scrolled ? "var(--navy-800)" : "white",
-              borderColor: scrolled
+              color: useDarkTopState ? "var(--navy-800)" : "white",
+              borderColor: useDarkTopState
                 ? "var(--navy-800)"
                 : "rgba(255,255,255,0.7)",
               fontSize: "0.7rem",
@@ -113,11 +122,14 @@ export function Navbar() {
             }}
           >
             {tx.boek}
-          </a>
+          </RouteLink>
         </div>
 
         {/* Mobile hamburger */}
         <div className="flex items-center gap-3">
+          <div className="hidden md:block">
+            <LangSwitcher scrolled={useDarkTopState} />
+          </div>
           <button
             className="md:hidden bg-transparent border-none p-2"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -128,7 +140,7 @@ export function Navbar() {
                   key={i}
                   className="w-6 h-0.5 rounded-sm transition-all duration-300"
                   style={{
-                    background: scrolled
+                    background: useDarkTopState
                       ? "var(--navy-800)"
                       : "white",
                   }}
@@ -144,22 +156,22 @@ export function Navbar() {
         <div className="bg-white py-4 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
           <div className="container flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <RouteLink
+                key={link.pageKey}
+                pageKey={link.pageKey}
                 onClick={() => setMenuOpen(false)}
                 className="font-body text-[0.9rem] font-medium no-underline text-[var(--navy-800)]"
               >
                 {link.label}
-              </a>
+              </RouteLink>
             ))}
-            <a
-              href="#contact"
+            <RouteLink
+              pageKey="contact"
               onClick={() => setMenuOpen(false)}
               className="btn-pill btn-pill-navy self-start"
             >
               {tx.boek}
-            </a>
+            </RouteLink>
           </div>
         </div>
       )}

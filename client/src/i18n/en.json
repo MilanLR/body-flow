@@ -1,5 +1,10 @@
 {
   "nav": {
+    "home": "Home",
+    "treatment": "EECP Therapy",
+    "costs": "Costs",
+    "whoItsFor": "Who it's for",
+    "amsterdam": "Amsterdam",
     "eecp": "What is EECP",
     "voordelen": "Benefits",
     "traject": "The Journey",
@@ -16,6 +21,43 @@
     "stat": "35+",
     "statLabel": "years of clinical evidence in cardiology",
     "statNote": "* clinically proven effective in peer-reviewed medical studies"
+  },
+  "seo": {
+    "viewMore": "View more information",
+    "pages": {
+      "home": {
+        "title": "BodyFlow Amsterdam | EECP therapy in Amsterdam and Amstelveen",
+        "description": "BodyFlow Amsterdam offers EECP therapy in Amstelveen for cardiovascular support, recovery and vitality."
+      },
+      "treatment": {
+        "title": "EECP therapy | BodyFlow Amsterdam",
+        "description": "Discover how EECP therapy works and what a treatment journey at BodyFlow Amsterdam involves."
+      },
+      "costs": {
+        "title": "EECP therapy costs | BodyFlow Amsterdam",
+        "description": "View pricing, intake details and treatment options for EECP therapy at BodyFlow Amsterdam."
+      },
+      "whoItsFor": {
+        "title": "Who EECP therapy is for | BodyFlow Amsterdam",
+        "description": "Learn who may benefit from EECP therapy and the support BodyFlow Amsterdam provides."
+      },
+      "amsterdam": {
+        "title": "EECP therapy in Amsterdam and Amstelveen | BodyFlow Amsterdam",
+        "description": "BodyFlow Amsterdam offers EECP therapy in Amstelveen with a focus on cardiovascular support and recovery."
+      },
+      "contact": {
+        "title": "Contact | BodyFlow Amsterdam",
+        "description": "Get in touch with BodyFlow Amsterdam for questions, an intake or more information about EECP therapy."
+      }
+    }
+  },
+  "pageCtas": {
+    "home": { "label": "View more information", "href": "treatment" },
+    "treatment": { "label": "View more information", "href": "costs" },
+    "costs": { "label": "View more information", "href": "contact" },
+    "whoItsFor": { "label": "View more information", "href": "contact" },
+    "amsterdam": { "label": "View more information", "href": "contact" },
+    "contact": { "label": "View more information", "href": "contact" }
   },
   "eecp": {
     "sectionLabel": "Restore your circulation",
@@ -247,6 +289,14 @@
     "contactLabel": "Contact",
     "copyright": "© 2026 BodyFlow Amsterdam. All rights reserved.",
     "location": "EECP therapy — Located in Amstelveen",
+    "pageLinks": [
+      { "pageKey": "home", "label": "Home", "href": "home" },
+      { "pageKey": "treatment", "label": "EECP Therapy", "href": "treatment" },
+      { "pageKey": "costs", "label": "Costs", "href": "costs" },
+      { "pageKey": "whoItsFor", "label": "Who it's for", "href": "whoItsFor" },
+      { "pageKey": "amsterdam", "label": "Amsterdam", "href": "amsterdam" },
+      { "pageKey": "contact", "label": "Contact", "href": "contact" }
+    ],
     "navLinks": [["What is EECP", "#eecp"], ["Benefits", "#voordelen"], ["The Journey", "#traject"], ["Packages", "#pakketten"], ["Pricing", "#prijslijst"], ["Contact", "#contact"]]
   }
 }

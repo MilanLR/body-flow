@@ -3,27 +3,49 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { useLang } from "@/i18n/LangContext";
+import { useLang, type Lang } from "@/i18n/LangContext";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
 import { buildContactPayload } from "./contactForm";
 
-const contactSchema = z.object({
-  voornaam: z.string().min(1, "Verplicht"),
-  achternaam: z.string().min(1, "Verplicht"),
-  telefoon: z.string().optional(),
-  email: z.string().email("Ongeldig e-mailadres"),
-  contactvoorkeur: z.enum(["telefoon", "email"]),
-  opmerkingen: z.string().optional(),
-});
+function getContactValidationMessages(lang: Lang) {
+  return lang === "en"
+    ? {
+        required: "Required",
+        invalidEmail: "Invalid email address",
+        submitError: "Something went wrong. Please try again.",
+      }
+    : {
+        required: "Verplicht",
+        invalidEmail: "Ongeldig e-mailadres",
+        submitError: "Er ging iets mis. Probeer het opnieuw.",
+      };
+}
 
-type ContactFormData = z.infer<typeof contactSchema>;
+export function createContactSchema(lang: Lang) {
+  const messages = getContactValidationMessages(lang);
+
+  return z.object({
+    voornaam: z.string().min(1, messages.required),
+    achternaam: z.string().min(1, messages.required),
+    telefoon: z.string().optional(),
+    email: z.string().email(messages.invalidEmail),
+    contactvoorkeur: z.enum(["telefoon", "email"], messages.required),
+    opmerkingen: z.string().optional(),
+  });
+}
+
+export function getContactSubmitErrorMessage(lang: Lang) {
+  return getContactValidationMessages(lang).submitError;
+}
+
+type ContactFormData = z.infer<ReturnType<typeof createContactSchema>>;
 
 export const EMAIL_LINK_ICON_PATH =
   "M2.25 4.5H15.75V13.5H2.25V4.5ZM3.75 6L9 9.75L14.25 6";
 
 export function Contact() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const { ref, inView } = useInView();
   const tx = t.contact;
   const [submitted, setSubmitted] = useState(false);
@@ -34,7 +56,7 @@ export function Contact() {
     formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+    resolver: zodResolver(createContactSchema(lang)),
   });
 
   const onSubmit = async (data: ContactFormData) => {
@@ -49,10 +71,10 @@ export function Contact() {
         setSubmitted(true);
         reset();
       } else {
-        toast.error("Er ging iets mis. Probeer het opnieuw.");
+        toast.error(getContactSubmitErrorMessage(lang));
       }
     } catch {
-      toast.error("Er ging iets mis. Probeer het opnieuw.");
+      toast.error(getContactSubmitErrorMessage(lang));
     }
   };
 

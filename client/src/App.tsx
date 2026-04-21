@@ -1,20 +1,51 @@
+import { type ComponentType } from "react";
+import { Redirect, Route, Switch } from "wouter";
+
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { LangProvider } from "@/i18n/LangContext";
+import { DEFAULT_LANG, LOCALIZED_ROUTES, getLocalizedPath, type PageKey } from "@/lib/routes";
+import { useLocalizedPage } from "@/hooks/useLocalizedPage";
+import AmsterdamPage from "@/pages/AmsterdamPage";
+import ContactPage from "@/pages/ContactPage";
+import CostsPage from "@/pages/CostsPage";
+import LocalizedHomePage from "@/pages/LocalizedHomePage";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import TreatmentPage from "@/pages/TreatmentPage";
+import WhoItsForPage from "@/pages/WhoItsForPage";
+
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
 
+function RootRedirect() {
+  return <Redirect to={getLocalizedPath(DEFAULT_LANG, "home")} />;
+}
 
-function Router() {
+const localizedPageComponents: Record<PageKey, ComponentType<any>> = {
+  home: LocalizedHomePage,
+  treatment: TreatmentPage,
+  costs: CostsPage,
+  whoItsFor: WhoItsForPage,
+  amsterdam: AmsterdamPage,
+  contact: ContactPage,
+};
+
+function LocalizedAppShell() {
+  const langValue = useLocalizedPage();
+
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <LangProvider value={langValue}>
+      <Switch>
+        <Route path={"/"} component={RootRedirect} />
+        {LOCALIZED_ROUTES.flatMap(({ pageKey, paths }) => [
+          <Route key={`nl-${pageKey}`} path={paths.nl} component={localizedPageComponents[pageKey]} />,
+          <Route key={`en-${pageKey}`} path={paths.en} component={localizedPageComponents[pageKey]} />,
+        ])}
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </LangProvider>
   );
 }
 
@@ -26,12 +57,10 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <LocalizedAppShell />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

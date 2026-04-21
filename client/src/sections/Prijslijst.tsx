@@ -1,11 +1,13 @@
 import { useLang } from "@/i18n/LangContext";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
+import { resolveSharedContactHref } from "./sharedLinks";
 
 export function Prijslijst() {
-  const { t } = useLang();
+  const { lang, pageKey, t } = useLang();
   const { ref, inView } = useInView();
   const tx = t.prijslijst;
+  const contactHref = resolveSharedContactHref(lang, pageKey);
 
   return (
     <section id="prijslijst" className="mobile-padding bg-white py-24">
@@ -44,7 +46,7 @@ export function Prijslijst() {
 
           <div className="mt-10 flex justify-end">
             <a
-              href="#contact"
+              href={contactHref}
               className="btn-pill btn-pill-navy flex items-center gap-2"
             >
               {tx.book}

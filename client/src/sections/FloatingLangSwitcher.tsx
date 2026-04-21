@@ -1,8 +1,15 @@
 import { useLang } from "@/i18n/LangContext";
 import type { Lang } from "@/i18n/LangContext";
+import { getAlternateLanguagePath } from "@/lib/routes";
+import { useLocation } from "wouter";
 
 export function FloatingLangSwitcher() {
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
+  const [location, navigate] = useLocation();
+
+  function handleSwitch(nextLang: Lang) {
+    navigate(getAlternateLanguagePath(location, nextLang));
+  }
 
   return (
     <div
@@ -16,7 +23,7 @@ export function FloatingLangSwitcher() {
       {(["nl", "en"] as Lang[]).map((l) => (
         <button
           key={l}
-          onClick={() => setLang(l)}
+          onClick={() => handleSwitch(l)}
           className="border-none rounded-[18px] font-body text-[0.72rem] font-semibold tracking-[0.08em] uppercase transition-all duration-300"
           style={{
             background: lang === l ? "rgba(255,255,255,0.18)" : "transparent",

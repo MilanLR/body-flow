@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { createElement } from "react";
 
 import en from "@/i18n/en.json";
-import { LangProvider } from "@/i18n/LangContext";
+import { LangProvider, createLangContextValue } from "@/i18n/LangContext";
 import nl from "@/i18n/nl.json";
 
 import { getPackageVariantData, Pakketten } from "./Pakketten";
@@ -45,7 +45,11 @@ describe("Pakketten package variants", () => {
 
   it("renders the intake block before the flow clinical toggle and package cards", () => {
     const html = renderToStaticMarkup(
-      createElement(LangProvider, null, createElement(Pakketten)),
+      createElement(
+        LangProvider,
+        { value: createLangContextValue("nl", "home", () => {}) },
+        createElement(Pakketten),
+      ),
     );
 
     const intakeIndex = html.indexOf(nl.pakketten.intakeText);

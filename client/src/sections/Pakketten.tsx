@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useLang } from "@/i18n/LangContext";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
+import { resolveSharedContactHref } from "./sharedLinks";
 
 export type PackageVariant = "flow" | "clinical";
 
@@ -17,11 +18,12 @@ export function getPackageVariantData(
 }
 
 export function Pakketten() {
-  const { t } = useLang();
+  const { lang, pageKey, t } = useLang();
   const { ref, inView } = useInView();
   const tx = t.pakketten;
   const [variant, setVariant] = useState<PackageVariant>("flow");
   const activeVariant = getPackageVariantData(tx, variant);
+  const contactHref = resolveSharedContactHref(lang, pageKey);
 
   return (
     <section
@@ -187,7 +189,7 @@ export function Pakketten() {
                       </span>
                     </div>
                     <a
-                      href="#contact"
+                      href={contactHref}
                       className="btn-pill btn-pill-navy text-[0.7rem] py-2.5 px-5 flex items-center gap-2"
                     >
                       {tx.book}
