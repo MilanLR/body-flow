@@ -157,7 +157,7 @@
         "label": "Flow",
         "packages": [
           {
-            "name": "The Flow Essential",
+            "name": "Flow Essential",
             "tagline": "De fundering voor een vitaal hart- en vaatstelsel.",
             "price": "€159",
             "priceNote": "per sessie",
@@ -170,14 +170,14 @@
             ]
           },
           {
-            "name": "The Flow Advanced",
+            "name": "Flow Advanced",
             "tagline": "Maximale synergie tussen therapie en voeding.",
             "price": "€179",
             "priceNote": "per sessie",
             "featured": true,
             "minSessions": "Vanaf 3 sessies",
             "features": [
-              "Alles uit The Flow Essential",
+              "Alles uit Flow Essential",
               "Hoogwaardig pakket met klinische supplementen",
               "Optimale ondersteuning van het celvernieuwingsproces",
               "Snellere afvoer van afvalstoffen en toxines",
@@ -185,13 +185,13 @@
             ]
           },
           {
-            "name": "The Flow Precision",
+            "name": "Flow Precision",
             "tagline": "Gezondheid op basis van jouw unieke biometrische data.",
             "price": "€199",
             "priceNote": "per sessie",
             "minSessions": "Vanaf 10 sessies",
             "features": [
-              "Alles uit The Flow Advanced",
+              "Alles uit Flow Advanced",
               "2x uitgebreid bloedonderzoek tijdens het traject",
               "Supplementen volledig afgestemd op jouw tekorten en biomarkers",
               "Biometrische monitoring van meetbare gezondheidsverbetering"
