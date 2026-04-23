@@ -157,7 +157,7 @@
         "label": "Flow",
         "packages": [
           {
-            "name": "The Flow Essential",
+            "name": "Flow Essential",
             "tagline": "The foundation for a vital cardiovascular system.",
             "price": "€159",
             "priceNote": "per session",
@@ -170,14 +170,14 @@
             ]
           },
           {
-            "name": "The Flow Advanced",
+            "name": "Flow Advanced",
             "tagline": "Maximum synergy between therapy and nutrition.",
             "price": "€179",
             "priceNote": "per session",
             "featured": true,
             "minSessions": "From 3 sessions",
             "features": [
-              "Everything in The Flow Essential",
+              "Everything in Flow Essential",
               "High-quality package with clinical supplements",
               "Optimal support of the cell renewal process",
               "Faster elimination of metabolic waste and toxins",
@@ -185,13 +185,13 @@
             ]
           },
           {
-            "name": "The Flow Precision",
+            "name": "Flow Precision",
             "tagline": "Health based on your unique biometric data.",
             "price": "€199",
             "priceNote": "per session",
             "minSessions": "From 10 sessions",
             "features": [
-              "Everything in The Flow Advanced",
+              "Everything in Flow Advanced",
               "2x comprehensive blood analysis (baseline and follow-up)",
               "Supplements tailored 100% to your deficiencies and biomarkers",
               "Biometric monitoring of health improvements"
