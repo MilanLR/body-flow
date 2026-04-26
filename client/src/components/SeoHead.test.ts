@@ -105,6 +105,12 @@ describe("SeoHead", () => {
       "https://body-flow.nl/og-image.jpg",
     );
     expect(
+      document.head.querySelector('script[type="application/ld+json"]')?.textContent,
+    ).toContain('"@type":"MedicalBusiness"');
+    expect(
+      document.head.querySelector('script[type="application/ld+json"]')?.textContent,
+    ).toContain('"url":"https://body-flow.nl/nl/kosten"');
+    expect(
       Array.from(document.head.querySelectorAll('link[rel="alternate"]')).map((element) => ({
         hrefLang: element.getAttribute("hreflang"),
         href: element.getAttribute("href"),
@@ -135,6 +141,9 @@ describe("SeoHead", () => {
     expect(document.head.querySelector('meta[name="twitter:image"]')?.getAttribute("content")).toBe(
       "https://body-flow.nl/og-image.jpg",
     );
+    expect(
+      document.head.querySelector('script[type="application/ld+json"]')?.textContent,
+    ).toContain('"url":"https://body-flow.nl/en/costs"');
     expect(
       Array.from(document.head.querySelectorAll('link[rel="alternate"]')).map((element) => ({
         hrefLang: element.getAttribute("hreflang"),

@@ -10,7 +10,7 @@ export function EECP() {
   const hero = t.hero;
 
   return (
-    <section id="eecp" className="mobile-padding bg-white py-24">
+    <section id="eecp" className="mobile-padding bg-white pb-24 pt-2 md:pt-4">
       <div className="container">
         <div
           ref={ref}

@@ -26,7 +26,7 @@
     "viewMore": "View more information",
     "pages": {
       "home": {
-        "title": "BodyFlow Amsterdam | EECP therapy in Amsterdam and Amstelveen",
+        "title": "BodyFlow Amsterdam | EECP therapy in the Amsterdam region",
         "description": "BodyFlow Amsterdam offers EECP therapy in Amstelveen for cardiovascular support, recovery and vitality."
       },
       "treatment": {
@@ -42,7 +42,7 @@
         "description": "Learn who may benefit from EECP therapy and the support BodyFlow Amsterdam provides."
       },
       "amsterdam": {
-        "title": "EECP therapy in Amsterdam and Amstelveen | BodyFlow Amsterdam",
+        "title": "EECP therapy in the Amsterdam region | BodyFlow Amsterdam",
         "description": "BodyFlow Amsterdam offers EECP therapy in Amstelveen with a focus on cardiovascular support and recovery."
       },
       "contact": {
@@ -58,6 +58,66 @@
     "whoItsFor": { "label": "View more information", "href": "contact" },
     "amsterdam": { "label": "View more information", "href": "contact" },
     "contact": { "label": "View more information", "href": "contact" }
+  },
+  "focusedPages": {
+    "treatment": {
+      "title": "EECP therapy at BodyFlow Amsterdam",
+      "intro": "EECP therapy is for people who want to support circulation, resilience and recovery without an invasive intervention. This page explains how the treatment works, which benefits clients often seek, and how a trajectory is structured.",
+      "sections": []
+    },
+    "costs": {
+      "title": "EECP therapy costs",
+      "intro": "What does EECP therapy cost at BodyFlow Amsterdam? The total investment depends on the intake, the number of sessions and the level of support that fits your trajectory. Below you can see both the package options and the individual rates.",
+      "sections": [
+        {
+          "title": "A clear structure for intake, sessions and added support",
+          "body": "We keep the pricing deliberately transparent. You start with an intake and then choose the route that matches your goals: individual sessions, a package with extra support, or a more structured clinical trajectory."
+        }
+      ]
+    },
+    "whoItsFor": {
+      "title": "Who EECP therapy may be for",
+      "intro": "EECP therapy is often considered by people who want to seriously improve cardiovascular support, energy or recovery. Suitability is never assumed, which is why every recommendation starts with a medical assessment.",
+      "sections": [
+        {
+          "title": "Often relevant for recovery, reduced capacity and performance goals",
+          "body": "Clients often come in with persistent fatigue, limited exercise tolerance, a need for structured recovery after illness, or a wish to improve physical and mental resilience."
+        },
+        {
+          "title": "Intake first, then a treatment recommendation",
+          "body": "This page is not meant to make broad medical claims. Its purpose is to explain that the intake determines whether EECP is useful, safe and proportionate in your situation.",
+          "items": [
+            "People who want to support recovery and circulation after an intense period.",
+            "Clients looking for more energy, focus or day-to-day resilience.",
+            "People who want a structured trajectory with medical intake and monitoring."
+          ]
+        }
+      ]
+    },
+    "amsterdam": {
+      "title": "EECP therapy in the Amsterdam region",
+      "intro": "BodyFlow Amsterdam operates from Amstelveen for clients in Amsterdam and the surrounding area. The setting combines a calm treatment environment, a medical intake as the starting point and a trajectory focused on practical support for recovery and vitality.",
+      "sections": [
+        {
+          "title": "Accessible from Amsterdam and the wider region",
+          "body": "The location on Amsterdamseweg in Amstelveen is designed as one fixed place for intake, treatment and follow-up. That keeps the trajectory coherent instead of spreading it across different addresses or disconnected appointments."
+        },
+        {
+          "title": "A local setting with specialist focus",
+          "body": "For many clients, proximity matters: you want a location that is easy to reach but calm enough to maintain a treatment rhythm. That is why we combine a regional location with a clear focus on EECP therapy and guidance."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact BodyFlow Amsterdam",
+      "intro": "Contact BodyFlow Amsterdam if you have questions about EECP therapy, want to schedule an intake or would like to discuss whether a trajectory fits your situation. You can also use the form to share whether you prefer a call or an email.",
+      "sections": [
+        {
+          "title": "Get in touch with BodyFlow Amsterdam",
+          "body": "Use the form for an intake request or a more detailed question. We will respond as quickly as possible and match the first follow-up to your preferred contact method."
+        }
+      ]
+    }
   },
   "eecp": {
     "sectionLabel": "Restore your circulation",
@@ -154,7 +214,7 @@
     "book": "Book",
     "packageVariants": {
       "flow": {
-        "label": "Flow",
+        "label": "The Flow",
         "packages": [
           {
             "name": "Flow Essential",
@@ -267,8 +327,24 @@
     "sectionLabel": "Get in touch",
     "h2": "Contact",
     "openingsLabel": "Opening hours",
-    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "times": ["09:00 – 21:00", "18:00 – 21:00", "18:00 – 21:00", "09:00 – 18:00", "Closed", "Closed", "09:00 – 21:00"],
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "times": [
+      "09:00 – 21:00",
+      "18:00 – 21:00",
+      "18:00 – 21:00",
+      "09:00 – 18:00",
+      "Closed",
+      "Closed",
+      "09:00 – 21:00"
+    ],
     "closed": "Closed",
     "formTitle": "Schedule an intake",
     "firstName": "First name*",
@@ -297,6 +373,13 @@
       { "pageKey": "amsterdam", "label": "Amsterdam", "href": "amsterdam" },
       { "pageKey": "contact", "label": "Contact", "href": "contact" }
     ],
-    "navLinks": [["What is EECP", "#eecp"], ["Benefits", "#voordelen"], ["The Journey", "#traject"], ["Packages", "#pakketten"], ["Pricing", "#prijslijst"], ["Contact", "#contact"]]
+    "navLinks": [
+      ["What is EECP", "#eecp"],
+      ["Benefits", "#voordelen"],
+      ["The Journey", "#traject"],
+      ["Packages", "#pakketten"],
+      ["Pricing", "#prijslijst"],
+      ["Contact", "#contact"]
+    ]
   }
 }

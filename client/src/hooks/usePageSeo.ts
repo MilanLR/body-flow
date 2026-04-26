@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 
-import { buildAlternates, buildCanonicalUrl, getPrimaryImageUrl } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildCanonicalUrl,
+  buildLocalBusinessSchema,
+  getPrimaryImageUrl,
+  serializeSchema,
+} from "@/lib/seo";
 import { SITE_NAME } from "@/lib/site";
 
 type SeoArgs = {
@@ -48,6 +54,20 @@ function upsertSingletonTag(
   }
 
   return element;
+}
+
+function upsertStructuredDataScript(document: Document, pathname: string) {
+  const selector = 'script[data-seo="page"][type="application/ld+json"]';
+  const existing = document.head.querySelector<HTMLScriptElement>(selector);
+  const element = existing ?? document.createElement("script");
+
+  element.setAttribute("data-seo", "page");
+  element.setAttribute("type", "application/ld+json");
+  element.textContent = serializeSchema(buildLocalBusinessSchema(pathname));
+
+  if (!existing) {
+    document.head.appendChild(element);
+  }
 }
 
 export function usePageSeo({ title, description, pathname }: SeoArgs) {
@@ -124,6 +144,8 @@ export function usePageSeo({ title, description, pathname }: SeoArgs) {
       name: "twitter:image",
       content: getPrimaryImageUrl(),
     });
+
+    upsertStructuredDataScript(document, pathname);
 
     for (const alternate of buildAlternates(pathname)) {
       upsertTag(

@@ -23,6 +23,13 @@ describe("Navbar", () => {
     expect(html).toContain('href="/nl/"');
   });
 
+  it("does not render a language switcher in the top bar", () => {
+    const html = renderNavbar("en", "home");
+
+    expect(html).not.toContain(">nl</button>");
+    expect(html).not.toContain(">en</button>");
+  });
+
   it("renders dark header styling at the top on non-home pages", () => {
     const html = renderNavbar("en", "costs");
 
@@ -36,8 +43,8 @@ describe("Navbar", () => {
     expect(html).toContain('href="/en/eecp-therapy"');
     expect(html).toContain('href="/en/costs"');
     expect(html).toContain('href="/en/who-its-for"');
-    expect(html).toContain('href="/en/amsterdam"');
     expect(html).toContain('href="/en/contact"');
+    expect(html).not.toContain('href="/en/amsterdam"');
     expect(html).not.toContain('href="#eecp"');
     expect(html).not.toContain('href="#contact"');
   });

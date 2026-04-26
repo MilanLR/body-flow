@@ -26,7 +26,7 @@
     "viewMore": "Bekijk meer informatie",
     "pages": {
       "home": {
-        "title": "BodyFlow Amsterdam | EECP therapie in Amsterdam en Amstelveen",
+        "title": "BodyFlow Amsterdam | EECP therapie in regio Amsterdam",
         "description": "BodyFlow Amsterdam biedt EECP-therapie in Amstelveen voor cardiovasculaire ondersteuning, herstel en vitaliteit."
       },
       "treatment": {
@@ -42,7 +42,7 @@
         "description": "Lees voor wie EECP-therapie passend kan zijn en welke ondersteuning BodyFlow Amsterdam biedt."
       },
       "amsterdam": {
-        "title": "EECP therapie in Amsterdam en Amstelveen | BodyFlow Amsterdam",
+        "title": "EECP therapie in regio Amsterdam | BodyFlow Amsterdam",
         "description": "BodyFlow Amsterdam biedt EECP-therapie in Amstelveen met focus op cardiovasculaire ondersteuning en herstel."
       },
       "contact": {
@@ -58,6 +58,66 @@
     "whoItsFor": { "label": "Bekijk meer informatie", "href": "contact" },
     "amsterdam": { "label": "Bekijk meer informatie", "href": "contact" },
     "contact": { "label": "Bekijk meer informatie", "href": "contact" }
+  },
+  "focusedPages": {
+    "treatment": {
+      "title": "EECP-therapie bij BodyFlow Amsterdam",
+      "intro": "EECP-therapie is bedoeld voor mensen die hun doorbloeding, belastbaarheid en herstel willen ondersteunen zonder invasieve ingreep. Op deze pagina lees je hoe de behandeling werkt, welke voordelen cliënten zoeken en hoe een traject is opgebouwd.",
+      "sections": []
+    },
+    "costs": {
+      "title": "Kosten van EECP-therapie",
+      "intro": "Wat kost EECP-therapie bij BodyFlow Amsterdam? De totale investering hangt af van de intake, het aantal sessies en de mate van begeleiding die bij jouw traject past. Hieronder zie je zowel de pakketten als de losse tarieven.",
+      "sections": [
+        {
+          "title": "Heldere opbouw van intake, sessies en aanvullende ondersteuning",
+          "body": "We houden de prijsopbouw bewust overzichtelijk. Je start met een intake en kiest daarna een route die past bij je doelen: losse sessies, een pakket met extra ondersteuning of een uitgebreider klinisch traject."
+        }
+      ]
+    },
+    "whoItsFor": {
+      "title": "Voor wie EECP-therapie geschikt kan zijn",
+      "intro": "EECP-therapie wordt vaak overwogen door mensen die hun cardiovasculaire ondersteuning, energie of herstel serieus willen verbeteren. De behandeling is niet voor iedereen hetzelfde, daarom begint geschiktheid altijd met een medische beoordeling.",
+      "sections": [
+        {
+          "title": "Vaak passend bij herstel, verminderde belastbaarheid en prestatievraagstukken",
+          "body": "Cliënten melden zich bijvoorbeeld met aanhoudende vermoeidheid, beperkte inspanningstolerantie, behoefte aan herstel na ziekte of de wens om hun fysieke en mentale belastbaarheid te verbeteren."
+        },
+        {
+          "title": "Intake eerst, pas daarna een behandeladvies",
+          "body": "We gebruiken deze pagina niet om algemene medische claims te doen. Het doel is juist om duidelijk te maken dat de intake bepaalt of EECP in jouw situatie zinvol, veilig en proportioneel is.",
+          "items": [
+            "Mensen die herstel en circulatie willen ondersteunen na een intensieve periode.",
+            "Cliënten die zoeken naar meer energie, focus of belastbaarheid in het dagelijks leven.",
+            "Mensen die behoefte hebben aan een gestructureerd traject met medische intake en monitoring."
+          ]
+        }
+      ]
+    },
+    "amsterdam": {
+      "title": "EECP-therapie in regio Amsterdam",
+      "intro": "BodyFlow Amsterdam werkt vanuit Amstelveen voor cliënten uit Amsterdam en de regio. Je vindt hier een rustige behandelomgeving, een medische intake als startpunt en een traject dat gericht is op praktische ondersteuning van herstel en vitaliteit.",
+      "sections": [
+        {
+          "title": "Goed bereikbaar voor Amsterdam en omgeving",
+          "body": "De locatie aan de Amsterdamseweg in Amstelveen is bedoeld als vaste plek voor intake, behandeling en evaluatie. Daardoor hoeft een traject niet versnipperd te raken over meerdere adressen of losse contactmomenten."
+        },
+        {
+          "title": "Een lokale setting met specialistische focus",
+          "body": "Voor veel cliënten is nabijheid belangrijk: je wilt een locatie die bereikbaar is, maar ook voldoende rust biedt om een behandelritme vol te houden. Daarom combineren we een regionale locatie met een duidelijke focus op EECP-therapie en begeleiding."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact met BodyFlow Amsterdam",
+      "intro": "Neem contact op met BodyFlow Amsterdam als je vragen hebt over EECP-therapie, een intake wilt plannen of wilt bespreken of een traject bij jouw situatie past. Via het formulier kun je je voorkeur voor telefoon of e-mail doorgeven.",
+      "sections": [
+        {
+          "title": "Neem contact op met BodyFlow Amsterdam",
+          "body": "Gebruik het formulier voor een intake-aanvraag of een inhoudelijke vraag. We reageren zo snel mogelijk en stemmen het eerste contactmoment af op jouw voorkeursmethode."
+        }
+      ]
+    }
   },
   "eecp": {
     "sectionLabel": "Herstel je circulatie",
@@ -154,7 +214,7 @@
     "book": "Boek intake",
     "packageVariants": {
       "flow": {
-        "label": "Flow",
+        "label": "The Flow",
         "packages": [
           {
             "name": "Flow Essential",

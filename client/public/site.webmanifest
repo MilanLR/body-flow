@@ -1,0 +1,20 @@
+{
+  "name": "BodyFlow Amsterdam",
+  "short_name": "BodyFlow",
+  "start_url": "/nl/",
+  "display": "standalone",
+  "background_color": "#1f3556",
+  "theme_color": "#3f7fc8",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "2048x2048",
+      "type": "image/png"
+    }
+  ]
+}

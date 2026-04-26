@@ -27,8 +27,25 @@ describe("App routing integration", () => {
     expect(contactHtml).toContain("Get in touch with BodyFlow Amsterdam");
     expect(costsHtml).toContain("Wat kost EECP-therapie bij BodyFlow Amsterdam?");
     expect(costsHtml).toContain('href="/nl/contact"');
+    expect(contactHtml).not.toContain("View more information");
+    expect(contactHtml).not.toContain('href="#contact"');
     expect(contactHtml).not.toContain("This localized page is a placeholder");
     expect(costsHtml).not.toContain("This localized page is a placeholder");
+  });
+
+  it("removes the old treatment narrative section from the focused treatment page", () => {
+    const html = renderApp("/en/eecp-therapy");
+
+    expect(html).toContain("What is EECP?");
+    expect(html).not.toContain("A treatment that combines rest with circulatory activation");
+  });
+
+  it("renders the English 404 copy for an unknown English route", () => {
+    const html = renderApp("/en/not-a-real-page");
+
+    expect(html).toContain("Page Not Found");
+    expect(html).toContain("It may have been moved or deleted.");
+    expect(html).not.toContain("Pagina niet gevonden");
   });
 
   it("records the root redirect to the Dutch home page", () => {

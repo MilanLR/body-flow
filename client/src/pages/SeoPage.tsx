@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { SeoCta } from "@/components/SeoCta";
 import { SeoHead } from "@/components/SeoHead";
+import { useLang } from "@/i18n/LangContext";
 import { FloatingLangSwitcher } from "@/sections/FloatingLangSwitcher";
 import { Footer } from "@/sections/Footer";
 import { Navbar } from "@/sections/Navbar";
@@ -19,6 +20,8 @@ export function SeoPage({
   pathname: string;
   children: ReactNode;
 }) {
+  const { pageKey } = useLang();
+
   return (
     <div className="min-h-screen">
       <SeoHead title={seoTitle} description={intro} pathname={pathname} />
@@ -38,7 +41,7 @@ export function SeoPage({
           </div>
         </section>
         {children}
-        <SeoCta />
+        {pageKey !== "contact" && <SeoCta />}
       </main>
       <Footer />
     </div>

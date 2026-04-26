@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://body-flow.nl/nl/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/eecp-therapie</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/eecp-therapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/eecp-therapy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/eecp-therapy</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/eecp-therapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/eecp-therapy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/kosten</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/kosten" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/costs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/costs</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/kosten" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/costs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/voor-wie</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/voor-wie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/who-its-for" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/who-its-for</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/voor-wie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/who-its-for" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/amsterdam</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/amsterdam" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/amsterdam" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/amsterdam</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/amsterdam" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/amsterdam" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/contact</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+</urlset>

@@ -20,6 +20,26 @@ async function startServer() {
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
+  app.get("/", (_req, res) => {
+    res.redirect(302, "/nl/");
+  });
+
+  const crawlFiles = {
+    "/robots.txt": "robots.txt",
+    "/sitemap.xml": "sitemap.xml",
+    "/site.webmanifest": "site.webmanifest",
+  } as const;
+
+  for (const [requestPath, fileName] of Object.entries(crawlFiles)) {
+    app.get(requestPath, (_req, res, next) => {
+      res.sendFile(path.join(staticPath, fileName), (error) => {
+        if (error) {
+          next(error);
+        }
+      });
+    });
+  }
+
   app.use(express.static(staticPath));
 
   // Handle client-side routing - serve index.html for all routes

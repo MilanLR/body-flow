@@ -1,53 +1,9 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
 
 import { RouteLink } from "@/components/RouteLink";
-import { useLang, type Lang } from "@/i18n/LangContext";
-import { getAlternateLanguagePath, type PageKey } from "@/lib/routes";
+import { useLang } from "@/i18n/LangContext";
+import { type PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
-
-function LangSwitcher({ scrolled }: { scrolled: boolean }) {
-  const { lang } = useLang();
-  const [location, navigate] = useLocation();
-
-  function handleSwitch(nextLang: Lang) {
-    navigate(getAlternateLanguagePath(location, nextLang));
-  }
-
-  return (
-    <div
-      className="flex items-center gap-0.5 rounded-[20px] px-1 py-0.5"
-      style={{
-        border: `1px solid ${scrolled ? "var(--ocean-300)" : "rgba(255,255,255,0.4)"}`,
-      }}
-    >
-      {(["nl", "en"] as Lang[]).map((l) => (
-        <button
-          key={l}
-          onClick={() => handleSwitch(l)}
-          className="font-body rounded-2xl border-none text-[0.7rem] font-semibold uppercase tracking-[0.06em] transition-all duration-200"
-          style={{
-            background:
-              lang === l
-                ? scrolled
-                  ? "var(--navy-800)"
-                  : "rgba(255,255,255,0.2)"
-                : "transparent",
-            color:
-              lang === l
-                ? "white"
-                : scrolled
-                  ? "oklch(0.40 0.05 235)"
-                  : "rgba(255,255,255,0.7)",
-            padding: "0.2rem 0.55rem",
-          }}
-        >
-          {l}
-        </button>
-      ))}
-    </div>
-  );
-}
 
 export function Navbar() {
   const { t, pageKey } = useLang();
@@ -66,7 +22,6 @@ export function Navbar() {
     { label: tx.treatment, pageKey: "treatment" },
     { label: tx.costs, pageKey: "costs" },
     { label: tx.whoItsFor, pageKey: "whoItsFor" },
-    { label: tx.amsterdam, pageKey: "amsterdam" },
     { label: tx.contact, pageKey: "contact" },
   ] satisfies Array<{ label: string; pageKey: PageKey }>;
 
@@ -127,9 +82,6 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <LangSwitcher scrolled={useDarkTopState} />
-          </div>
           <button
             className="md:hidden bg-transparent border-none p-2"
             onClick={() => setMenuOpen(!menuOpen)}

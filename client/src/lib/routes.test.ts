@@ -7,6 +7,7 @@ import {
   DEFAULT_LANG,
   LOCALIZED_ROUTES,
   PAGE_KEYS,
+  getLangFromPath,
   getLocalizedPath,
   getPageFromPath,
   getAlternateLanguagePath,
@@ -23,6 +24,12 @@ describe("localized routes", () => {
   it("derives page identity from route paths", () => {
     expect(getPageFromPath("/nl/voor-wie")).toEqual({ lang: "nl", pageKey: "whoItsFor" });
     expect(getPageFromPath("/en/contact")).toEqual({ lang: "en", pageKey: "contact" });
+  });
+
+  it("infers the language prefix for unknown localized paths", () => {
+    expect(getLangFromPath("/en/not-a-real-page")).toBe("en");
+    expect(getLangFromPath("/nl/not-a-real-page")).toBe("nl");
+    expect(getLangFromPath("/not-a-real-page")).toBe("nl");
   });
 
   it("swaps to the equivalent page in the other language", () => {
@@ -44,5 +51,7 @@ describe("localized routes", () => {
     expect(Object.keys(en.seo.pages)).toEqual(PAGE_KEYS);
     expect(Object.keys(nl.pageCtas)).toEqual(PAGE_KEYS);
     expect(Object.keys(en.pageCtas)).toEqual(PAGE_KEYS);
+    expect(Object.keys(nl.focusedPages)).toEqual(PAGE_KEYS.filter((key) => key !== "home"));
+    expect(Object.keys(en.focusedPages)).toEqual(PAGE_KEYS.filter((key) => key !== "home"));
   });
 });

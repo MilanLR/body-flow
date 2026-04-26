@@ -27,7 +27,11 @@ describe("injectSeoIntoHtml", () => {
     expect(html).toContain('meta name="description" content="View pricing, intake details and treatment options for EECP therapy at BodyFlow Amsterdam."');
     expect(html).toContain('link data-seo="page" rel="canonical" href="https://body-flow.nl/en/costs"');
     expect(html).toContain('meta property="og:url" content="https://body-flow.nl/en/costs"');
+    expect(html).toContain('meta property="og:image" content="https://body-flow.nl/og-image.jpg"');
     expect(html).toContain('meta name="twitter:title" content="EECP therapy costs | BodyFlow Amsterdam"');
+    expect(html).toContain('<script data-seo="page" type="application/ld+json">');
+    expect(html).toContain('"@type":"MedicalBusiness"');
+    expect(html).toContain('"url":"https://body-flow.nl/en/costs"');
     expect(html).toContain('link data-seo="page" rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/kosten"');
     expect(html).toContain('link data-seo="page" rel="alternate" hreflang="en" href="https://body-flow.nl/en/costs"');
   });
@@ -43,6 +47,7 @@ describe("injectSeoIntoHtml", () => {
     expect(html).toContain('meta name="robots" content="noindex,nofollow"');
     expect(html).toContain('meta name="description" content="The page you are looking for could not be found."');
     expect(html).toContain('link data-seo="page" rel="canonical" href="https://body-flow.nl/en/not-a-real-page"');
+    expect(html).toContain('"url":"https://body-flow.nl/en/not-a-real-page"');
     expect(html).not.toContain('hreflang="nl"');
     expect(html).not.toContain('hreflang="en"');
   });

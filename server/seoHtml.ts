@@ -1,4 +1,5 @@
 import { getRouteSeo } from "../client/src/lib/routeSeo";
+import { buildLocalBusinessSchema, serializeSchema } from "../client/src/lib/seo";
 
 function escapeHtml(value: string) {
   return value
@@ -58,6 +59,7 @@ export function injectSeoIntoHtml(html: string, pathname: string) {
     `<meta name="twitter:title" content="${escapeHtml(seo.title)}" />`,
     `<meta name="twitter:description" content="${escapeHtml(seo.description)}" />`,
     `<meta name="twitter:image" content="${seo.ogImage}" />`,
+    `<script data-seo="page" type="application/ld+json">${serializeSchema(buildLocalBusinessSchema(pathname))}</script>`,
     alternateTags,
   ].join("\n    ");
 

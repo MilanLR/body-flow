@@ -48,6 +48,16 @@ export function getLocalizedPath(lang: Lang, pageKey: PageKey) {
   return slug ? `/${lang}/${slug}` : `/${lang}/`;
 }
 
+export function getLangFromPath(pathname: string): Lang {
+  const normalized = pathname.replace(/\/+$/, "") || "/";
+
+  if (normalized === "/en" || normalized.startsWith("/en/")) {
+    return "en";
+  }
+
+  return DEFAULT_LANG;
+}
+
 export function getPageFromPath(
   pathname: string,
 ): { lang: Lang; pageKey: PageKey } | null {
