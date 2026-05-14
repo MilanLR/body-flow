@@ -265,11 +265,11 @@
           {
             "name": "Clinical Essential",
             "tagline": "A structured clinical trajectory for deep circulatory recovery.",
-            "price": "€5,088.00",
-            "priceNote": "for 32 sessions",
-            "minSessions": "32 sessions",
+            "price": "€5.565,00",
+            "priceNote": "for 35 sessions",
+            "minSessions": "35 sessions",
             "features": [
-              "32 specialized EECP therapy sessions",
+              "35 specialized EECP therapy sessions",
               "Clinically guided cardiovascular support",
               "Steady improvement of circulation and oxygen delivery",
               "Structured recovery for energy, focus, and resilience"
@@ -278,10 +278,10 @@
           {
             "name": "Clinical Advanced",
             "tagline": "An intensive program that combines therapy with targeted support.",
-            "price": "€5,238.00",
-            "priceNote": "for 32 sessions",
+            "price": "€5.715,00",
+            "priceNote": "for 35 sessions",
             "featured": true,
-            "minSessions": "32 sessions",
+            "minSessions": "35 sessions",
             "features": [
               "Everything in Clinical Essential",
               "Clinical supplement support throughout the trajectory",
@@ -292,9 +292,9 @@
           {
             "name": "Clinical Precision",
             "tagline": "The most data-led clinical package for personalised optimisation.",
-            "price": "€5,588.00",
-            "priceNote": "for 32 sessions",
-            "minSessions": "32 sessions",
+            "price": "€6.065,00",
+            "priceNote": "for 35 sessions",
+            "minSessions": "35 sessions",
             "features": [
               "Everything in Clinical Advanced",
               "2x comprehensive blood analysis during the trajectory",
@@ -318,9 +318,9 @@
       { "item": "Blood test (2 times)", "price": "€300" },
       { "item": "Advanced package (3 sessions)", "price": "€552" },
       { "item": "Precision package (10 sessions)", "price": "€1,990.00" },
-      { "item": "Clinical Essential (32 sessions)", "price": "€5,088.00" },
-      { "item": "Clinical Advanced (32 sessions)", "price": "€5,238.00" },
-      { "item": "Clinical Precision (32 sessions)", "price": "€5,588.00" }
+      { "item": "Clinical Essential (32 sessions)", "price": "€5.565,00" },
+      { "item": "Clinical Advanced (32 sessions)", "price": "€5.715,00" },
+      { "item": "Clinical Precision (32 sessions)", "price": "€6.065,00" }
     ]
   },
   "contact": {
