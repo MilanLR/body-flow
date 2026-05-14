@@ -265,9 +265,9 @@
           {
             "name": "Clinical Essential",
             "tagline": "Een gestructureerd klinisch traject voor diep circulair herstel.",
-            "price": "€5.088,00",
-            "priceNote": "voor 32 sessies",
-            "minSessions": "32 sessies",
+            "price": "€5.565,00",
+            "priceNote": "voor 35 sessies",
+            "minSessions": "35 sessies",
             "features": [
               "32 gespecialiseerde EECP-therapiesessies",
               "Klinisch begeleide ondersteuning van hart en bloedsomloop",
@@ -278,10 +278,10 @@
           {
             "name": "Clinical Advanced",
             "tagline": "Een intensief programma met therapie en gerichte ondersteuning.",
-            "price": "€5.238,00",
-            "priceNote": "voor 32 sessies",
+            "price": "€5.715,00",
+            "priceNote": "voor 35 sessies",
             "featured": true,
-            "minSessions": "32 sessies",
+            "minSessions": "35 sessies",
             "features": [
               "Alles uit Clinical Essential",
               "Klinische supplementondersteuning gedurende het hele traject",
@@ -292,9 +292,9 @@
           {
             "name": "Clinical Precision",
             "tagline": "Het meest datagedreven klinische pakket voor persoonlijke optimalisatie.",
-            "price": "€5.588,00",
-            "priceNote": "voor 32 sessies",
-            "minSessions": "32 sessies",
+            "price": "€6.065,00",
+            "priceNote": "voor 35 sessies",
+            "minSessions": "35 sessies",
             "features": [
               "Alles uit Clinical Advanced",
               "2x uitgebreid bloedonderzoek tijdens het traject",
@@ -318,9 +318,9 @@
       { "item": "Bloedonderzoek (2 keer)", "price": "€300" },
       { "item": "Advanced pakket (3 sessies)", "price": "€552" },
       { "item": "Precision pakket (10 sessies)", "price": "€1.990,00" },
-      { "item": "Clinical Essential (32 sessies)", "price": "€5.088,00" },
-      { "item": "Clinical Advanced (32 sessies)", "price": "€5.238,00" },
-      { "item": "Clinical Precision (32 sessies)", "price": "€5.588,00" }
+      { "item": "Clinical Essential (35 sessies)", "price": "€5.565,00" },
+      { "item": "Clinical Advanced (35 sessies)", "price": "€5.715,00" },
+      { "item": "Clinical Precision (35 sessies)", "price": "€6.065,00" }
     ]
   },
   "contact": {
