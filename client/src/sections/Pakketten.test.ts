@@ -15,7 +15,7 @@ describe("Pakketten package variants", () => {
     expect(data.label).toBe("The Flow");
     expect(data.packages).toHaveLength(3);
     expect(data.packages[0]).toMatchObject({
-      name: "The Flow Essential",
+      name: "Flow Essential",
       price: "€159",
       priceNote: "per session",
     });
@@ -28,8 +28,8 @@ describe("Pakketten package variants", () => {
     expect(data.packages).toHaveLength(3);
     expect(data.packages[1]).toMatchObject({
       name: "Clinical Advanced",
-      price: "€5,238.00",
-      priceNote: "for 32 sessions",
+      price: "€5.715,00",
+      priceNote: "for 35 sessions",
       featured: true,
     });
   });
@@ -40,7 +40,7 @@ describe("Pakketten package variants", () => {
 
     expect(flow.label).toBe("The Flow");
     expect(clinical.label).toBe("Clinical");
-    expect(clinical.packages[2].priceNote).toBe("voor 32 sessies");
+    expect(clinical.packages[2].priceNote).toBe("voor 35 sessies");
   });
 
   it("renders the intake block before the flow clinical toggle and package cards", () => {

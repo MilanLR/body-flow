@@ -35,7 +35,7 @@ export function Hero() {
           {tx.subtitle}
         </p>
         <div className="animate-fade-in-up animate-delay-400">
-          <a href="#pakketten" className="btn-pill btn-pill-white">
+          <a href="#eecp" className="btn-pill btn-pill-white">
             {tx.cta}
           </a>
         </div>
