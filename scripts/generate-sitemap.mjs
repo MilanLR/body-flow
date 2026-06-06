@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
+import { getAllBlogPaths } from "../client/src/content/blog/registry.ts";
 import { LOCALIZED_ROUTES } from "../client/src/lib/routes.ts";
 import { buildAlternates, buildCanonicalUrl } from "../client/src/lib/seo.ts";
 
@@ -18,7 +19,7 @@ function escapeXml(value) {
     .replaceAll("'", "&apos;");
 }
 
-const pages = LOCALIZED_ROUTES.flatMap(({ paths }) =>
+const pages = [...LOCALIZED_ROUTES, ...getAllBlogPaths()].flatMap(({ paths }) =>
   Object.values(paths).map((pathname) => ({
     loc: buildCanonicalUrl(pathname),
     alternates: buildAlternates(pathname),

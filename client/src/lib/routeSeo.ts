@@ -1,3 +1,8 @@
+import {
+  getBlogFromPath,
+  getBlogIndexPath,
+  getBlogPostPath,
+} from "@/content/blog/registry";
 import en from "@/i18n/en.json";
 import nl from "@/i18n/nl.json";
 import type { Lang } from "@/i18n/LangContext";
@@ -26,6 +31,38 @@ function getLangFromPath(pathname: string): Lang {
 }
 
 export function getRouteSeo(pathname: string): RouteSeo {
+  const blog = getBlogFromPath(pathname);
+
+  if (blog) {
+    const t = translations[blog.lang];
+    const resolvedPath =
+      blog.kind === "post"
+        ? getBlogPostPath(blog.lang, blog.post)
+        : getBlogIndexPath(blog.lang);
+    const title =
+      blog.kind === "post"
+        ? blog.post.locales[blog.lang].seoTitle
+        : t.seo.pages.blog.title;
+    const description =
+      blog.kind === "post"
+        ? blog.post.locales[blog.lang].seoDescription
+        : t.seo.pages.blog.description;
+
+    return {
+      found: true,
+      statusCode: 200,
+      lang: blog.lang,
+      pageKey: null,
+      title,
+      description,
+      robots: "index,follow",
+      canonical: buildCanonicalUrl(resolvedPath),
+      alternates: buildAlternates(resolvedPath),
+      ogImage: getPrimaryImageUrl(),
+      siteName: SITE_NAME,
+    };
+  }
+
   const current = getPageFromPath(pathname);
 
   if (!current) {

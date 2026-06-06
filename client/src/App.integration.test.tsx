@@ -40,6 +40,17 @@ describe("App routing integration", () => {
     expect(html).not.toContain("A treatment that combines rest with circulatory activation");
   });
 
+  it("renders the science page with study evidence in both languages", () => {
+    const nlHtml = renderApp("/nl/wetenschap");
+    const enHtml = renderApp("/en/science");
+
+    expect(nlHtml).toContain("Klinische studies per indicatie");
+    expect(nlHtml).toContain("Sinvhal");
+    expect(nlHtml).toContain("Werkingsmechanismen");
+    expect(enHtml).toContain("Clinical studies by indication");
+    expect(enHtml).toContain("Mechanisms of action");
+  });
+
   it("renders the English 404 copy for an unknown English route", () => {
     const html = renderApp("/en/not-a-real-page");
 

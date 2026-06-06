@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 
 import { RouteLink } from "@/components/RouteLink";
+import { getBlogFromPath } from "@/content/blog/registry";
 import { useLang } from "@/i18n/LangContext";
 import { type PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
 export function Navbar() {
   const { t, pageKey } = useLang();
+  const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const tx = t.nav;
-  const useDarkTopState = scrolled || pageKey !== "home";
+  const isBlogPage = getBlogFromPath(location) !== null;
+  const useDarkTopState = scrolled || pageKey !== "home" || isBlogPage;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -22,6 +26,7 @@ export function Navbar() {
     { label: tx.treatment, pageKey: "treatment" },
     { label: tx.costs, pageKey: "costs" },
     { label: tx.whoItsFor, pageKey: "whoItsFor" },
+    { label: tx.science, pageKey: "science" },
     { label: tx.contact, pageKey: "contact" },
   ] satisfies Array<{ label: string; pageKey: PageKey }>;
 

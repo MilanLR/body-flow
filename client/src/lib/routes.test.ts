@@ -47,11 +47,14 @@ describe("localized routes", () => {
   });
 
   it("keeps the page-level i18n schema aligned with route keys", () => {
-    expect(Object.keys(nl.seo.pages)).toEqual(PAGE_KEYS);
-    expect(Object.keys(en.seo.pages)).toEqual(PAGE_KEYS);
+    // seo.pages also carries the blog index, which is routed via the blog registry
+    expect(Object.keys(nl.seo.pages)).toEqual([...PAGE_KEYS, "blog"]);
+    expect(Object.keys(en.seo.pages)).toEqual([...PAGE_KEYS, "blog"]);
     expect(Object.keys(nl.pageCtas)).toEqual(PAGE_KEYS);
     expect(Object.keys(en.pageCtas)).toEqual(PAGE_KEYS);
-    expect(Object.keys(nl.focusedPages)).toEqual(PAGE_KEYS.filter((key) => key !== "home"));
-    expect(Object.keys(en.focusedPages)).toEqual(PAGE_KEYS.filter((key) => key !== "home"));
+    // home and science render custom pages and have no focusedPages content
+    const focusedKeys = PAGE_KEYS.filter((key) => key !== "home" && key !== "science");
+    expect(Object.keys(nl.focusedPages)).toEqual(focusedKeys);
+    expect(Object.keys(en.focusedPages)).toEqual(focusedKeys);
   });
 });

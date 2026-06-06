@@ -7,10 +7,13 @@ import { LangProvider } from "@/i18n/LangContext";
 import { DEFAULT_LANG, LOCALIZED_ROUTES, getLocalizedPath, type PageKey } from "@/lib/routes";
 import { useLocalizedPage } from "@/hooks/useLocalizedPage";
 import AmsterdamPage from "@/pages/AmsterdamPage";
+import BlogIndexPage from "@/pages/BlogIndexPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 import ContactPage from "@/pages/ContactPage";
 import CostsPage from "@/pages/CostsPage";
 import LocalizedHomePage from "@/pages/LocalizedHomePage";
 import NotFound from "@/pages/NotFound";
+import SciencePage from "@/pages/SciencePage";
 import TreatmentPage from "@/pages/TreatmentPage";
 import WhoItsForPage from "@/pages/WhoItsForPage";
 
@@ -27,6 +30,7 @@ const localizedPageComponents: Record<PageKey, ComponentType<any>> = {
   costs: CostsPage,
   whoItsFor: WhoItsForPage,
   amsterdam: AmsterdamPage,
+  science: SciencePage,
   contact: ContactPage,
 };
 
@@ -41,6 +45,10 @@ function LocalizedAppShell() {
           <Route key={`nl-${pageKey}`} path={paths.nl} component={localizedPageComponents[pageKey]} />,
           <Route key={`en-${pageKey}`} path={paths.en} component={localizedPageComponents[pageKey]} />,
         ])}
+        <Route path={"/nl/blog"} component={BlogIndexPage} />
+        <Route path={"/en/blog"} component={BlogIndexPage} />
+        <Route path={"/nl/blog/:slug"} component={BlogPostPage} />
+        <Route path={"/en/blog/:slug"} component={BlogPostPage} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

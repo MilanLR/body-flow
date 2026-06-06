@@ -5,6 +5,7 @@
     "costs": "Kosten",
     "whoItsFor": "Voor wie",
     "amsterdam": "Amsterdam",
+    "science": "Wetenschap",
     "eecp": "Wat is EECP",
     "voordelen": "Voordelen",
     "traject": "Het Traject",
@@ -45,11 +46,33 @@
         "title": "EECP therapie in regio Amsterdam | BodyFlow Amsterdam",
         "description": "BodyFlow Amsterdam biedt EECP-therapie in Amstelveen met focus op cardiovasculaire ondersteuning en herstel."
       },
+      "science": {
+        "title": "Wetenschappelijke onderbouwing EECP | BodyFlow Amsterdam",
+        "description": "Bekijk de klinische studies achter EECP-therapie: angina pectoris, long COVID, vaatfunctie en internationale richtlijnen."
+      },
       "contact": {
         "title": "Contact | BodyFlow Amsterdam",
         "description": "Neem contact op met BodyFlow Amsterdam voor vragen, een intake of meer informatie over EECP-therapie."
+      },
+      "blog": {
+        "title": "Blog | BodyFlow Amsterdam",
+        "description": "Artikelen over EECP-therapie, doorbloeding en vitaliteit van BodyFlow Amsterdam in Amstelveen."
       }
     }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexIntro": "Artikelen over EECP-therapie, doorbloeding en vitaliteit — geschreven om je te helpen een weloverwogen keuze te maken.",
+    "readPost": "Lees artikel",
+    "publishedOn": "Gepubliceerd op",
+    "breadcrumbBlog": "Blog",
+    "faqTitle": "Veelgestelde vragen",
+    "moreAbout": "Meer over EECP",
+    "ctaTitle": "Benieuwd wat EECP voor jou kan betekenen?",
+    "ctaText": "Plan een vrijblijvende intake of lees meer over de behandeling bij BodyFlow Amsterdam.",
+    "ctaButton": "Boek intake",
+    "ctaHome": "Naar de homepage",
+    "footerLabel": "Blog"
   },
   "pageCtas": {
     "home": { "label": "Bekijk meer informatie", "href": "treatment" },
@@ -57,6 +80,7 @@
     "costs": { "label": "Bekijk meer informatie", "href": "contact" },
     "whoItsFor": { "label": "Bekijk meer informatie", "href": "contact" },
     "amsterdam": { "label": "Bekijk meer informatie", "href": "contact" },
+    "science": { "label": "Bekijk meer informatie", "href": "contact" },
     "contact": { "label": "Bekijk meer informatie", "href": "contact" }
   },
   "focusedPages": {
@@ -371,6 +395,7 @@
       { "pageKey": "costs", "label": "Kosten", "href": "costs" },
       { "pageKey": "whoItsFor", "label": "Voor wie", "href": "whoItsFor" },
       { "pageKey": "amsterdam", "label": "Amsterdam", "href": "amsterdam" },
+      { "pageKey": "science", "label": "Wetenschap", "href": "science" },
       { "pageKey": "contact", "label": "Contact", "href": "contact" }
     ],
     "navLinks": [

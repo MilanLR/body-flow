@@ -1,3 +1,8 @@
+import {
+  getBlogFromPath,
+  getBlogIndexPath,
+  getBlogPostPath,
+} from "@/content/blog/registry";
 import type { Lang } from "@/i18n/LangContext";
 
 export const DEFAULT_LANG: Lang = "nl";
@@ -8,6 +13,7 @@ export const PAGE_KEYS = [
   "costs",
   "whoItsFor",
   "amsterdam",
+  "science",
   "contact",
 ] as const;
 
@@ -20,6 +26,7 @@ const localizedSlugs: Record<Lang, Record<PageKey, string>> = {
     costs: "kosten",
     whoItsFor: "voor-wie",
     amsterdam: "amsterdam",
+    science: "wetenschap",
     contact: "contact",
   },
   en: {
@@ -28,6 +35,7 @@ const localizedSlugs: Record<Lang, Record<PageKey, string>> = {
     costs: "costs",
     whoItsFor: "who-its-for",
     amsterdam: "amsterdam",
+    science: "science",
     contact: "contact",
   },
 };
@@ -77,6 +85,13 @@ export function getPageFromPath(
 }
 
 export function getAlternateLanguagePath(pathname: string, nextLang: Lang) {
+  const blog = getBlogFromPath(pathname);
+  if (blog) {
+    return blog.kind === "post"
+      ? getBlogPostPath(nextLang, blog.post)
+      : getBlogIndexPath(nextLang);
+  }
+
   const current = getPageFromPath(pathname);
   return getLocalizedPath(nextLang, current?.pageKey ?? "home");
 }

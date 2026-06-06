@@ -1,10 +1,11 @@
 import { useLang } from "@/i18n/LangContext";
 import { RouteLink } from "@/components/RouteLink";
+import { getBlogIndexPath } from "@/content/blog/registry";
 import type { PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
 export function Footer() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const tx = t.footer;
 
   return (
@@ -34,6 +35,12 @@ export function Footer() {
                     {link.label}
                   </RouteLink>
                 ))}
+                <a
+                  href={getBlogIndexPath(lang)}
+                  className="font-body text-[0.85rem] text-white/70 no-underline hover:text-white transition-colors"
+                >
+                  {t.blog.footerLabel}
+                </a>
               </div>
             </div>
             <div>

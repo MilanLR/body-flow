@@ -61,6 +61,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
   </url>
   <url>
+    <loc>https://body-flow.nl/nl/wetenschap</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/wetenschap" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/science" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/science</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/wetenschap" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/science" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
     <loc>https://body-flow.nl/nl/contact</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/contact" />
@@ -70,6 +82,30 @@
     <loc>https://body-flow.nl/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/blog</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/nl/blog/eecp-therapie-bij-longcovid</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/blog/eecp-therapie-bij-longcovid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/blog/eecp-therapy-for-long-covid" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
+  </url>
+  <url>
+    <loc>https://body-flow.nl/en/blog/eecp-therapy-for-long-covid</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://body-flow.nl/nl/blog/eecp-therapie-bij-longcovid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://body-flow.nl/en/blog/eecp-therapy-for-long-covid" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://body-flow.nl/nl/" />
   </url>
 </urlset>
