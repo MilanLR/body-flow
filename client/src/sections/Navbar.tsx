@@ -7,8 +7,6 @@ import { useLang } from "@/i18n/LangContext";
 import { type PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
-import { cn } from "@/lib/utils";
-
 export function Navbar() {
   const { t, pageKey } = useLang();
   const [location] = useLocation();
@@ -16,7 +14,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const tx = t.nav;
   const isBlogPage = getBlogFromPath(location) !== null;
-  const useDarkTopState = scrolled || pageKey !== "home" || isBlogPage;
+  const isTranslucentHeader = scrolled || pageKey !== "home" || isBlogPage;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -36,20 +34,21 @@ export function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-[100] transition-all duration-[400ms] ease-in-out"
       style={{
-        background: scrolled ? "rgba(255,255,255,0.97)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        boxShadow: scrolled ? "0 1px 20px rgba(26,46,74,0.08)" : "none",
+        background: isTranslucentHeader ? "rgba(18, 32, 54, 0.45)" : "transparent",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.25)" : "none",
         padding: scrolled ? "0.75rem 0" : "1.25rem 0",
       }}
     >
       <div className="container flex items-center justify-between">
         <RouteLink pageKey="home" className="no-underline">
-          <BodyFlowLogo white={!useDarkTopState} />
+          <BodyFlowLogo white />
         </RouteLink>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
-          {navLinks.map(link => (
+          {navLinks.map((link) => (
             <RouteLink
               key={link.pageKey}
               pageKey={link.pageKey}
@@ -57,14 +56,9 @@ export function Navbar() {
               data-ga-name="nav_link_click"
               data-ga-label={link.label}
               data-ga-location="navbar"
-              className="font-body text-[0.8rem] font-medium tracking-[0.06em] no-underline transition-opacity duration-200"
-              style={{
-                color: useDarkTopState
-                  ? "var(--navy-800)"
-                  : "rgba(255,255,255,0.9)",
-              }}
-              onMouseEnter={e => (e.currentTarget.style.opacity = "0.7")}
-              onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+              className="font-body text-[0.8rem] font-medium tracking-[0.06em] no-underline text-white/90 hover:text-white transition-opacity duration-200"
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
               {link.label}
             </RouteLink>
@@ -75,12 +69,8 @@ export function Navbar() {
             data-ga-name="book_intake_click"
             data-ga-label={tx.boek}
             data-ga-location="navbar"
-            className="btn-pill"
+            className="btn-pill text-white border-white/70 hover:border-white hover:bg-white/10"
             style={{
-              color: useDarkTopState ? "var(--navy-800)" : "white",
-              borderColor: useDarkTopState
-                ? "var(--navy-800)"
-                : "rgba(255,255,255,0.7)",
               fontSize: "0.7rem",
               padding: "0.6rem 1.5rem",
             }}
@@ -100,13 +90,10 @@ export function Navbar() {
             aria-label="Menu"
           >
             <div className="flex flex-col gap-[5px]">
-              {[0, 1, 2].map(i => (
+              {[0, 1, 2].map((i) => (
                 <div
                   key={i}
-                  className="w-6 h-0.5 rounded-sm transition-all duration-300"
-                  style={{
-                    background: useDarkTopState ? "var(--navy-800)" : "white",
-                  }}
+                  className="w-6 h-0.5 rounded-sm bg-white transition-all duration-300"
                 />
               ))}
             </div>
@@ -125,7 +112,7 @@ export function Navbar() {
           }}
         >
           <div className="container flex flex-col gap-4">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <RouteLink
                 key={link.pageKey}
                 pageKey={link.pageKey}

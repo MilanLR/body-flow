@@ -30,11 +30,11 @@ describe("Navbar", () => {
     expect(html).not.toContain(">en</button>");
   });
 
-  it("renders dark header styling at the top on non-home pages", () => {
+  it("renders translucent glassmorphism header styling at the top on non-home pages", () => {
     const html = renderNavbar("en", "costs");
 
-    expect(html).toContain("brightness(0) saturate(100%)");
-    expect(html).toContain("color:var(--navy-800)");
+    expect(html).toContain("background:rgba(18, 32, 54, 0.45)");
+    expect(html).toContain("backdrop-filter:blur(16px)");
   });
 
   it("uses localized page routes as its primary navigation model", () => {
