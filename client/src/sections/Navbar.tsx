@@ -104,7 +104,7 @@ export function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="py-6 border-t border-white/10 transition-all duration-300"
+          className="mt-3 py-7 border-t border-white/10 transition-all duration-300"
           style={{
             background: "rgba(18, 32, 54, 0.45)",
             backdropFilter: "blur(16px)",
