@@ -13,6 +13,7 @@ import ContactPage from "@/pages/ContactPage";
 import CostsPage from "@/pages/CostsPage";
 import LocalizedHomePage from "@/pages/LocalizedHomePage";
 import NotFound from "@/pages/NotFound";
+import PrivacyPage from "@/pages/PrivacyPage";
 import SciencePage from "@/pages/SciencePage";
 import TreatmentPage from "@/pages/TreatmentPage";
 import WhoItsForPage from "@/pages/WhoItsForPage";
@@ -32,6 +33,7 @@ const localizedPageComponents: Record<PageKey, ComponentType<any>> = {
   amsterdam: AmsterdamPage,
   science: SciencePage,
   contact: ContactPage,
+  privacy: PrivacyPage,
 };
 
 function LocalizedAppShell() {

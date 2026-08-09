@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { useLang, type Lang } from "@/i18n/LangContext";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
+import { RouteLink } from "@/components/RouteLink";
 import { buildContactPayload } from "./contactForm";
 
 function getContactValidationMessages(lang: Lang) {
@@ -14,11 +15,13 @@ function getContactValidationMessages(lang: Lang) {
         required: "Required",
         invalidEmail: "Invalid email address",
         submitError: "Something went wrong. Please try again.",
+        privacyRequired: "You must agree to the privacy notice to submit the form.",
       }
     : {
         required: "Verplicht",
         invalidEmail: "Ongeldig e-mailadres",
         submitError: "Er ging iets mis. Probeer het opnieuw.",
+        privacyRequired: "U dient akkoord te gaan met de privacyverklaring om het formulier te versturen.",
       };
 }
 
@@ -32,6 +35,14 @@ export function createContactSchema(lang: Lang) {
     email: z.string().email(messages.invalidEmail),
     contactvoorkeur: z.enum(["telefoon", "email"], messages.required),
     opmerkingen: z.string().optional(),
+    privacyConsent: z
+      .boolean({
+        required_error: messages.privacyRequired,
+        invalid_type_error: messages.privacyRequired,
+      })
+      .refine((val) => val === true, {
+        message: messages.privacyRequired,
+      }),
   });
 }
 
@@ -335,6 +346,39 @@ export function Contact() {
                     rows={3}
                     className={cn(inputClass, "resize-none")}
                   />
+                </div>
+
+                <div className="bg-[oklch(0.97_0.01_230)] p-4 rounded-md border border-[oklch(0.90_0.02_230)] flex flex-col gap-2">
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="privacyConsent"
+                      {...register("privacyConsent")}
+                      className="mt-1 h-4 w-4 rounded border-gray-300 text-[var(--navy-600)] focus:ring-[var(--navy-600)] accent-[var(--navy-600)] cursor-pointer shrink-0"
+                    />
+                    <label
+                      htmlFor="privacyConsent"
+                      className="font-body text-[0.8rem] text-[oklch(0.35_0.04_235)] leading-relaxed cursor-pointer"
+                    >
+                      <span className="font-semibold block mb-1 text-[var(--navy-800)]">
+                        {tx.privacyNoticeTitle}
+                      </span>
+                      {tx.privacyNoticeBody}{" "}
+                      {tx.privacyNoticeReadMore}{" "}
+                      <RouteLink
+                        pageKey="privacy"
+                        className="underline font-medium text-[var(--navy-800)] hover:text-[var(--ocean-600)]"
+                      >
+                        {tx.privacyNoticeFullLink}
+                      </RouteLink>{" "}
+                      {tx.privacyNoticeSuffix}
+                    </label>
+                  </div>
+                  {errors.privacyConsent && (
+                    <p className="font-body text-xs text-red-500 mt-0.5">
+                      {errors.privacyConsent.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="pt-2">

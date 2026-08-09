@@ -41,7 +41,7 @@ export function SeoPage({
           </div>
         </section>
         {children}
-        {pageKey !== "contact" && <SeoCta />}
+        {pageKey !== "contact" && pageKey !== "privacy" && <SeoCta />}
       </main>
       <Footer />
     </div>

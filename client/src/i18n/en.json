@@ -12,6 +12,7 @@
     "pakketten": "Packages",
     "tarieven": "Pricing",
     "contact": "Contact",
+    "privacy": "Privacy Policy",
     "boek": "Schedule an intake"
   },
   "hero": {
@@ -54,6 +55,10 @@
         "title": "Contact | BodyFlow Amsterdam",
         "description": "Get in touch with BodyFlow Amsterdam for questions, an intake or more information about EECP therapy."
       },
+      "privacy": {
+        "title": "Privacy Policy | BodyFlow Amsterdam",
+        "description": "Privacy statement of BodyFlow Amsterdam regarding the contact form and intakes (GDPR)."
+      },
       "blog": {
         "title": "Blog | BodyFlow Amsterdam",
         "description": "Articles about EECP therapy, circulation and vitality from BodyFlow Amsterdam in Amstelveen."
@@ -81,7 +86,8 @@
     "whoItsFor": { "label": "View more information", "href": "contact" },
     "amsterdam": { "label": "View more information", "href": "contact" },
     "science": { "label": "View more information", "href": "contact" },
-    "contact": { "label": "View more information", "href": "contact" }
+    "contact": { "label": "View more information", "href": "contact" },
+    "privacy": { "label": "View more information", "href": "contact" }
   },
   "focusedPages": {
     "treatment": {
@@ -139,6 +145,37 @@
         {
           "title": "Get in touch with BodyFlow Amsterdam",
           "body": "Use the form for an intake request or a more detailed question. We will respond as quickly as possible and match the first follow-up to your preferred contact method."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Statement - Contact Form & Intakes",
+      "intro": "BodyFlow is committed to protecting your personal data. In this privacy statement, we explain how we process your personal data in accordance with the General Data Protection Regulation (GDPR).",
+      "sections": [
+        {
+          "title": "1. What personal data do we collect?",
+          "body": "When you fill out the contact form on our website (https://body-flow.nl), we collect the following personal information:",
+          "items": [
+            "First name and last name",
+            "Email address",
+            "Phone number"
+          ]
+        },
+        {
+          "title": "2. Purpose of processing",
+          "body": "We use this data solely for the following purposes:",
+          "items": [
+            "To contact you in response to your inquiry or application.",
+            "To schedule and prepare for an intake session."
+          ]
+        },
+        {
+          "title": "3. Retention period",
+          "body": "No intake: If the contact does not result in an intake session or contract, we store your contact details for a maximum of 6 months. After this period, your data will be permanently deleted.\n\nIntake completed: If an intake takes place or you become a client, your details will be processed according to our general client administration policies and legal retention obligations."
+        },
+        {
+          "title": "4. Your rights (GDPR)",
+          "body": "You have the right at any time to access, correct, or request the deletion of your personal data, and to withdraw your consent for data processing.\n\nIf you have questions or wish to exercise your rights, please contact us at:\nBodyFlow\nAmsterdamseweg 487\nWebsite: https://body-flow.nl"
         }
       ]
     }
@@ -381,7 +418,13 @@
     "remarks": "Additional remarks",
     "submit": "Send",
     "thankYou": "Thank you!",
-    "thankYouMsg": "Your request has been received. We will contact you shortly."
+    "thankYouMsg": "Your request has been received. We will contact you shortly.",
+    "privacyNoticeTitle": "Privacy Notice",
+    "privacyNoticeBody": "By submitting this form, you agree that BodyFlow will process your name, email address, and phone number to contact you regarding an intake. If no intake takes place, your contact details will be deleted after a maximum of 6 months.",
+    "privacyNoticeReadMore": "Please read our",
+    "privacyNoticeFullLink": "full privacy policy",
+    "privacyNoticeSuffix": "for more information about your rights.",
+    "privacyConsentLabel": "I agree to the processing of my personal data according to the privacy policy."
   },
   "footer": {
     "tagline": "EECP therapy for cardiovascular optimisation and vital recovery in Amsterdam.",
@@ -396,7 +439,8 @@
       { "pageKey": "whoItsFor", "label": "Who it's for", "href": "whoItsFor" },
       { "pageKey": "amsterdam", "label": "Amsterdam", "href": "amsterdam" },
       { "pageKey": "science", "label": "Science", "href": "science" },
-      { "pageKey": "contact", "label": "Contact", "href": "contact" }
+      { "pageKey": "contact", "label": "Contact", "href": "contact" },
+      { "pageKey": "privacy", "label": "Privacy Policy", "href": "privacy" }
     ],
     "navLinks": [
       ["What is EECP", "#eecp"],

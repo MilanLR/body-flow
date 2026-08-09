@@ -15,6 +15,7 @@ export const PAGE_KEYS = [
   "amsterdam",
   "science",
   "contact",
+  "privacy",
 ] as const;
 
 export type PageKey = (typeof PAGE_KEYS)[number];
@@ -28,6 +29,7 @@ const localizedSlugs: Record<Lang, Record<PageKey, string>> = {
     amsterdam: "amsterdam",
     science: "wetenschap",
     contact: "contact",
+    privacy: "privacyverklaring",
   },
   en: {
     home: "",
@@ -37,6 +39,7 @@ const localizedSlugs: Record<Lang, Record<PageKey, string>> = {
     amsterdam: "amsterdam",
     science: "science",
     contact: "contact",
+    privacy: "privacy-policy",
   },
 };
 

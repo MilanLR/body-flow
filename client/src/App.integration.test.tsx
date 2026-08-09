@@ -51,6 +51,18 @@ describe("App routing integration", () => {
     expect(enHtml).toContain("Mechanisms of action");
   });
 
+  it("renders the privacy policy page in Dutch and English with GDPR details", () => {
+    const nlHtml = renderApp("/nl/privacyverklaring");
+    const enHtml = renderApp("/en/privacy-policy");
+
+    expect(nlHtml).toContain("Privacyverklaring - Contactformulier &amp; Intakes");
+    expect(nlHtml).toContain("Welke gegevens verzamelen wij?");
+    expect(nlHtml).toContain("Bewaartermijn");
+    expect(enHtml).toContain("Privacy Statement - Contact Form &amp; Intakes");
+    expect(enHtml).toContain("What personal data do we collect?");
+    expect(enHtml).toContain("Retention period");
+  });
+
   it("renders the English 404 copy for an unknown English route", () => {
     const html = renderApp("/en/not-a-real-page");
 
