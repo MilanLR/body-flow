@@ -36,11 +36,14 @@ const localizedPageComponents: Record<PageKey, ComponentType<any>> = {
   privacy: PrivacyPage,
 };
 
+import { CookieBanner } from "@/components/CookieBanner";
+
 function LocalizedAppShell() {
   const langValue = useLocalizedPage();
 
   return (
     <LangProvider value={langValue}>
+      <CookieBanner />
       <Switch>
         <Route path={"/"} component={RootRedirect} />
         {LOCALIZED_ROUTES.flatMap(({ pageKey, paths }) => [

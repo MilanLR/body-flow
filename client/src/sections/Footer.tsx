@@ -4,6 +4,8 @@ import { getBlogIndexPath } from "@/content/blog/registry";
 import type { PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
+import { openCookieBanner } from "@/components/CookieBanner";
+
 export function Footer() {
   const { lang, t } = useLang();
   const tx = t.footer;
@@ -67,9 +69,18 @@ export function Footer() {
           <p className="font-body text-[0.75rem] text-white/40">
             {tx.copyright}
           </p>
-          <p className="font-body text-[0.75rem] text-white/40">
-            {tx.location}
-          </p>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={openCookieBanner}
+              className="font-body text-[0.75rem] text-white/40 hover:text-white/80 transition-colors bg-transparent border-none p-0 cursor-pointer underline"
+            >
+              {lang === "nl" ? "Cookie-instellingen" : "Cookie settings"}
+            </button>
+            <p className="font-body text-[0.75rem] text-white/40">
+              {tx.location}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
