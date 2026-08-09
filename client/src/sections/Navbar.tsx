@@ -110,14 +110,14 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="bg-white py-4 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+        <div className="bg-[var(--navy-900)] py-6 shadow-[0_8px_30px_rgba(0,0,0,0.3)] border-t border-white/10">
           <div className="container flex flex-col gap-4">
             {navLinks.map((link) => (
               <RouteLink
                 key={link.pageKey}
                 pageKey={link.pageKey}
                 onClick={() => setMenuOpen(false)}
-                className="font-body text-[0.9rem] font-medium no-underline text-[var(--navy-800)]"
+                className="font-body text-[0.95rem] font-medium no-underline text-white/90 hover:text-white transition-colors py-1"
               >
                 {link.label}
               </RouteLink>
@@ -125,7 +125,7 @@ export function Navbar() {
             <RouteLink
               pageKey="contact"
               onClick={() => setMenuOpen(false)}
-              className="btn-pill btn-pill-navy self-start"
+              className="btn-pill text-white border-white hover:bg-white/15 self-start mt-2"
             >
               {tx.boek}
             </RouteLink>
