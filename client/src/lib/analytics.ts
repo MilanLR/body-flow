@@ -63,8 +63,11 @@ export function injectGoogleAnalyticsScript(
   doc: Document,
   measurementId: string
 ) {
-  const selector = 'script[data-analytics="ga4"]';
-  const existing = doc.head.querySelector<HTMLScriptElement>(selector);
+  const existing =
+    doc.head.querySelector<HTMLScriptElement>('script[data-analytics="ga4"]') ||
+    Array.from(doc.head.querySelectorAll<HTMLScriptElement>("script")).find(
+      (s) => s.src && s.src.includes("googletagmanager.com/gtag/js")
+    );
 
   if (existing) {
     return existing;
