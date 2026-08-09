@@ -7,6 +7,8 @@ import { useLang } from "@/i18n/LangContext";
 import { type PageKey } from "@/lib/routes";
 import { BodyFlowLogo } from "./BodyFlowLogo";
 
+import { cn } from "@/lib/utils";
+
 export function Navbar() {
   const { t, pageKey } = useLang();
   const [location] = useLocation();
@@ -90,7 +92,7 @@ export function Navbar() {
         {/* Mobile hamburger */}
         <div className="flex items-center gap-3">
           <button
-            className="md:hidden bg-transparent border-none p-2"
+            className="md:hidden bg-transparent border-none p-2 cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
             data-ga-category="navigation"
             data-ga-name="mobile_menu_toggle"
@@ -115,11 +117,16 @@ export function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="py-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] border-t border-white/10 transition-all duration-300"
+          className="py-6 shadow-[0_12px_40px_rgba(26,46,74,0.12)] border-t transition-all duration-300"
           style={{
-            background: "rgba(18, 32, 54, 0.00)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(24px)",
+            background: useDarkTopState
+              ? "rgba(255, 255, 255, 0.98)"
+              : "rgba(18, 32, 54, 0.92)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            borderColor: useDarkTopState
+              ? "rgba(26, 46, 74, 0.08)"
+              : "rgba(255, 255, 255, 0.1)",
           }}
         >
           <div className="container flex flex-col gap-4">
@@ -132,7 +139,12 @@ export function Navbar() {
                 data-ga-name="mobile_nav_link_click"
                 data-ga-label={link.label}
                 data-ga-location="navbar_mobile"
-                className="font-body text-[0.95rem] font-medium no-underline text-white/90 hover:text-white transition-colors py-1"
+                className={cn(
+                  "font-body text-[0.95rem] font-medium no-underline transition-colors py-1",
+                  useDarkTopState
+                    ? "text-[var(--navy-900)] hover:text-[var(--ocean-600)]"
+                    : "text-white/90 hover:text-white"
+                )}
               >
                 {link.label}
               </RouteLink>
@@ -144,7 +156,12 @@ export function Navbar() {
               data-ga-name="book_intake_click"
               data-ga-label={tx.boek}
               data-ga-location="navbar_mobile"
-              className="btn-pill text-white border-white hover:bg-white/15 self-start mt-2"
+              className={cn(
+                "btn-pill self-start mt-2 text-xs py-2 px-5",
+                useDarkTopState
+                  ? "btn-pill-navy"
+                  : "text-white border-white hover:bg-white/15"
+              )}
             >
               {tx.boek}
             </RouteLink>
