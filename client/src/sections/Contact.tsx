@@ -37,8 +37,7 @@ export function createContactSchema(lang: Lang) {
     opmerkingen: z.string().optional(),
     privacyConsent: z
       .boolean({
-        required_error: messages.privacyRequired,
-        invalid_type_error: messages.privacyRequired,
+        message: messages.privacyRequired,
       })
       .refine((val) => val === true, {
         message: messages.privacyRequired,
