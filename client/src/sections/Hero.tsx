@@ -23,17 +23,17 @@ export function Hero() {
       />
 
       <div className="hero-content relative z-[2] text-center px-6 max-w-[900px]">
-        <h1
+        <p
           className="font-display text-[clamp(2rem,8vw,5.5rem)] font-light text-white tracking-[0.08em] leading-[1.1] mb-6 uppercase animate-fade-in-up"
         >
           {tx.title}
-        </h1>
-        <p
+        </p>
+        <h1
           className="font-body text-[clamp(1rem,2vw,1.2rem)] font-light leading-[1.7] mb-12 mx-auto max-w-[580px] animate-fade-in-up animate-delay-200 hero-subtitle"
           style={{ color: "rgba(255,255,255,0.88)" }}
         >
           {tx.subtitle}
-        </p>
+        </h1>
         <div className="animate-fade-in-up animate-delay-400">
           <a
             href="#eecp"
