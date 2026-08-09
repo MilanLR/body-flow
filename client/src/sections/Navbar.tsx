@@ -36,9 +36,7 @@ export function Navbar() {
       style={{
         background: scrolled ? "rgba(255,255,255,0.97)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
-        boxShadow: scrolled
-          ? "0 1px 20px rgba(26,46,74,0.08)"
-          : "none",
+        boxShadow: scrolled ? "0 1px 20px rgba(26,46,74,0.08)" : "none",
         padding: scrolled ? "0.75rem 0" : "1.25rem 0",
       }}
     >
@@ -49,28 +47,32 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <RouteLink
               key={link.pageKey}
               pageKey={link.pageKey}
+              data-ga-category="navigation"
+              data-ga-name="nav_link_click"
+              data-ga-label={link.label}
+              data-ga-location="navbar"
               className="font-body text-[0.8rem] font-medium tracking-[0.06em] no-underline transition-opacity duration-200"
               style={{
                 color: useDarkTopState
                   ? "var(--navy-800)"
                   : "rgba(255,255,255,0.9)",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.opacity = "0.7")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.opacity = "1")
-              }
+              onMouseEnter={e => (e.currentTarget.style.opacity = "0.7")}
+              onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
             >
               {link.label}
             </RouteLink>
           ))}
           <RouteLink
             pageKey="contact"
+            data-ga-category="cta"
+            data-ga-name="book_intake_click"
+            data-ga-label={tx.boek}
+            data-ga-location="navbar"
             className="btn-pill"
             style={{
               color: useDarkTopState ? "var(--navy-800)" : "white",
@@ -90,16 +92,18 @@ export function Navbar() {
           <button
             className="md:hidden bg-transparent border-none p-2"
             onClick={() => setMenuOpen(!menuOpen)}
+            data-ga-category="navigation"
+            data-ga-name="mobile_menu_toggle"
+            data-ga-location="navbar"
+            aria-label="Menu"
           >
             <div className="flex flex-col gap-[5px]">
-              {[0, 1, 2].map((i) => (
+              {[0, 1, 2].map(i => (
                 <div
                   key={i}
                   className="w-6 h-0.5 rounded-sm transition-all duration-300"
                   style={{
-                    background: useDarkTopState
-                      ? "var(--navy-800)"
-                      : "white",
+                    background: useDarkTopState ? "var(--navy-800)" : "white",
                   }}
                 />
               ))}
@@ -113,17 +117,21 @@ export function Navbar() {
         <div
           className="py-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] border-t border-white/10 transition-all duration-300"
           style={{
-            background: "rgba(18, 32, 54, 0.45)",
-            backdropFilter: "blur(24px)",
+            background: "rgba(18, 32, 54, 0.00)",
+            backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(24px)",
           }}
         >
           <div className="container flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <RouteLink
                 key={link.pageKey}
                 pageKey={link.pageKey}
                 onClick={() => setMenuOpen(false)}
+                data-ga-category="navigation"
+                data-ga-name="mobile_nav_link_click"
+                data-ga-label={link.label}
+                data-ga-location="navbar_mobile"
                 className="font-body text-[0.95rem] font-medium no-underline text-white/90 hover:text-white transition-colors py-1"
               >
                 {link.label}
@@ -132,6 +140,10 @@ export function Navbar() {
             <RouteLink
               pageKey="contact"
               onClick={() => setMenuOpen(false)}
+              data-ga-category="cta"
+              data-ga-name="book_intake_click"
+              data-ga-label={tx.boek}
+              data-ga-location="navbar_mobile"
               className="btn-pill text-white border-white hover:bg-white/15 self-start mt-2"
             >
               {tx.boek}

@@ -17,6 +17,91 @@ type AnalyticsConfig = {
   gaMeasurementId: string | null;
 };
 
+let pageLoadTimestamp = typeof window !== "undefined" ? Date.now() : 0;
+
+export function resetPageLoadTimestamp() {
+  pageLoadTimestamp = typeof window !== "undefined" ? Date.now() : 0;
+}
+
+export function getTimeOnPageSeconds(): number {
+  if (!pageLoadTimestamp) return 0;
+  return Math.max(0, Math.round((Date.now() - pageLoadTimestamp) / 1000));
+}
+
+export type EventCategory =
+  | "cta"
+  | "navigation"
+  | "form"
+  | "external_link"
+  | "cookie_consent"
+  | "content";
+
+export type EventParams = {
+  category: EventCategory;
+  name: string;
+  label?: string;
+  location?: string;
+  [key: string]: any;
+};
+
+export function trackEvent({
+  category,
+  name,
+  label,
+  location: clickLocation,
+  ...extraParams
+}: EventParams) {
+  if (typeof window === "undefined") return;
+
+  const timeOnPage = getTimeOnPageSeconds();
+  const currentPath = window.location.pathname;
+
+  const eventPayload = {
+    event_category: category,
+    event_label: label || name,
+    click_location: clickLocation || currentPath,
+    page_path: currentPath,
+    time_on_page_seconds: timeOnPage,
+    ...extraParams,
+  };
+
+  // Google Analytics 4 (GA4)
+  if (typeof (window as any).gtag === "function") {
+    (window as any).gtag("event", name, eventPayload);
+  }
+
+  // Umami Analytics
+  if (typeof (window as any).umami?.track === "function") {
+    (window as any).umami.track(name, eventPayload);
+  }
+}
+
+export function setupAutoClickListener(doc: Document = typeof document === "undefined" ? (undefined as any) : document) {
+  if (!doc || typeof window === "undefined" || (window as any).__ga_auto_listener_attached) {
+    return;
+  }
+  (window as any).__ga_auto_listener_attached = true;
+
+  doc.addEventListener("click", (e) => {
+    const target = (e.target as HTMLElement)?.closest<HTMLElement>(
+      "[data-ga-category], [data-ga-name]"
+    );
+    if (!target) return;
+
+    const category = (target.dataset.gaCategory as EventCategory) || "cta";
+    const name = target.dataset.gaName || "button_click";
+    const label = target.dataset.gaLabel || target.innerText?.trim() || "";
+    const location = target.dataset.gaLocation || window.location.pathname;
+
+    trackEvent({
+      category,
+      name,
+      label,
+      location,
+    });
+  });
+}
+
 function normalizeValue(value?: string) {
   return value?.trim() ?? "";
 }
@@ -97,6 +182,12 @@ export function initAnalytics(
     ? undefined
     : document
 ) {
+  resetPageLoadTimestamp();
+
+  if (doc) {
+    setupAutoClickListener(doc);
+  }
+
   const config = getAnalyticsConfig(env);
 
   if (!config || !doc) {

@@ -22,6 +22,10 @@ export function SeoCta() {
           </div>
           <a
             href={href}
+            data-ga-category="cta"
+            data-ga-name="seo_cta_click"
+            data-ga-label={cta.label}
+            data-ga-location="seo_cta"
             className="btn-pill btn-pill-navy mt-6 inline-flex items-center gap-2 md:mt-0"
           >
             {cta.label}

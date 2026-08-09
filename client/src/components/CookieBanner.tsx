@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { RouteLink } from "@/components/RouteLink";
 import { useLang } from "@/i18n/LangContext";
 
+import { trackEvent } from "@/lib/analytics";
+
 export const COOKIE_CONSENT_KEY = "bodyflow_cookie_consent";
 
 export function updateGaConsent(granted: boolean) {
@@ -33,12 +35,24 @@ export function CookieBanner() {
   const handleAccept = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
     updateGaConsent(true);
+    trackEvent({
+      category: "cookie_consent",
+      name: "cookie_consent_accepted",
+      label: "Accept All",
+      location: "cookie_banner",
+    });
     setVisible(false);
   };
 
   const handleDecline = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, "declined");
     updateGaConsent(false);
+    trackEvent({
+      category: "cookie_consent",
+      name: "cookie_consent_declined",
+      label: "Necessary Only",
+      location: "cookie_banner",
+    });
     setVisible(false);
   };
 

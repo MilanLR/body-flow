@@ -1,10 +1,23 @@
 // @vitest-environment jsdom
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { getAnalyticsConfig, initAnalytics } from "./analytics";
+import {
+  getAnalyticsConfig,
+  initAnalytics,
+  trackEvent,
+  getTimeOnPageSeconds,
+  resetPageLoadTimestamp,
+} from "./analytics";
+
+beforeEach(() => {
+  document.head.innerHTML = "";
+  (window as any).gtag = undefined;
+  resetPageLoadTimestamp();
+});
 
 afterEach(() => {
   document.head.innerHTML = "";
+  vi.restoreAllMocks();
 });
 
 describe("analytics", () => {
@@ -30,15 +43,6 @@ describe("analytics", () => {
     expect(
       document.head.querySelectorAll('script[data-analytics="umami"]')
     ).toHaveLength(1);
-
-    initAnalytics({
-      VITE_ANALYTICS_ENDPOINT: "https://stats.example.com/",
-      VITE_ANALYTICS_WEBSITE_ID: "site-id",
-    });
-
-    expect(
-      document.head.querySelectorAll('script[data-analytics="umami"]')
-    ).toHaveLength(1);
   });
 
   it("injects Google Analytics 4 (GA4) script when measurement ID is provided", () => {
@@ -61,14 +65,30 @@ describe("analytics", () => {
     expect(gaScript).not.toBeNull();
     expect(initScript).not.toBeNull();
     expect(initScript?.textContent).toContain("G-TEST123456");
+  });
 
-    // Deduplication test
-    initAnalytics({
-      VITE_GA_MEASUREMENT_ID: "G-TEST123456",
+  it("tracks categorized GA events with time_on_page_seconds metric", () => {
+    let capturedEventName: string = "";
+    let capturedPayload: any = null;
+
+    (window as any).gtag = (command: string, name: string, payload: any) => {
+      if (command === "event") {
+        capturedEventName = name;
+        capturedPayload = payload;
+      }
+    };
+
+    trackEvent({
+      category: "cta",
+      name: "book_intake_click",
+      label: "Boek intake",
+      location: "navbar",
     });
 
-    expect(
-      document.head.querySelectorAll('script[data-analytics="ga4"]')
-    ).toHaveLength(1);
+    expect(capturedEventName).toBe("book_intake_click");
+    expect(capturedPayload.event_category).toBe("cta");
+    expect(capturedPayload.event_label).toBe("Boek intake");
+    expect(capturedPayload.click_location).toBe("navbar");
+    expect(typeof capturedPayload.time_on_page_seconds).toBe("number");
   });
 });

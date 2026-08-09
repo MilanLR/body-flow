@@ -384,6 +384,10 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
+                    data-ga-category="form"
+                    data-ga-name="contact_form_submit"
+                    data-ga-label={tx.submit}
+                    data-ga-location="contact_section"
                     className={cn(
                       "btn-pill btn-pill-navy",
                       isSubmitting && "opacity-60 cursor-not-allowed"

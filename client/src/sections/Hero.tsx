@@ -35,7 +35,14 @@ export function Hero() {
           {tx.subtitle}
         </p>
         <div className="animate-fade-in-up animate-delay-400">
-          <a href="#eecp" className="btn-pill btn-pill-white">
+          <a
+            href="#eecp"
+            data-ga-category="cta"
+            data-ga-name="discover_more_click"
+            data-ga-label={tx.cta}
+            data-ga-location="hero"
+            className="btn-pill btn-pill-white"
+          >
             {tx.cta}
           </a>
         </div>

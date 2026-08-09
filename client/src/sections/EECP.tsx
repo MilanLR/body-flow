@@ -91,6 +91,10 @@ export function EECP() {
                   href="https://www.cardiovitaal.nl/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-ga-category="external_link"
+                  data-ga-name="cardiovitaal_click"
+                  data-ga-label="CardioVitaal Image Link"
+                  data-ga-location="eecp_section"
                   className="block w-full h-full cursor-pointer"
                   title="CardioVitaal - Medische supervisie"
                 >
@@ -127,6 +131,10 @@ export function EECP() {
                 href="https://www.cardiovitaal.nl/"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-ga-category="external_link"
+                data-ga-name="cardiovitaal_click"
+                data-ga-label="CardioVitaal Supervision Banner"
+                data-ga-location="eecp_section"
                 title="Bezoek CardioVitaal (cardiovitaal.nl)"
                 className="w-full sm:w-auto bg-white p-4 px-5 rounded-lg border border-[oklch(0.88_0.02_230)] shadow-[0_4px_20px_rgba(26,46,74,0.08)] flex items-center gap-4 no-underline cursor-pointer transition-all duration-300 hover:shadow-[0_8px_28px_rgba(26,46,74,0.16)] hover:-translate-y-0.5 border-l-4 border-l-[var(--ocean-600)] group/badge"
               >

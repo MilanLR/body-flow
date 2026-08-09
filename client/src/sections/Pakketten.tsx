@@ -89,6 +89,10 @@ export function Pakketten() {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setVariant(key)}
+                    data-ga-category="cta"
+                    data-ga-name="package_tab_switch"
+                    data-ga-label={option.label}
+                    data-ga-location="pakketten"
                     className={cn(
                       "min-w-[9rem] rounded-full px-5 py-3 text-sm font-semibold tracking-[0.08em] uppercase transition-all duration-300",
                       isActive
@@ -190,6 +194,10 @@ export function Pakketten() {
                     </div>
                     <a
                       href={contactHref}
+                      data-ga-category="cta"
+                      data-ga-name="book_intake_click"
+                      data-ga-label={`${pkg.name} - ${tx.book}`}
+                      data-ga-location="pakketten"
                       className="btn-pill btn-pill-navy text-[0.7rem] py-2.5 px-5 flex items-center gap-2"
                     >
                       {tx.book}

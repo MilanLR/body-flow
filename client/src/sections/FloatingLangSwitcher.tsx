@@ -24,7 +24,11 @@ export function FloatingLangSwitcher() {
         <button
           key={l}
           onClick={() => handleSwitch(l)}
-          className="border-none rounded-[18px] font-body text-[0.72rem] font-semibold tracking-[0.08em] uppercase transition-all duration-300"
+          data-ga-category="navigation"
+          data-ga-name="language_switch"
+          data-ga-label={`switch_to_${l}`}
+          data-ga-location="floating_switcher"
+          className="border-none rounded-[18px] font-body text-[0.72rem] font-semibold tracking-[0.08em] uppercase transition-all duration-300 cursor-pointer"
           style={{
             background: lang === l ? "rgba(255,255,255,0.18)" : "transparent",
             color: lang === l ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.45)",

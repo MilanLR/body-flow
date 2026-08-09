@@ -32,6 +32,10 @@ export function Footer() {
                   <RouteLink
                     key={link.pageKey}
                     pageKey={link.pageKey as PageKey}
+                    data-ga-category="navigation"
+                    data-ga-name="footer_link_click"
+                    data-ga-label={link.label}
+                    data-ga-location="footer"
                     className="font-body text-[0.85rem] text-white/70 no-underline hover:text-white transition-colors"
                   >
                     {link.label}
@@ -39,6 +43,10 @@ export function Footer() {
                 ))}
                 <a
                   href={getBlogIndexPath(lang)}
+                  data-ga-category="navigation"
+                  data-ga-name="footer_link_click"
+                  data-ga-label={t.blog.footerLabel}
+                  data-ga-location="footer"
                   className="font-body text-[0.85rem] text-white/70 no-underline hover:text-white transition-colors"
                 >
                   {t.blog.footerLabel}
@@ -57,6 +65,10 @@ export function Footer() {
                 </p>
                 <a
                   href="mailto:info@body-flow.nl"
+                  data-ga-category="contact"
+                  data-ga-name="footer_email_click"
+                  data-ga-label="info@body-flow.nl"
+                  data-ga-location="footer"
                   className="font-body text-[0.85rem] text-white/70 no-underline hover:text-white transition-colors"
                 >
                   info@body-flow.nl
@@ -73,6 +85,10 @@ export function Footer() {
             <button
               type="button"
               onClick={openCookieBanner}
+              data-ga-category="cookie_consent"
+              data-ga-name="open_cookie_settings"
+              data-ga-label={lang === "nl" ? "Cookie-instellingen" : "Cookie settings"}
+              data-ga-location="footer"
               className="font-body text-[0.75rem] text-white/40 hover:text-white/80 transition-colors bg-transparent border-none p-0 cursor-pointer underline"
             >
               {lang === "nl" ? "Cookie-instellingen" : "Cookie settings"}
