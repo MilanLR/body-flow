@@ -84,42 +84,45 @@ export function EECP() {
                 : "opacity-0 translate-y-[30px]"
             )}
           >
-            <div className="eecp-image-wrapper rounded-sm overflow-hidden aspect-[3/4] relative group">
-              <a
-                href="https://www.cardiovitaal.nl/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full h-full cursor-pointer"
-                title="CardioVitaal - Medische supervisie"
-              >
-                <img
-                  src={EECP_THERAPY}
-                  alt="EECP therapy session at BodyFlow Amsterdam"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-              </a>
-              <div className="absolute inset-0 border border-white/30 rounded-sm pointer-events-none" />
-            </div>
+            {/* Image + 35+ Stat Card Wrapper */}
+            <div className="relative">
+              <div className="eecp-image-wrapper rounded-sm overflow-hidden aspect-[3/4] relative group">
+                <a
+                  href="https://www.cardiovitaal.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full cursor-pointer"
+                  title="CardioVitaal - Medische supervisie"
+                >
+                  <img
+                    src={EECP_THERAPY}
+                    alt="EECP therapy session at BodyFlow Amsterdam"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </a>
+                <div className="absolute inset-0 border border-white/30 rounded-sm pointer-events-none" />
+              </div>
 
-            <div
-              className="mobile-stat-card absolute bottom-6 -left-6 bg-[var(--navy-800)] text-white p-6 rounded-sm max-w-[200px]"
-              style={{
-                boxShadow: "0 8px 32px rgba(26,46,74,0.3)",
-              }}
-            >
-              <div className="font-display text-[2.5rem] font-semibold leading-none">
-                {hero.stat}
-              </div>
-              <div className="font-body text-[0.75rem] opacity-80 mt-2.5 leading-[1.4]">
-                {hero.statLabel}
-              </div>
-              <div className="font-body text-[0.6rem] opacity-55 mt-2.5 leading-[1.4]">
-                {hero.statNote}
+              <div
+                className="mobile-stat-card absolute bottom-8 -left-6 bg-[var(--navy-800)] text-white p-6 rounded-sm max-w-[200px] z-10"
+                style={{
+                  boxShadow: "0 8px 32px rgba(26,46,74,0.3)",
+                }}
+              >
+                <div className="font-display text-[2.5rem] font-semibold leading-none">
+                  {hero.stat}
+                </div>
+                <div className="font-body text-[0.75rem] opacity-80 mt-2.5 leading-[1.4]">
+                  {hero.statLabel}
+                </div>
+                <div className="font-body text-[0.6rem] opacity-55 mt-2.5 leading-[1.4]">
+                  {hero.statNote}
+                </div>
               </div>
             </div>
 
             {/* CardioVitaal Medical Supervision Banner - Positioned cleanly below the image */}
-            <div className="mt-4 flex justify-end">
+            <div className="mt-6 flex justify-end">
               <a
                 href="https://www.cardiovitaal.nl/"
                 target="_blank"
