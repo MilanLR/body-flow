@@ -110,7 +110,14 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="bg-[var(--navy-900)] py-6 shadow-[0_8px_30px_rgba(0,0,0,0.3)] border-t border-white/10">
+        <div
+          className="py-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] border-t border-white/10 transition-all duration-300"
+          style={{
+            background: "rgba(18, 32, 54, 0.92)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+          }}
+        >
           <div className="container flex flex-col gap-4">
             {navLinks.map((link) => (
               <RouteLink
