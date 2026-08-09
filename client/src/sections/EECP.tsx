@@ -102,7 +102,7 @@ export function EECP() {
             </div>
 
             <div
-              className="mobile-stat-card absolute -bottom-6 -left-6 bg-[var(--navy-800)] text-white p-6 rounded-sm max-w-[200px]"
+              className="mobile-stat-card absolute bottom-6 -left-6 bg-[var(--navy-800)] text-white p-6 rounded-sm max-w-[200px]"
               style={{
                 boxShadow: "0 8px 32px rgba(26,46,74,0.3)",
               }}
@@ -119,7 +119,7 @@ export function EECP() {
             </div>
 
             {/* CardioVitaal Medical Supervision Banner - Positioned cleanly below the image */}
-            <div className="mt-10 flex justify-end">
+            <div className="mt-4 flex justify-end">
               <a
                 href="https://www.cardiovitaal.nl/"
                 target="_blank"
