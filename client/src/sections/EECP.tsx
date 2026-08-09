@@ -122,24 +122,24 @@ export function EECP() {
             </div>
 
             {/* CardioVitaal Medical Supervision Banner - Positioned cleanly below the image */}
-            <div className="mt-6 flex justify-end">
+            <div className="mt-10 flex justify-end">
               <a
                 href="https://www.cardiovitaal.nl/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Bezoek CardioVitaal"
-                className="bg-white p-3.5 px-4 rounded-md border border-[oklch(0.88_0.02_230)] shadow-[0_4px_20px_rgba(26,46,74,0.08)] flex items-center gap-3.5 no-underline transition-all duration-300 hover:shadow-[0_8px_28px_rgba(26,46,74,0.14)] hover:-translate-y-0.5 group/badge"
+                title="Bezoek CardioVitaal (cardiovitaal.nl)"
+                className="w-full sm:w-auto bg-white p-4 px-5 rounded-lg border border-[oklch(0.88_0.02_230)] shadow-[0_4px_20px_rgba(26,46,74,0.08)] flex items-center gap-4 no-underline cursor-pointer transition-all duration-300 hover:shadow-[0_8px_28px_rgba(26,46,74,0.16)] hover:-translate-y-0.5 border-l-4 border-l-[var(--ocean-600)] group/badge"
               >
                 <img
                   src="/cardiovitaal.png"
                   alt="CardioVitaal Logo"
-                  className="h-8 w-auto object-contain shrink-0"
+                  className="h-9 w-auto object-contain shrink-0"
                 />
                 <div className="flex flex-col">
-                  <span className="font-body text-[0.72rem] text-[oklch(0.45_0.04_235)] leading-tight">
+                  <span className="font-body text-[0.725rem] text-[oklch(0.45_0.04_235)] leading-tight">
                     {(tx as any).supervisionLabel || (lang === "nl" ? "Onder medische supervisie van" : "Under medical supervision of")}
                   </span>
-                  <span className="font-body text-[0.875rem] font-semibold text-[var(--navy-900)] group-hover/badge:text-[var(--ocean-600)] transition-colors flex items-center gap-1">
+                  <span className="font-body text-[0.9rem] font-semibold text-[var(--navy-900)] group-hover/badge:text-[var(--ocean-600)] transition-colors flex items-center gap-1.5 mt-0.5">
                     CardioVitaal
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-70 group-hover/badge:opacity-100 group-hover/badge:translate-x-0.5 transition-all">
                       <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
