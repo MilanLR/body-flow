@@ -106,9 +106,9 @@ export function Navbar() {
         <div
           className="mt-3 py-7 border-t border-white/10 transition-all duration-300"
           style={{
-            background: "rgba(18, 32, 54, 0.45)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
+            background: isTranslucentHeader ? "transparent" : "rgba(18, 32, 54, 0.45)",
+            backdropFilter: isTranslucentHeader ? "none" : "blur(16px)",
+            WebkitBackdropFilter: isTranslucentHeader ? "none" : "blur(16px)",
           }}
         >
           <div className="container flex flex-col gap-4">
