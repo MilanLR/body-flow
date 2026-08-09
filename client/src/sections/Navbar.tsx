@@ -113,9 +113,9 @@ export function Navbar() {
         <div
           className="py-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] border-t border-white/10 transition-all duration-300"
           style={{
-            background: "rgba(18, 32, 54, 0.75)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
+            background: "rgba(18, 32, 54, 0.45)",
+            backdropFilter: "blur(24px)",
+            WebkitBackdropFilter: "blur(24px)",
           }}
         >
           <div className="container flex flex-col gap-4">
