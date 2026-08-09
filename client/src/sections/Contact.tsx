@@ -190,6 +190,24 @@ export function Contact() {
                 ))}
               </div>
             </div>
+
+            <div className="mt-8 pt-6 border-t border-[oklch(0.90_0.02_230)] flex items-center gap-4">
+              <img
+                src="/zkn.png"
+                alt="ZKN Keurmerk Logo"
+                loading="lazy"
+                decoding="async"
+                data-ga-category="external_link"
+                data-ga-name="zkn_logo_view"
+                data-ga-location="contact_section"
+                className="h-14 w-auto object-contain shrink-0"
+              />
+              <span className="font-body text-xs text-[oklch(0.45_0.04_235)] leading-snug">
+                {lang === "nl"
+                  ? "Erkend keurmerk door Zelfstandige Klinieken Nederland (ZKN)"
+                  : "Accredited quality mark by Independent Clinics Netherlands (ZKN)"}
+              </span>
+            </div>
           </div>
 
           {/* Right column — booking form */}
