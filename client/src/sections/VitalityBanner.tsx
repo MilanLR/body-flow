@@ -10,6 +10,8 @@ export function VitalityBanner() {
       <img
         src={VITALITY}
         alt="Vitaal leven in Amsterdam"
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-cover object-[center_30%]"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,30,55,0.75)_0%,rgba(15,30,55,0.3)_60%,transparent_100%)]" />

@@ -101,6 +101,8 @@ export function EECP() {
                   <img
                     src={EECP_THERAPY}
                     alt="EECP therapy session at BodyFlow Amsterdam"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   />
                 </a>
@@ -141,6 +143,8 @@ export function EECP() {
                 <img
                   src="/cardiovitaal.png"
                   alt="CardioVitaal Logo"
+                  loading="lazy"
+                  decoding="async"
                   className="h-9 w-auto object-contain shrink-0"
                 />
                 <div className="flex flex-col">

@@ -48,6 +48,8 @@ export function Voordelen() {
                 <img
                   src={images[i]}
                   alt={b.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-28 h-28 object-contain"
                 />
               </div>

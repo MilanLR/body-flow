@@ -52,15 +52,15 @@ export function Pakketten() {
             </p>
             <div className="intake-icons-grid">
               <div className="intake-icon-item">
-                <img src="/images/ecg.png" alt="ECG" className="w-16 h-16 object-contain" />
+                <img src="/images/ecg.png" alt="ECG" loading="lazy" decoding="async" className="w-16 h-16 object-contain" />
                 <span className="intake-icon-label">{tx.ecg}</span>
               </div>
               <div className="intake-icon-item">
-                <img src="/images/echocardiografie.png" alt="Echocardiografie" className="w-16 h-16 object-contain" />
+                <img src="/images/echocardiografie.png" alt="Echocardiografie" loading="lazy" decoding="async" className="w-16 h-16 object-contain" />
                 <span className="intake-icon-label">{tx.echo}</span>
               </div>
               <div className="intake-icon-item">
-                <img src="/images/inspanningstest.png" alt="Inspanningstest" className="w-16 h-16 object-contain" />
+                <img src="/images/inspanningstest.png" alt="Inspanningstest" loading="lazy" decoding="async" className="w-16 h-16 object-contain" />
                 <span className="intake-icon-label">{tx.bike}</span>
               </div>
             </div>

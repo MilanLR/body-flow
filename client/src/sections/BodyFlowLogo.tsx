@@ -17,6 +17,7 @@ export function BodyFlowLogo({ white = false }: { white?: boolean }) {
     <img
       src={BODYFLOW_LOGO_SRC}
       alt="BodyFlow Amsterdam"
+      decoding="async"
       className="h-12 w-auto"
       style={getBodyFlowLogoStyle(white)}
     />
