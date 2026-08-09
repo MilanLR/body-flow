@@ -35,8 +35,8 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-[100] transition-all duration-[400ms] ease-in-out"
       style={{
         background: isTranslucentHeader ? "rgba(18, 32, 54, 0.45)" : "transparent",
-        backdropFilter: "blur(16px)",
-        WebkitBackdropFilter: "blur(16px)",
+        backdropFilter: isTranslucentHeader ? "blur(16px)" : "none",
+        WebkitBackdropFilter: isTranslucentHeader ? "blur(16px)" : "none",
         boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.25)" : "none",
         padding: scrolled ? "0.75rem 0" : "1.25rem 0",
       }}
