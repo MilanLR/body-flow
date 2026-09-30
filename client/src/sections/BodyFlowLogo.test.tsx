@@ -4,7 +4,7 @@ import { BODYFLOW_LOGO_SRC, getBodyFlowLogoStyle } from "./BodyFlowLogo";
 
 describe("BodyFlowLogo", () => {
   it("uses the public logo asset", () => {
-    expect(BODYFLOW_LOGO_SRC).toBe("/bodyflow-logo.png");
+    expect(BODYFLOW_LOGO_SRC).toBe("/logo.svg");
   });
 
   it("keeps the logo white on dark backgrounds", () => {

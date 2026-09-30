@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-export const BODYFLOW_LOGO_SRC = "/bodyflow-logo.png";
+export const BODYFLOW_LOGO_SRC = "/logo.svg";
 
 export function getBodyFlowLogoStyle(white: boolean): CSSProperties {
   if (white) {
