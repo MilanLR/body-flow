@@ -327,6 +327,9 @@
       aspect-ratio: 4/3 !important;
       max-height: 280px !important;
     }
+    .eecp-image-wrapper img {
+      object-position: bottom !important;
+    }
   }
 
   @media (min-width: 769px) {

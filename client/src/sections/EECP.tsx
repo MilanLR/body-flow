@@ -103,7 +103,7 @@ export function EECP() {
                     alt="EECP therapy session at BodyFlow Amsterdam"
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.02]"
                   />
                 </a>
                 <div className="absolute inset-0 border border-white/30 rounded-sm pointer-events-none" />
