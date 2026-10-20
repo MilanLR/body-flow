@@ -22,9 +22,18 @@ describe("App routing integration", () => {
 
   it("renders the focused localized pages instead of placeholders", () => {
     const contactHtml = renderApp("/en/contact");
+    const nlContactHtml = renderApp("/nl/contact");
     const costsHtml = renderApp("/nl/kosten");
 
     expect(contactHtml).toContain("Get in touch with BodyFlow Amsterdam");
+    expect(contactHtml).toContain("Want to know more or schedule an intake directly?");
+    expect(nlContactHtml).toContain("Meer weten of direct een intake plannen?");
+    expect(
+      nlContactHtml.indexOf("Meer weten of direct een intake plannen?"),
+    ).toBeLessThan(nlContactHtml.indexOf("Openingstijden"));
+    expect(
+      contactHtml.indexOf("Want to know more or schedule an intake directly?"),
+    ).toBeLessThan(contactHtml.indexOf("Opening hours"));
     expect(costsHtml).toContain("Wat kost EECP-therapie bij BodyFlow Amsterdam?");
     expect(costsHtml).toContain('href="/nl/contact"');
     expect(contactHtml).not.toContain("View more information");

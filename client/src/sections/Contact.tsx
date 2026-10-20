@@ -54,9 +54,8 @@ type ContactFormData = z.infer<ReturnType<typeof createContactSchema>>;
 export const EMAIL_LINK_ICON_PATH =
   "M2.25 4.5H15.75V13.5H2.25V4.5ZM3.75 6L9 9.75L14.25 6";
 
-export function Contact() {
+export function ContactFormCard({ className }: { className?: string }) {
   const { lang, t } = useLang();
-  const { ref, inView } = useInView();
   const tx = t.contact;
   const [submitted, setSubmitted] = useState(false);
 
@@ -92,6 +91,246 @@ export function Contact() {
     "w-full border-b-[1.5px] border-[oklch(0.75_0.04_230)] py-1.5 font-body text-sm bg-transparent outline-none text-[var(--navy-800)] box-border";
 
   return (
+    <div
+      id="boek"
+      className={cn(
+        "contact-form-card bg-white p-10 rounded-sm shadow-[0_4px_30px_rgba(26,46,74,0.08)]",
+        className
+      )}
+    >
+      <h3 className="font-display text-[1.8rem] font-medium text-[var(--navy-800)] mb-7">
+        {tx.formTitle}
+      </h3>
+
+      {submitted ? (
+        <div className="text-center py-12">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            className="mx-auto mb-4"
+          >
+            <circle
+              cx="24"
+              cy="24"
+              r="22"
+              stroke="var(--ocean-500)"
+              strokeWidth="2"
+              fill="none"
+            />
+            <polyline
+              points="14,24 21,31 34,17"
+              stroke="var(--ocean-500)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <h4 className="font-display text-2xl text-[var(--navy-800)] mb-2">
+            {tx.thankYou}
+          </h4>
+          <p className="font-body text-sm text-[oklch(0.50_0.05_235)]">
+            {tx.thankYouMsg}
+          </p>
+        </div>
+      ) : (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col gap-5"
+        >
+          <div className="mobile-form-grid grid grid-cols-2 gap-4">
+            <div>
+              <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
+                {tx.firstName}
+              </label>
+              <input
+                type="text"
+                {...register("voornaam")}
+                className={inputClass}
+              />
+              {errors.voornaam && (
+                <p className="font-body text-xs text-red-500 mt-1">
+                  {errors.voornaam.message}
+                </p>
+              )}
+            </div>
+            <div>
+              <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
+                {tx.lastName}
+              </label>
+              <input
+                type="text"
+                {...register("achternaam")}
+                className={inputClass}
+              />
+              {errors.achternaam && (
+                <p className="font-body text-xs text-red-500 mt-1">
+                  {errors.achternaam.message}
+                </p>
+              )}
+            </div>
+          </div>
+
+          <div>
+            <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
+              {tx.phone}
+            </label>
+            <input
+              type="tel"
+              {...register("telefoon")}
+              className={inputClass}
+            />
+          </div>
+
+          <div>
+            <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
+              {tx.email}
+            </label>
+            <input
+              type="email"
+              {...register("email")}
+              className={inputClass}
+            />
+            {errors.email && (
+              <p className="font-body text-xs text-red-500 mt-1">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-3">
+              {tx.contactPref}
+            </label>
+            <div className="flex gap-6">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  {...register("contactvoorkeur")}
+                  value="telefoon"
+                  className="accent-[var(--navy-600)]"
+                />
+                <span className="font-body text-[0.875rem] text-[oklch(0.40_0.04_235)]">
+                  {tx.phoneOpt}
+                </span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  {...register("contactvoorkeur")}
+                  value="email"
+                  className="accent-[var(--navy-600)]"
+                />
+                <span className="font-body text-[0.875rem] text-[oklch(0.40_0.04_235)]">
+                  {tx.emailOpt}
+                </span>
+              </label>
+            </div>
+            {errors.contactvoorkeur && (
+              <p className="font-body text-xs text-red-500 mt-1">
+                {errors.contactvoorkeur.message}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
+              {tx.remarks}
+            </label>
+            <textarea
+              {...register("opmerkingen")}
+              rows={3}
+              className={cn(inputClass, "resize-none")}
+            />
+          </div>
+
+          <div className="bg-[oklch(0.97_0.01_230)] p-4 rounded-md border border-[oklch(0.90_0.02_230)] flex flex-col gap-2">
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="privacyConsent"
+                {...register("privacyConsent")}
+                className="mt-1 h-4 w-4 rounded border-gray-300 text-[var(--navy-600)] focus:ring-[var(--navy-600)] accent-[var(--navy-600)] cursor-pointer shrink-0"
+              />
+              <label
+                htmlFor="privacyConsent"
+                className="font-body text-[0.8rem] text-[oklch(0.35_0.04_235)] leading-relaxed cursor-pointer"
+              >
+                <span className="font-semibold block mb-1 text-[var(--navy-800)]">
+                  {tx.privacyNoticeTitle}
+                </span>
+                {tx.privacyNoticeBody}{" "}
+                {tx.privacyNoticeReadMore}{" "}
+                <RouteLink
+                  pageKey="privacy"
+                  className="underline font-medium text-[var(--navy-800)] hover:text-[var(--ocean-600)]"
+                >
+                  {tx.privacyNoticeFullLink}
+                </RouteLink>{" "}
+                {tx.privacyNoticeSuffix}
+              </label>
+            </div>
+            {errors.privacyConsent && (
+              <p className="font-body text-xs text-red-500 mt-0.5">
+                {errors.privacyConsent.message}
+              </p>
+            )}
+          </div>
+
+          <div className="pt-2">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              data-ga-category="form"
+              data-ga-name="contact_form_submit"
+              data-ga-label={tx.submit}
+              data-ga-location="contact_section"
+              className={cn(
+                "btn-pill btn-pill-navy",
+                isSubmitting && "opacity-60 cursor-not-allowed"
+              )}
+            >
+              {isSubmitting ? (
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="animate-spin h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                    />
+                  </svg>
+                  {tx.submit}...
+                </span>
+              ) : (
+                tx.submit
+              )}
+            </button>
+          </div>
+        </form>
+      )}
+    </div>
+  );
+}
+
+export function Contact({ hideForm = false }: { hideForm?: boolean } = {}) {
+  const { lang, t } = useLang();
+  const { ref, inView } = useInView();
+  const tx = t.contact;
+
+  return (
     <section
       id="contact"
       className="mobile-padding bg-[var(--lighter-blue)] py-24"
@@ -99,7 +338,12 @@ export function Contact() {
       <div className="container">
         <div
           ref={ref}
-          className="responsive-grid contact-grid grid grid-cols-2 gap-20 items-start"
+          className={cn(
+            "items-start",
+            hideForm
+              ? "max-w-xl"
+              : "responsive-grid contact-grid grid grid-cols-2 gap-20"
+          )}
         >
           {/* Left column — contact info */}
           <div
@@ -211,237 +455,14 @@ export function Contact() {
           </div>
 
           {/* Right column — booking form */}
-          <div
-            id="boek"
-            className={cn(
-              "contact-form-card bg-white p-10 rounded-sm shadow-[0_4px_30px_rgba(26,46,74,0.08)] transition-all duration-[800ms] ease-out delay-200",
-              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            )}
-          >
-            <h3 className="font-display text-[1.8rem] font-medium text-[var(--navy-800)] mb-7">
-              {tx.formTitle}
-            </h3>
-
-            {submitted ? (
-              <div className="text-center py-12">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  className="mx-auto mb-4"
-                >
-                  <circle
-                    cx="24"
-                    cy="24"
-                    r="22"
-                    stroke="var(--ocean-500)"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                  <polyline
-                    points="14,24 21,31 34,17"
-                    stroke="var(--ocean-500)"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <h4 className="font-display text-2xl text-[var(--navy-800)] mb-2">
-                  {tx.thankYou}
-                </h4>
-                <p className="font-body text-sm text-[oklch(0.50_0.05_235)]">
-                  {tx.thankYouMsg}
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5"
-              >
-                <div className="mobile-form-grid grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
-                      {tx.firstName}
-                    </label>
-                    <input
-                      type="text"
-                      {...register("voornaam")}
-                      className={inputClass}
-                    />
-                    {errors.voornaam && (
-                      <p className="font-body text-xs text-red-500 mt-1">
-                        {errors.voornaam.message}
-                      </p>
-                    )}
-                  </div>
-                  <div>
-                    <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
-                      {tx.lastName}
-                    </label>
-                    <input
-                      type="text"
-                      {...register("achternaam")}
-                      className={inputClass}
-                    />
-                    {errors.achternaam && (
-                      <p className="font-body text-xs text-red-500 mt-1">
-                        {errors.achternaam.message}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
-                    {tx.phone}
-                  </label>
-                  <input
-                    type="tel"
-                    {...register("telefoon")}
-                    className={inputClass}
-                  />
-                </div>
-
-                <div>
-                  <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
-                    {tx.email}
-                  </label>
-                  <input
-                    type="email"
-                    {...register("email")}
-                    className={inputClass}
-                  />
-                  {errors.email && (
-                    <p className="font-body text-xs text-red-500 mt-1">
-                      {errors.email.message}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-3">
-                    {tx.contactPref}
-                  </label>
-                  <div className="flex gap-6">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        {...register("contactvoorkeur")}
-                        value="telefoon"
-                        className="accent-[var(--navy-600)]"
-                      />
-                      <span className="font-body text-[0.875rem] text-[oklch(0.40_0.04_235)]">
-                        {tx.phoneOpt}
-                      </span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        {...register("contactvoorkeur")}
-                        value="email"
-                        className="accent-[var(--navy-600)]"
-                      />
-                      <span className="font-body text-[0.875rem] text-[oklch(0.40_0.04_235)]">
-                        {tx.emailOpt}
-                      </span>
-                    </label>
-                  </div>
-                  {errors.contactvoorkeur && (
-                    <p className="font-body text-xs text-red-500 mt-1">
-                      {errors.contactvoorkeur.message}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="font-body text-xs text-[oklch(0.40_0.04_235)] block mb-1.5">
-                    {tx.remarks}
-                  </label>
-                  <textarea
-                    {...register("opmerkingen")}
-                    rows={3}
-                    className={cn(inputClass, "resize-none")}
-                  />
-                </div>
-
-                <div className="bg-[oklch(0.97_0.01_230)] p-4 rounded-md border border-[oklch(0.90_0.02_230)] flex flex-col gap-2">
-                  <div className="flex items-start gap-3">
-                    <input
-                      type="checkbox"
-                      id="privacyConsent"
-                      {...register("privacyConsent")}
-                      className="mt-1 h-4 w-4 rounded border-gray-300 text-[var(--navy-600)] focus:ring-[var(--navy-600)] accent-[var(--navy-600)] cursor-pointer shrink-0"
-                    />
-                    <label
-                      htmlFor="privacyConsent"
-                      className="font-body text-[0.8rem] text-[oklch(0.35_0.04_235)] leading-relaxed cursor-pointer"
-                    >
-                      <span className="font-semibold block mb-1 text-[var(--navy-800)]">
-                        {tx.privacyNoticeTitle}
-                      </span>
-                      {tx.privacyNoticeBody}{" "}
-                      {tx.privacyNoticeReadMore}{" "}
-                      <RouteLink
-                        pageKey="privacy"
-                        className="underline font-medium text-[var(--navy-800)] hover:text-[var(--ocean-600)]"
-                      >
-                        {tx.privacyNoticeFullLink}
-                      </RouteLink>{" "}
-                      {tx.privacyNoticeSuffix}
-                    </label>
-                  </div>
-                  {errors.privacyConsent && (
-                    <p className="font-body text-xs text-red-500 mt-0.5">
-                      {errors.privacyConsent.message}
-                    </p>
-                  )}
-                </div>
-
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    data-ga-category="form"
-                    data-ga-name="contact_form_submit"
-                    data-ga-label={tx.submit}
-                    data-ga-location="contact_section"
-                    className={cn(
-                      "btn-pill btn-pill-navy",
-                      isSubmitting && "opacity-60 cursor-not-allowed"
-                    )}
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center gap-2">
-                        <svg
-                          className="animate-spin h-4 w-4"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          />
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                          />
-                        </svg>
-                        {tx.submit}...
-                      </span>
-                    ) : (
-                      tx.submit
-                    )}
-                  </button>
-                </div>
-              </form>
-            )}
-          </div>
+          {!hideForm && (
+            <ContactFormCard
+              className={cn(
+                "transition-all duration-[800ms] ease-out delay-200",
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              )}
+            />
+          )}
         </div>
       </div>
     </section>
