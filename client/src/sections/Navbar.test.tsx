@@ -33,7 +33,7 @@ describe("Navbar", () => {
   it("renders translucent glassmorphism header styling at the top on non-home pages", () => {
     const html = renderNavbar("en", "costs");
 
-    expect(html).toContain("background:rgba(18, 32, 54, 0.45)");
+    expect(html).toContain("background:rgba(18, 32, 54, 0.85)");
     expect(html).toContain("backdrop-filter:blur(16px)");
   });
 

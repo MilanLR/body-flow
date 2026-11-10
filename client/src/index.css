@@ -412,3 +412,72 @@
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   Mobiele optimalisatie — geldt ALLEEN voor schermen t/m 768px.
+   Desktop (769px en breder) blijft ongewijzigd.
+   Doel: tikdoelen van minimaal 44px en leesbare tekst (min. ~12px).
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Taalwisselaar (zwevend, rechtsonder) */
+  [data-ga-location="floating_switcher"] {
+    min-height: 32px;
+    min-width: 44px;
+    font-size: 0.8rem !important;
+    padding: 0 0.8rem !important;
+  }
+
+  /* Hamburgermenu in de navigatiebalk */
+  button[data-ga-name="mobile_menu_toggle"] {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Links in het uitklapmenu en de "Boek intake"-knop */
+  nav a,
+  a.btn-pill {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Cookiebanner: grotere knoppen en leesbare tekst */
+  .z-\[999\] button,
+  .z-\[999\] a.btn-pill {
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+  .z-\[999\] p {
+    font-size: 0.875rem;
+  }
+
+  /* Footer: tikbare links en leesbare kleine tekst */
+  footer a,
+  footer button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  footer .text-\[0\.75rem\] {
+    font-size: 0.8125rem;
+  }
+  footer h4 {
+    font-size: 0.75rem;
+  }
+
+  /* Te kleine bijschriften (EECP-sectie) */
+  .text-\[0\.6rem\] {
+    font-size: 0.75rem;
+  }
+
+  /* Formuliervelden: 16px voorkomt dat iOS bij focus inzoomt */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
