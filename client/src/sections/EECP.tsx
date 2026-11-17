@@ -50,7 +50,7 @@ export function EECP() {
               <p className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] mb-4">
                 {tx.howText}
               </p>
-              <ul className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] pl-5 mb-6">
+              <ul className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] pl-0 list-none mb-6">
                 <li className="mb-2">{tx.howLi1}</li>
                 <li>{tx.howLi2}</li>
               </ul>
