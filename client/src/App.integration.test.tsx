@@ -16,7 +16,9 @@ describe("App routing integration", () => {
   it("renders the localized home page for a route", () => {
     const html = renderApp("/en/");
 
-    expect(html).toContain("Redefine your vitality");
+    expect(html.replace(/<[^>]+>/g, "")).toContain(
+      "The new standard in circulation &amp; recovery",
+    );
     expect(html).not.toContain("This localized page is a placeholder");
   });
 

@@ -11,8 +11,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <EECP />
-      <Voordelen />
+      {/* Desktop: wrapper is onzichtbaar (display: contents), volgorde ongewijzigd.
+          Mobiel: "De voordelen" komt boven "Herstel je natuurlijke circulatie". */}
+      <div className="flex flex-col md:contents [&>#eecp]:max-md:order-2 [&>#eecp]:max-md:pt-16 [&>#voordelen]:max-md:order-1">
+        <EECP />
+        <Voordelen />
+      </div>
       <VitalityBanner />
       <Traject />
       <Pakketten />
