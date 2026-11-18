@@ -61,7 +61,7 @@ export function EECP() {
               <p className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] mb-2">
                 {tx.physText}
               </p>
-              <ul className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] pl-5">
+              <ul className="font-body text-[0.9rem] text-[oklch(0.40_0.04_235)] leading-[1.8] pl-0 list-none">
                 <li className="mb-1.5">
                   <strong>{tx.physLi1Bold}</strong> {tx.physLi1}
                 </li>
