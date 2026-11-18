@@ -121,7 +121,7 @@ export function Pakketten() {
                 <div
                   key={pkg.name}
                   className={cn(
-                    "flex flex-col overflow-hidden rounded-sm bg-white transition-all duration-700",
+                    "flex flex-col overflow-hidden rounded-[24px] bg-white transition-all duration-700",
                     inView
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-6",
