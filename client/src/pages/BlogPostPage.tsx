@@ -18,6 +18,24 @@ import { Navbar } from "@/sections/Navbar";
 
 import NotFound from "./NotFound";
 
+function WithFootnotes({ text }: { text: string }) {
+  const parts = text.split(/(\[\d+(?:,\d+)*\])/);
+
+  return (
+    <>
+      {parts.map((part, index) =>
+        /^\[\d+(?:,\d+)*\]$/.test(part) ? (
+          <sup key={index} className="ml-[0.1em] text-[0.7em] leading-none">
+            {part}
+          </sup>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
 export default function BlogPostPage() {
   const { lang, t } = useLang();
   const [pathname] = useLocation();
@@ -89,7 +107,7 @@ export default function BlogPostPage() {
                   key={paragraph}
                   className="mt-6 font-body text-lg leading-8 text-[oklch(0.38_0.04_235)]"
                 >
-                  {paragraph}
+                  <WithFootnotes text={paragraph} />
                 </p>
               ))}
 
@@ -116,13 +134,15 @@ export default function BlogPostPage() {
                       key={paragraph}
                       className="mt-5 font-body text-[0.98rem] leading-8 text-[oklch(0.40_0.04_235)]"
                     >
-                      {paragraph}
+                      <WithFootnotes text={paragraph} />
                     </p>
                   ))}
                   {section.bullets && (
                     <ul className="mt-6 list-disc space-y-3 pl-5 font-body text-[0.95rem] leading-7 text-[oklch(0.40_0.04_235)]">
                       {section.bullets.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item}>
+                          <WithFootnotes text={item} />
+                        </li>
                       ))}
                     </ul>
                   )}
