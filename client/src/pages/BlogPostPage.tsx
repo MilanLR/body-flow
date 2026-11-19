@@ -68,6 +68,16 @@ export default function BlogPostPage() {
                 <span>{locale.title}</span>
               </nav>
 
+              {post.image && (
+                <img
+                  src={post.image.src}
+                  alt={post.image.alt[lang]}
+                  width={2000}
+                  height={1125}
+                  className="mt-8 aspect-[16/9] w-full rounded-sm object-cover"
+                />
+              )}
+
               <p className="mt-8 font-body text-[0.8rem] tracking-[0.1em] uppercase text-[oklch(0.55_0.03_235)]">
                 {tx.publishedOn} {formatBlogDate(post.datePublished, lang)}
               </p>
@@ -84,8 +94,21 @@ export default function BlogPostPage() {
               ))}
 
               {locale.sections.map((section) => (
-                <section key={section.title} className="mt-12">
-                  <h2 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-medium text-[var(--navy-900)]">
+                <section
+                  key={section.title}
+                  className={
+                    section.callout
+                      ? "mt-10 rounded-sm border border-[oklch(0.84_0.05_230)] bg-[oklch(0.94_0.03_230)] px-6 py-6 md:px-8 md:py-7"
+                      : "mt-12"
+                  }
+                >
+                  <h2
+                    className={
+                      section.callout
+                        ? "font-display text-[1.75rem] font-medium text-[var(--navy-900)]"
+                        : "font-display text-[clamp(1.5rem,3vw,2rem)] font-medium text-[var(--navy-900)]"
+                    }
+                  >
                     {section.title}
                   </h2>
                   {section.paragraphs.map((paragraph) => (
@@ -105,6 +128,39 @@ export default function BlogPostPage() {
                   )}
                 </section>
               ))}
+
+              {locale.sources && locale.sources.length > 0 && (
+                <section className="mt-12 border-t border-[oklch(0.92_0.01_230)] pt-8">
+                  <h2 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-medium text-[var(--navy-900)]">
+                    {tx.sourcesTitle}
+                  </h2>
+                  <ol className="mt-6 list-decimal space-y-3 pl-6 font-body text-[0.85rem] leading-6 text-[oklch(0.40_0.04_235)]">
+                    {locale.sources.map((source) => {
+                      const match = source.match(/^(.*?)\s*(https?:\/\/\S+)$/);
+
+                      return (
+                        <li key={source}>
+                          {match ? (
+                            <>
+                              {match[1]}{" "}
+                              <a
+                                href={match[2]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="break-all underline underline-offset-2"
+                              >
+                                {match[2]}
+                              </a>
+                            </>
+                          ) : (
+                            source
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </section>
+              )}
 
               {locale.faq && locale.faq.length > 0 && (
                 <section className="mt-12">

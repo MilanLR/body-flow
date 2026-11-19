@@ -35,7 +35,7 @@ export default function BlogIndexPage() {
                 {tx.indexIntro}
               </p>
 
-              <div className="mt-10 space-y-6">
+              <div className="mt-10 grid gap-6 md:grid-cols-2">
                 {posts.map((post) => {
                   const locale = post.locales[lang];
 
@@ -43,7 +43,7 @@ export default function BlogIndexPage() {
                     <a
                       key={post.key}
                       href={getBlogPostPath(lang, post)}
-                      className="block rounded-sm border border-[oklch(0.88_0.02_230)] bg-white px-8 py-8 no-underline shadow-[0_4px_20px_rgba(26,46,74,0.05)] transition-shadow hover:shadow-[0_10px_40px_rgba(26,46,74,0.12)]"
+                      className="flex h-full flex-col rounded-sm border border-[oklch(0.88_0.02_230)] bg-white px-8 py-8 no-underline shadow-[0_4px_20px_rgba(26,46,74,0.05)] transition-shadow hover:shadow-[0_10px_40px_rgba(26,46,74,0.12)]"
                     >
                       <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-[oklch(0.55_0.03_235)]">
                         {formatBlogDate(post.datePublished, lang)}
@@ -54,7 +54,7 @@ export default function BlogIndexPage() {
                       <p className="mt-3 font-body text-[0.95rem] leading-7 text-[oklch(0.40_0.04_235)]">
                         {locale.seoDescription}
                       </p>
-                      <span className="mt-4 inline-block font-body text-[0.85rem] font-medium text-[var(--navy-900)]">
+                      <span className="mt-auto inline-block pt-4 font-body text-[0.85rem] font-medium text-[var(--navy-900)]">
                         {tx.readPost} →
                       </span>
                     </a>

@@ -1,10 +1,12 @@
 import type { Lang } from "@/i18n/LangContext";
 
+import { eecpEnTopsport } from "./posts/eecp-en-topsport";
 import { eecpTherapieBijLongcovid } from "./posts/eecp-therapie-bij-longcovid";
 import type { BlogPost } from "./types";
 
 export const BLOG_POSTS: ReadonlyArray<BlogPost> = [
   eecpTherapieBijLongcovid,
+  eecpEnTopsport,
 ];
 
 export function getBlogIndexPath(lang: Lang) {
