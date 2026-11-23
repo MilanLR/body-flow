@@ -62,7 +62,7 @@ export function WhoItsForAudiences() {
           key={a.id}
           id={a.id}
           className={cn(
-            "mobile-padding scroll-mt-24 py-20",
+            "mobile-padding scroll-mt-[55px] py-20 md:scroll-mt-24",
             i % 2 === 0 ? "bg-white" : "bg-[var(--lighter-blue)]"
           )}
         >
