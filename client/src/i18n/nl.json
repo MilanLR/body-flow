@@ -109,20 +109,56 @@
     },
     "whoItsFor": {
       "title": "Voor wie EECP-therapie geschikt kan zijn",
-      "intro": "EECP-therapie wordt vaak overwogen door mensen die hun cardiovasculaire ondersteuning, energie of herstel serieus willen verbeteren. De behandeling is niet voor iedereen hetzelfde, daarom begint geschiktheid altijd met een medische beoordeling.",
-      "sections": [
+      "intro": "Mensen komen om verschillende redenen naar BodyFlow. Herken je jezelf in een van de drie groepen hieronder? Dan kan een intake uitwijzen of EECP bij je past. Geschiktheid nemen we nooit aan, want elk advies begint met een medische beoordeling.",
+      "sections": [],
+      "chooseLabel": "Kies jouw situatie",
+      "readMore": "Lees verder",
+      "audiences": [
         {
-          "title": "Vaak passend bij herstel, verminderde belastbaarheid en prestatievraagstukken",
-          "body": "Cliënten melden zich bijvoorbeeld met aanhoudende vermoeidheid, beperkte inspanningstolerantie, behoefte aan herstel na ziekte of de wens om hun fysieke en mentale belastbaarheid te verbeteren."
+          "id": "klachten",
+          "icon": "/voor-wie/klachten.svg",
+          "label": "Klachten oplossen",
+          "cardTitle": "Ik wil iets oplossen",
+          "cardText": "Weinig energie, snel moe of nog niet de oude.",
+          "title": "Als je lichaam niet meer meewerkt zoals je wilt",
+          "lead": "Je bent sneller moe dan vroeger, je energie zakt halverwege de dag in of je voelt je na een ziekte nog niet de oude. Zulke kwaaltjes maken je dagelijks leven kleiner, ook als er geen duidelijke diagnose is.",
+          "points": [
+            "Aanhoudende vermoeidheid of een laag energieniveau",
+            "Beperkte belastbaarheid bij inspanning",
+            "Behoefte aan herstel na een zware periode of ziekte"
+          ],
+          "closing": "Tijdens de intake kijken we samen naar je klachten en je gezondheid. Daarna weet je of EECP in jouw situatie zinvol en veilig is."
         },
         {
-          "title": "Intake eerst, pas daarna een behandeladvies",
-          "body": "We gebruiken deze pagina niet om algemene medische claims te doen. Het doel is juist om duidelijk te maken dat de intake bepaalt of EECP in jouw situatie zinvol, veilig en proportioneel is.",
-          "items": [
-            "Mensen die herstel en circulatie willen ondersteunen na een intensieve periode.",
-            "Cliënten die zoeken naar meer energie, focus of belastbaarheid in het dagelijks leven.",
-            "Mensen die behoefte hebben aan een gestructureerd traject met medische intake en monitoring."
-          ]
+          "id": "topsporters",
+          "icon": "/voor-wie/topsporters.svg",
+          "label": "Topsporters",
+          "cardTitle": "Ik wil sneller herstellen",
+          "cardText": "Herstel tussen trainingen en meer belastbaarheid.",
+          "title": "Als herstel net zo belangrijk is als trainen",
+          "lead": "Wie op hoog niveau traint, wint of verliest tijd in het herstel. EECP is een passieve behandeling. Je ligt rustig terwijl je bloedsomloop wordt ondersteund, zonder extra belasting voor spieren en gewrichten.",
+          "points": [
+            "Herstel ondersteunen tussen zware trainingsblokken",
+            "Een passieve aanvulling op je trainings- en herstelschema",
+            "Een behandeling zonder extra belasting voor spieren en gewrichten"
+          ],
+          "closing": "Benieuwd naar de achtergrond? Lees ons blog over EECP en topsport.",
+          "linkLabel": "Lees het blog over EECP en topsport"
+        },
+        {
+          "id": "health-optimizers",
+          "icon": "/voor-wie/health-optimizers.svg",
+          "label": "Health Optimizers",
+          "cardTitle": "Ik wil een stap verder",
+          "cardText": "Je gezondheid naar het volgende niveau tillen.",
+          "title": "Als goed nog niet goed genoeg is",
+          "lead": "Je beweegt, slaapt en eet bewust. Misschien volg je je eigen data of ben je aangesloten bij een club voor gezondheid en langer vitaal blijven. Je zoekt de volgende stap om je gezondheid verder te verbeteren.",
+          "points": [
+            "Je investeert al actief in je gezondheid en vitaliteit",
+            "Je wilt weten wat je cardiovasculaire gezondheid kan ondersteunen",
+            "Je zoekt een onderbouwde aanvulling op wat je al doet"
+          ],
+          "closing": "In de intake bespreken we wat je al doet en waar EECP in jouw routine past."
         }
       ]
     },

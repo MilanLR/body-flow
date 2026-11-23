@@ -13,3 +13,12 @@ const pageContent = {
 export function getPageContent(lang: Lang, pageKey: FocusedPageKey) {
   return pageContent[lang][pageKey];
 }
+
+const whoItsForContent = {
+  nl: nl.focusedPages.whoItsFor,
+  en: en.focusedPages.whoItsFor,
+};
+
+export function getWhoItsForContent(lang: Lang) {
+  return whoItsForContent[lang];
+}

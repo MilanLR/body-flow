@@ -109,20 +109,56 @@
     },
     "whoItsFor": {
       "title": "Who EECP therapy may be for",
-      "intro": "EECP therapy is often considered by people who want to seriously improve cardiovascular support, energy or recovery. Suitability is never assumed, which is why every recommendation starts with a medical assessment.",
-      "sections": [
+      "intro": "People come to BodyFlow for different reasons. Do you recognise yourself in one of the three groups below? Then an intake can show whether EECP suits you. We never assume suitability, because every recommendation starts with a medical assessment.",
+      "sections": [],
+      "chooseLabel": "Choose your situation",
+      "readMore": "Read more",
+      "audiences": [
         {
-          "title": "Often relevant for recovery, reduced capacity and performance goals",
-          "body": "Clients often come in with persistent fatigue, limited exercise tolerance, a need for structured recovery after illness, or a wish to improve physical and mental resilience."
+          "id": "klachten",
+          "icon": "/voor-wie/klachten.svg",
+          "label": "Everyday complaints",
+          "cardTitle": "I want to fix something",
+          "cardText": "Low energy, tired quickly or not feeling like yourself.",
+          "title": "When your body no longer cooperates the way you want",
+          "lead": "You tire more easily than you used to, your energy drops halfway through the day, or you still don't feel like yourself after an illness. Complaints like these make daily life smaller, even without a clear diagnosis.",
+          "points": [
+            "Persistent fatigue or a low energy level",
+            "Limited capacity for physical effort",
+            "A need to recover after a demanding period or illness"
+          ],
+          "closing": "During the intake we look at your complaints and your health together. Afterwards you know whether EECP is useful and safe in your situation."
         },
         {
-          "title": "Intake first, then a treatment recommendation",
-          "body": "This page is not meant to make broad medical claims. Its purpose is to explain that the intake determines whether EECP is useful, safe and proportionate in your situation.",
-          "items": [
-            "People who want to support recovery and circulation after an intense period.",
-            "Clients looking for more energy, focus or day-to-day resilience.",
-            "People who want a structured trajectory with medical intake and monitoring."
-          ]
+          "id": "topsporters",
+          "icon": "/voor-wie/topsporters.svg",
+          "label": "Elite athletes",
+          "cardTitle": "I want to recover faster",
+          "cardText": "Recovery between sessions and more capacity.",
+          "title": "When recovery matters as much as training",
+          "lead": "Anyone training at a high level wins or loses time in recovery. EECP is a passive treatment. You rest while your circulation is supported, without extra strain on muscles and joints.",
+          "points": [
+            "Support recovery between heavy training blocks",
+            "A passive addition to your training and recovery schedule",
+            "A treatment without extra strain on muscles and joints"
+          ],
+          "closing": "Curious about the background? Read our blog on EECP and elite sport.",
+          "linkLabel": "Read the blog on EECP and elite sport"
+        },
+        {
+          "id": "health-optimizers",
+          "icon": "/voor-wie/health-optimizers.svg",
+          "label": "Health Optimizers",
+          "cardTitle": "I want to go a step further",
+          "cardText": "Take your health to the next level.",
+          "title": "When good is not yet good enough",
+          "lead": "You move, sleep and eat with intention. Maybe you track your own data or belong to a club for health and a longer, more vital life. You are looking for the next step to improve your health further.",
+          "points": [
+            "You already invest actively in your health and vitality",
+            "You want to know what can support your cardiovascular health",
+            "You are looking for an evidence-based addition to what you already do"
+          ],
+          "closing": "In the intake we discuss what you already do and where EECP fits into your routine."
         }
       ]
     },

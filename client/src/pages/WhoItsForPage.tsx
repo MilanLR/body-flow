@@ -2,9 +2,9 @@ import { useLocation } from "wouter";
 
 import { getPageContent } from "@/content/pageContent";
 import { useLang } from "@/i18n/LangContext";
-import { Voordelen } from "@/sections/Voordelen";
+import { WhoItsForAudiences } from "@/sections/WhoItsForAudiences";
 
-import { SeoPage, SeoPageSection } from "./SeoPage";
+import { SeoPage } from "./SeoPage";
 
 export default function WhoItsForPage() {
   const { lang, t } = useLang();
@@ -18,10 +18,7 @@ export default function WhoItsForPage() {
       intro={page.intro}
       pathname={pathname}
     >
-      <Voordelen />
-      {page.sections.map((section) => (
-        <SeoPageSection key={section.title} {...section} />
-      ))}
+      <WhoItsForAudiences />
     </SeoPage>
   );
 }
